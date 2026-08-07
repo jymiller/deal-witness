@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "event_key": "snowflake-beta-fund-agent-token-economy-2026-08-07",
+  "trace_id": "3809f8742fbf2961916b9a5bbbd9a21c",
+  "project": {
+    "name": "Memory Knee",
+    "one_liner": "Find the smallest EverMind retrieval budget that preserves full-history recall and ID integrity while reducing real context tokens and cost.",
+    "data_status": "PRERUN · SYNTHETIC"
+  },
+  "build": {
+    "builder": "Codex",
+    "codex_exclusive": true,
+    "snowflake_cortex": {
+      "status": "on_hold_excluded",
+      "included_in_build": false,
+      "note": "The event_key is retained only as an opaque event identifier."
+    }
+  },
+  "memory": {
+    "preparation": {
+      "provider": "Cognee",
+      "scope": "hackathon preparation and build context only",
+      "shipped_product_dependency": false
+    },
+    "product": {
+      "provider": "EverMind / EverOS",
+      "system": "Memory OS",
+      "required": true,
+      "role": "load-bearing benchmark arm",
+      "integration_status": "required_for_valid_result",
+      "adapter_status": "credential_client_connected_real_benchmark_pending",
+      "api_contract_status": "official_v2_wire_contract_confirmed",
+      "cloud_base_url": "https://api.evermind.ai",
+      "official_reference_url": "https://docs.evermind.ai/llms-full.txt",
+      "official_python_sdk": {
+        "package": "everos-cloud",
+        "version": "1.0.0"
+      },
+      "confirmed_v2_operations": [
+        "add",
+        "flush",
+        "search"
+      ],
+      "confirmed_v2_paths": {
+        "add": "/api/v2/memory/add",
+        "flush": "/api/v2/memory/flush",
+        "search": "/api/v2/memory/search"
+      },
+      "credentials_status": "authenticated_v2_search_probe",
+      "credential_env_var": "EVEROS_API_KEY",
+      "credential_storage": "process environment or git-ignored .env",
+      "credential_committed": false,
+      "required_behavior": [
+        "ingest the benchmark memory corpus through add",
+        "commit pending memory through flush before evaluation",
+        "retrieve context through search at each declared top_k budget",
+        "report the benchmark as incomplete when the real EverMind arm cannot run"
+      ],
+      "forbidden_behavior": [
+        "invent an endpoint URL, payload schema, authentication flow, or response schema",
+        "replace the measured EverMind arm with fake or ephemeral memory"
+      ]
+    }
+  },
+  "submission": {
+    "timezone": "America/Los_Angeles",
+    "internal_freeze_at": "2026-08-07T14:30:00-07:00",
+    "hard_deadline_at": "2026-08-07T16:00:00-07:00",
+    "required_fields": [
+      "team_name",
+      "project_name",
+      "members",
+      "slide_deck_url"
+    ],
+    "values": {
+      "team_name": null,
+      "project_name": "Memory Knee",
+      "members": {
+        "required_member_fields": [
+          "name",
+          "email",
+          "role"
+        ],
+        "entries": []
+      },
+      "slide_deck_url": null,
+      "live_demo_url": null
+    },
+    "live_demo_required": false,
+    "completion_status": "incomplete"
+  }
+}

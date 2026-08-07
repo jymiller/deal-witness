@@ -1,0 +1,112 @@
+{
+  "schema_version": "2.0",
+  "dataset_id": "memory-knee-prerun-v1",
+  "data_status": "PRERUN · SYNTHETIC",
+  "purpose": "Planned corpus, queries, preservation gates, and measurement fields for full-history versus EverMind retrieval; this file contains no measured results.",
+  "benchmark_axis": "evermind_search_top_k",
+  "baseline": {
+    "id": "full_history",
+    "context_policy": "include every eligible memory record",
+    "data_status": "PRERUN · SYNTHETIC"
+  },
+  "evermind_arm": {
+    "required_for_valid_result": true,
+    "api_version": "v2",
+    "confirmed_operations": [
+      "add",
+      "flush",
+      "search"
+    ],
+    "credentials_status": "authenticated_v2_search_probe",
+    "wire_contract_status": "official_v2_wire_contract_confirmed",
+    "real_benchmark_status": "not_run"
+  },
+  "candidate_top_k": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "execution_plan": {
+    "corpus_ingestion_sequence": [
+      "add",
+      "flush"
+    ],
+    "retrieval_operation": "search",
+    "top_k_ordering": "ascending",
+    "measured_repetitions_per_query": 3,
+    "result_status_before_execution": "not_run"
+  },
+  "preservation_gates": {
+    "configuration_not_result": true,
+    "exact_id_integrity_required": true,
+    "minimum_recall_relative_to_full_history": 1.0,
+    "minimum_ground_truth_recall": 1.0,
+    "minimum_measured_repetitions_per_query": 3,
+    "all_gates_required": true
+  },
+  "measurement_contract": {
+    "capture_per_arm": [
+      "context_tokens",
+      "input_cost_usd",
+      "answer_recall",
+      "id_integrity",
+      "retrieved_memory_ids"
+    ],
+    "token_measurement": "count the exact context sent to the model with the recorded tokenizer",
+    "cost_measurement": "calculate from observed input tokens and a timestamped model price snapshot",
+    "derived_comparisons": [
+      "context_token_reduction_vs_full_history",
+      "input_cost_reduction_vs_full_history"
+    ]
+  },
+  "workloads": [
+    {
+      "id": "customer-commitment-recall",
+      "data_status": "PRERUN · SYNTHETIC",
+      "scenario": "Recover the current delivery commitment and immutable customer ID from a long synthetic account history.",
+      "synthetic_memory_record_count": 64,
+      "query_count": 8,
+      "ground_truth_fields": [
+        "customer_id",
+        "commitment_date",
+        "source_memory_ids"
+      ],
+      "contains_personal_data": false
+    },
+    {
+      "id": "incident-owner-recall",
+      "data_status": "PRERUN · SYNTHETIC",
+      "scenario": "Recover the latest incident owner and incident ID amid superseded synthetic status updates.",
+      "synthetic_memory_record_count": 64,
+      "query_count": 8,
+      "ground_truth_fields": [
+        "incident_id",
+        "owner_id",
+        "source_memory_ids"
+      ],
+      "contains_personal_data": false
+    },
+    {
+      "id": "policy-exception-recall",
+      "data_status": "PRERUN · SYNTHETIC",
+      "scenario": "Recover an active exception, its canonical policy ID, and expiry from synthetic policy history.",
+      "synthetic_memory_record_count": 64,
+      "query_count": 8,
+      "ground_truth_fields": [
+        "policy_id",
+        "exception_id",
+        "expires_on",
+        "source_memory_ids"
+      ],
+      "contains_personal_data": false
+    }
+  ],
+  "results": {
+    "full_history": [],
+    "evermind_top_k": [],
+    "recommendation": null
+  }
+}

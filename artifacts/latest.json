@@ -1,0 +1,474 @@
+{
+  "configuration": {
+    "items_per_call": null,
+    "quality_aggregation": "minimum_dimension",
+    "quality_floor": 1.0,
+    "sweep_parameter": "evermind_search_top_k",
+    "sweep_values": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ]
+  },
+  "evidence": {
+    "adapter": "deterministic-synthetic-preflight",
+    "claim_status": "preflight_only",
+    "kind": "synthetic",
+    "notice": "Synthetic preflight only; do not present these values as measured product results."
+  },
+  "label": "PRERUN \u00b7 SYNTHETIC",
+  "results": [
+    {
+      "correctness": {
+        "correct": 3,
+        "correct_ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ],
+        "incorrect": 0,
+        "incorrect_ids": [],
+        "rate": 1.0
+      },
+      "cost": {
+        "per_item": 0.0023,
+        "total": 0.0069,
+        "unit": "synthetic_cost_units"
+      },
+      "dropped": {
+        "count": 0,
+        "ids": []
+      },
+      "duplicates": {
+        "count": 0,
+        "ids": []
+      },
+      "latency": {
+        "calls": 3,
+        "mean_call_ms": 4.6,
+        "p95_call_ms": 4.6,
+        "total_ms": 13.799999999999999
+      },
+      "misalignment": {
+        "count": 0,
+        "events": []
+      },
+      "passed_quality_floor": true,
+      "quality": {
+        "aggregation": "minimum_dimension",
+        "dimensions": {
+          "alignment": 1.0,
+          "completeness": 1.0,
+          "correctness": 1.0,
+          "id_precision": 1.0,
+          "uniqueness": 1.0
+        },
+        "floor": 1.0,
+        "passed": true,
+        "score": 1.0
+      },
+      "requested": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "returned": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "sweep_parameter": "evermind_search_top_k",
+      "sweep_value": 1,
+      "unexpected": {
+        "count": 0,
+        "ids": []
+      }
+    },
+    {
+      "correctness": {
+        "correct": 3,
+        "correct_ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ],
+        "incorrect": 0,
+        "incorrect_ids": [],
+        "rate": 1.0
+      },
+      "cost": {
+        "per_item": 0.0023,
+        "total": 0.0069,
+        "unit": "synthetic_cost_units"
+      },
+      "dropped": {
+        "count": 0,
+        "ids": []
+      },
+      "duplicates": {
+        "count": 0,
+        "ids": []
+      },
+      "latency": {
+        "calls": 3,
+        "mean_call_ms": 4.6,
+        "p95_call_ms": 4.6,
+        "total_ms": 13.799999999999999
+      },
+      "misalignment": {
+        "count": 0,
+        "events": []
+      },
+      "passed_quality_floor": true,
+      "quality": {
+        "aggregation": "minimum_dimension",
+        "dimensions": {
+          "alignment": 1.0,
+          "completeness": 1.0,
+          "correctness": 1.0,
+          "id_precision": 1.0,
+          "uniqueness": 1.0
+        },
+        "floor": 1.0,
+        "passed": true,
+        "score": 1.0
+      },
+      "requested": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "returned": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "sweep_parameter": "evermind_search_top_k",
+      "sweep_value": 2,
+      "unexpected": {
+        "count": 0,
+        "ids": []
+      }
+    },
+    {
+      "correctness": {
+        "correct": 3,
+        "correct_ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ],
+        "incorrect": 0,
+        "incorrect_ids": [],
+        "rate": 1.0
+      },
+      "cost": {
+        "per_item": 0.0023,
+        "total": 0.0069,
+        "unit": "synthetic_cost_units"
+      },
+      "dropped": {
+        "count": 0,
+        "ids": []
+      },
+      "duplicates": {
+        "count": 0,
+        "ids": []
+      },
+      "latency": {
+        "calls": 3,
+        "mean_call_ms": 4.6,
+        "p95_call_ms": 4.6,
+        "total_ms": 13.799999999999999
+      },
+      "misalignment": {
+        "count": 0,
+        "events": []
+      },
+      "passed_quality_floor": true,
+      "quality": {
+        "aggregation": "minimum_dimension",
+        "dimensions": {
+          "alignment": 1.0,
+          "completeness": 1.0,
+          "correctness": 1.0,
+          "id_precision": 1.0,
+          "uniqueness": 1.0
+        },
+        "floor": 1.0,
+        "passed": true,
+        "score": 1.0
+      },
+      "requested": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "returned": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "sweep_parameter": "evermind_search_top_k",
+      "sweep_value": 4,
+      "unexpected": {
+        "count": 0,
+        "ids": []
+      }
+    },
+    {
+      "correctness": {
+        "correct": 0,
+        "correct_ids": [],
+        "incorrect": 3,
+        "incorrect_ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ],
+        "rate": 0.0
+      },
+      "cost": {
+        "per_item": 0.0023,
+        "total": 0.0069,
+        "unit": "synthetic_cost_units"
+      },
+      "dropped": {
+        "count": 0,
+        "ids": []
+      },
+      "duplicates": {
+        "count": 0,
+        "ids": []
+      },
+      "latency": {
+        "calls": 3,
+        "mean_call_ms": 4.6,
+        "p95_call_ms": 4.6,
+        "total_ms": 13.799999999999999
+      },
+      "misalignment": {
+        "count": 0,
+        "events": []
+      },
+      "passed_quality_floor": false,
+      "quality": {
+        "aggregation": "minimum_dimension",
+        "dimensions": {
+          "alignment": 1.0,
+          "completeness": 1.0,
+          "correctness": 0.0,
+          "id_precision": 1.0,
+          "uniqueness": 1.0
+        },
+        "floor": 1.0,
+        "passed": false,
+        "score": 0.0
+      },
+      "requested": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "returned": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "sweep_parameter": "evermind_search_top_k",
+      "sweep_value": 8,
+      "unexpected": {
+        "count": 0,
+        "ids": []
+      }
+    },
+    {
+      "correctness": {
+        "correct": 0,
+        "correct_ids": [],
+        "incorrect": 3,
+        "incorrect_ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ],
+        "rate": 0.0
+      },
+      "cost": {
+        "per_item": 0.0023,
+        "total": 0.0069,
+        "unit": "synthetic_cost_units"
+      },
+      "dropped": {
+        "count": 0,
+        "ids": []
+      },
+      "duplicates": {
+        "count": 0,
+        "ids": []
+      },
+      "latency": {
+        "calls": 3,
+        "mean_call_ms": 4.6,
+        "p95_call_ms": 4.6,
+        "total_ms": 13.799999999999999
+      },
+      "misalignment": {
+        "count": 0,
+        "events": []
+      },
+      "passed_quality_floor": false,
+      "quality": {
+        "aggregation": "minimum_dimension",
+        "dimensions": {
+          "alignment": 1.0,
+          "completeness": 1.0,
+          "correctness": 0.0,
+          "id_precision": 1.0,
+          "uniqueness": 1.0
+        },
+        "floor": 1.0,
+        "passed": false,
+        "score": 0.0
+      },
+      "requested": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "returned": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "sweep_parameter": "evermind_search_top_k",
+      "sweep_value": 16,
+      "unexpected": {
+        "count": 0,
+        "ids": []
+      }
+    },
+    {
+      "correctness": {
+        "correct": 0,
+        "correct_ids": [],
+        "incorrect": 3,
+        "incorrect_ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ],
+        "rate": 0.0
+      },
+      "cost": {
+        "per_item": 0.0023,
+        "total": 0.0069,
+        "unit": "synthetic_cost_units"
+      },
+      "dropped": {
+        "count": 0,
+        "ids": []
+      },
+      "duplicates": {
+        "count": 0,
+        "ids": []
+      },
+      "latency": {
+        "calls": 3,
+        "mean_call_ms": 4.6,
+        "p95_call_ms": 4.6,
+        "total_ms": 13.799999999999999
+      },
+      "misalignment": {
+        "count": 0,
+        "events": []
+      },
+      "passed_quality_floor": false,
+      "quality": {
+        "aggregation": "minimum_dimension",
+        "dimensions": {
+          "alignment": 1.0,
+          "completeness": 1.0,
+          "correctness": 0.0,
+          "id_precision": 1.0,
+          "uniqueness": 1.0
+        },
+        "floor": 1.0,
+        "passed": false,
+        "score": 0.0
+      },
+      "requested": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "returned": {
+        "count": 3,
+        "ids": [
+          "customer-commitment-recall",
+          "incident-owner-recall",
+          "policy-exception-recall"
+        ]
+      },
+      "sweep_parameter": "evermind_search_top_k",
+      "sweep_value": 32,
+      "unexpected": {
+        "count": 0,
+        "ids": []
+      }
+    }
+  ],
+  "schema_version": "cost-knee/v1",
+  "selection": {
+    "first_failing": {
+      "quality_score": 0.0,
+      "sweep_parameter": "evermind_search_top_k",
+      "sweep_value": 8
+    },
+    "first_failing_value": 8,
+    "knee": {
+      "cost_per_item": 0.0023,
+      "cost_unit": "synthetic_cost_units",
+      "quality_score": 1.0,
+      "sweep_parameter": "evermind_search_top_k",
+      "sweep_value": 1
+    },
+    "rule": "lowest cost/item among points meeting the predeclared quality floor"
+  }
+}

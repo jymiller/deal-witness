@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cost-knee"
+version = "0.1.0"
+description = "Provider-agnostic quality/cost sweep benchmark"
+requires-python = ">=3.11"
+dependencies = [
+  "everos-cloud==1.0.0",
+  "python-dotenv==1.1.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+
+[project.scripts]
+cost-knee = "cost_knee.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
