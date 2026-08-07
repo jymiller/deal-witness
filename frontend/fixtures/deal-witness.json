@@ -1,0 +1,1411 @@
+{
+  "schemaVersion": "deal-witness.v2",
+  "product": {
+    "name": "Deal Witness",
+    "tagline": "Complete the memory. Check the paper.",
+    "documentTitle": "Deal Witness · Synthetic airport financing memory replay",
+    "description": "A fixture-driven visual prototype showing evidence compression, active memory completion, and draft verification."
+  },
+  "deal": {
+    "id": "project-asterline",
+    "title": "Project Asterline · Asterline Gateway",
+    "dataLabel": "Wholly synthetic · $380M private-credit runway-infrastructure financing"
+  },
+  "teachingLine": "A covenant is just a promise that protects the money.",
+  "story": {
+    "demonstratedOmissionId": "noise_funding_certification",
+    "teachingClusterId": "funding_conditions",
+    "exampleKicker": "Representative example · one of 144 contract-scoped items",
+    "weekStakes": {
+      "ariaLabel": "Maya is already gone Monday; the financing is scheduled to close Friday",
+      "items": [
+        { "day": "Monday", "label": "Maya is gone", "tone": "departure" },
+        { "day": "Tuesday", "label": "Find who knows", "tone": "standard" },
+        { "day": "Wednesday", "label": "Capture proof", "tone": "standard" },
+        { "day": "Thursday", "label": "Check the paper", "tone": "standard" },
+        { "day": "Friday", "label": "Deal closes", "tone": "deadline" }
+      ]
+    }
+  },
+  "historicalNavigator": {
+    "label": "Historical relationship memory",
+    "name": "Maya Soren",
+    "deadline": "Already gone Monday · closes Friday",
+    "role": "Trusted cross-organization analytical hub",
+    "departedAt": "2027-09-03T17:00:00.000Z",
+    "recoveryStartedAt": "2027-09-06T09:00:00.000Z",
+    "scheduledCloseAt": "2027-09-10T10:00:00.000Z",
+    "boundary": "Historical provenance and relationship edges only. Maya is already gone, cannot be contacted, and is never presented as the author or approver of every fact."
+  },
+  "memoryLayer": {
+    "systemName": "EverOS",
+    "modeLabel": "EverOS seed target · deterministic fixture replay",
+    "ownerLabel": "Institution-owned memory",
+    "spaceName": "Deal Witness",
+    "seedTarget": {
+      "appId": "deal-witness",
+      "projectId": "synthetic-airport-discovery-v1",
+      "sessionCount": 3,
+      "episodeCount": 10,
+      "profileCount": 5
+    },
+    "runtimeBoundary": "Integration target: 3 sessions, 10 episodes, and 5 profiles. The 430-record corpus below is a deterministic fixture replay, not a live EverOS bulk write."
+  },
+  "river": {
+    "kicker": "Evidence River · Monday after Maya leaves",
+    "title": "Institution-owned work memory becomes navigable",
+    "truthLabel": "430 preload-ready fixture records replayed locally · no EverOS bulk-write claim · v7 and v8 are staged demo inputs",
+    "compressionLabel": "Compressed without moving the map",
+    "outputLabel": "stable concept clusters",
+    "months": 9,
+    "organizationCount": 14,
+    "peopleRoleCount": 36,
+    "evidenceRecordCount": 432,
+    "preloadedRecordCount": 430,
+    "stagedLiveRecordCount": 2,
+    "atomicItemCount": 288,
+    "provenanceLinkCount": 864,
+    "typedRelationshipCount": 576,
+    "clusterCount": 13,
+    "contractScopedItemCount": 144,
+    "bundleCount": 7,
+    "investigationPathCount": 24,
+    "completedPathCount": 16,
+    "openPathCount": 8,
+    "metrics": [
+      { "key": "months", "label": "months" },
+      { "key": "organizationCount", "label": "organizations" },
+      { "key": "peopleRoleCount", "label": "people + roles" },
+      { "key": "evidenceRecordCount", "label": "evidence records" },
+      { "key": "atomicItemCount", "label": "atomic items" },
+      { "key": "provenanceLinkCount", "label": "provenance links" },
+      { "key": "typedRelationshipCount", "label": "typed relationships" },
+      { "key": "contractScopedItemCount", "label": "contract-scoped" },
+      { "key": "investigationPathCount", "label": "investigation paths" }
+    ],
+    "sampleEvidenceIds": [
+      "credit_authorization",
+      "opening_model",
+      "lender_sponsor_call",
+      "counsel_notes",
+      "construction_estimate",
+      "engineer_scope",
+      "environmental_analysis",
+      "public_coverage",
+      "term_sheet_markup",
+      "approval_memo",
+      "maya_historical_crosswalk",
+      "everos_receipt",
+      "draft_v7",
+      "draft_v8"
+    ],
+    "stagedLiveEvidenceIds": ["draft_v7", "draft_v8"]
+  },
+  "paper": {
+    "overline": "Project Asterline · closing document check",
+    "footerLeft": "Memory-to-draft comparison",
+    "footerRight": "Synthetic v7 / v8 replay"
+  },
+  "regions": [
+    {
+      "id": "money",
+      "label": "Money",
+      "icon": "$",
+      "order": 3,
+      "help": "How the project is funded and when money can move."
+    },
+    {
+      "id": "promises",
+      "label": "Promises",
+      "icon": "◇",
+      "order": 2,
+      "help": "Commitments that protect the financing."
+    },
+    {
+      "id": "risks",
+      "label": "Risks",
+      "icon": "!",
+      "order": 1,
+      "help": "Conditions that could disrupt delivery or repayment."
+    },
+    {
+      "id": "decisions",
+      "label": "Decisions",
+      "icon": "✓",
+      "order": 0,
+      "help": "Approvals, exceptions, and closing readiness."
+    }
+  ],
+  "clusters": [
+    {
+      "id": "capital_structure",
+      "regionId": "money",
+      "regionSlot": 0,
+      "label": "Facility economics",
+      "summary": "Facility size, tranches, pricing, and sources of capital.",
+      "metrics": {
+        "atomicCount": 28,
+        "sourceCount": 34,
+        "provenanceCount": 84,
+        "relationshipCount": 56,
+        "contractScopedCount": 18,
+        "densityPercent": 93
+      },
+      "representative": {
+        "id": "facility_commitment",
+        "label": "Facility commitment",
+        "displayValue": "$380M delayed-draw private-credit facility",
+        "plainLanguage": "The lenders commit up to $380 million for the synthetic runway project.",
+        "expectedInDraft": true,
+        "paperSlot": 0
+      }
+    },
+    {
+      "id": "draw_schedule",
+      "regionId": "money",
+      "regionSlot": 1,
+      "label": "Draw schedule",
+      "summary": "Draw windows, disbursement gates, and account sequencing.",
+      "metrics": {
+        "atomicCount": 22,
+        "sourceCount": 29,
+        "provenanceCount": 66,
+        "relationshipCount": 44,
+        "contractScopedCount": 16,
+        "densityPercent": 88
+      },
+      "representative": {
+        "id": "first_draw_window",
+        "label": "First construction draw",
+        "displayValue": "First draw follows the agreed readiness package",
+        "plainLanguage": "Money cannot move until the first-draw conditions are satisfied.",
+        "expectedInDraft": true,
+        "paperSlot": 1
+      }
+    },
+    {
+      "id": "reserves_and_contingency",
+      "regionId": "money",
+      "regionSlot": 2,
+      "label": "Reserves + contingency",
+      "summary": "Liquidity buffers, controlled accounts, and cost contingency.",
+      "metrics": {
+        "atomicCount": 20,
+        "sourceCount": 26,
+        "provenanceCount": 60,
+        "relationshipCount": 40,
+        "contractScopedCount": 12,
+        "densityPercent": 84
+      },
+      "representative": {
+        "id": "contingency_reserve",
+        "label": "Contingency reserve",
+        "displayValue": "Project contingency remains in a controlled account",
+        "plainLanguage": "A protected reserve is kept available for unexpected project costs.",
+        "expectedInDraft": true,
+        "paperSlot": 2
+      }
+    },
+    {
+      "id": "funding_conditions",
+      "regionId": "promises",
+      "regionSlot": 0,
+      "label": "Funding conditions",
+      "summary": "What must be funded, certified, or delivered before draws.",
+      "metrics": {
+        "atomicCount": 26,
+        "sourceCount": 31,
+        "provenanceCount": 78,
+        "relationshipCount": 52,
+        "contractScopedCount": 22,
+        "densityPercent": 95
+      },
+      "representative": {
+        "id": "noise_funding_certification",
+        "label": "Selected first-draw example",
+        "displayValue": "Before the first construction draw, sponsor deposits the noise-mitigation budget and an independent engineer certifies it is fully funded.",
+        "plainLanguage": "The noise-protection money must be deposited and independently checked before the first construction draw.",
+        "expectedInDraft": true,
+        "paperSlot": 3
+      }
+    },
+    {
+      "id": "reporting_controls",
+      "regionId": "promises",
+      "regionSlot": 1,
+      "label": "Reporting + controls",
+      "summary": "Reporting cadence, inspection evidence, and information rights.",
+      "metrics": {
+        "atomicCount": 18,
+        "sourceCount": 27,
+        "provenanceCount": 54,
+        "relationshipCount": 36,
+        "contractScopedCount": 14,
+        "densityPercent": 81
+      },
+      "representative": {
+        "id": "monthly_progress_package",
+        "label": "Monthly progress package",
+        "displayValue": "Monthly cost, schedule, and inspection reporting",
+        "plainLanguage": "The lender receives one clear monthly picture of progress.",
+        "expectedInDraft": true,
+        "paperSlot": 4
+      }
+    },
+    {
+      "id": "permitted_use",
+      "regionId": "promises",
+      "regionSlot": 2,
+      "label": "Permitted use",
+      "summary": "Which runway and infrastructure costs may use loan proceeds.",
+      "metrics": {
+        "atomicCount": 16,
+        "sourceCount": 22,
+        "provenanceCount": 48,
+        "relationshipCount": 32,
+        "contractScopedCount": 12,
+        "densityPercent": 77
+      },
+      "representative": {
+        "id": "eligible_project_costs",
+        "label": "Eligible project costs",
+        "displayValue": "Draws fund approved runway and supporting infrastructure costs",
+        "plainLanguage": "Loan money can only pay for the approved project.",
+        "expectedInDraft": true,
+        "paperSlot": 5
+      }
+    },
+    {
+      "id": "completion_support",
+      "regionId": "promises",
+      "regionSlot": 3,
+      "label": "Completion support",
+      "summary": "Completion tests, longstop dates, and sponsor support mechanics.",
+      "metrics": {
+        "atomicCount": 22,
+        "sourceCount": 30,
+        "provenanceCount": 66,
+        "relationshipCount": 44,
+        "contractScopedCount": 18,
+        "densityPercent": 89
+      },
+      "representative": {
+        "id": "completion_support_example",
+        "label": "Completion support",
+        "displayValue": "Sponsor support continues through the completion test",
+        "plainLanguage": "The sponsor remains responsible until the project passes its agreed completion test.",
+        "expectedInDraft": true,
+        "paperSlot": 6
+      }
+    },
+    {
+      "id": "institutional_continuity",
+      "regionId": "risks",
+      "regionSlot": 0,
+      "label": "Institutional continuity",
+      "summary": "Cross-organization routes, handoffs, and retained investigation history.",
+      "metrics": {
+        "atomicCount": 18,
+        "sourceCount": 24,
+        "provenanceCount": 54,
+        "relationshipCount": 36,
+        "contractScopedCount": 0,
+        "densityPercent": 86
+      },
+      "representative": {
+        "id": "historical_route",
+        "label": "Historical investigation route",
+        "displayValue": "Maya linked the financial, technical, legal, and stakeholder owners",
+        "plainLanguage": "Her prior navigation work remains inspectable after she leaves.",
+        "expectedInDraft": false,
+        "paperSlot": null
+      }
+    },
+    {
+      "id": "construction_delivery",
+      "regionId": "risks",
+      "regionSlot": 1,
+      "label": "Construction delivery",
+      "summary": "Cost, phasing, inspection, and runway-availability exposure.",
+      "metrics": {
+        "atomicCount": 26,
+        "sourceCount": 35,
+        "provenanceCount": 78,
+        "relationshipCount": 52,
+        "contractScopedCount": 10,
+        "densityPercent": 92
+      },
+      "representative": {
+        "id": "runway_phasing",
+        "label": "Runway phasing",
+        "displayValue": "Construction phases preserve required airport operations",
+        "plainLanguage": "The work is sequenced so the fictional airport can keep operating safely.",
+        "expectedInDraft": false,
+        "paperSlot": null
+      }
+    },
+    {
+      "id": "environmental_noise",
+      "regionId": "risks",
+      "regionSlot": 2,
+      "label": "Environment + noise",
+      "summary": "Noise exposure, environmental analysis, and mitigation dependencies.",
+      "metrics": {
+        "atomicCount": 24,
+        "sourceCount": 33,
+        "provenanceCount": 72,
+        "relationshipCount": 48,
+        "contractScopedCount": 8,
+        "densityPercent": 90
+      },
+      "representative": {
+        "id": "noise_exposure_window",
+        "label": "Noise exposure window",
+        "displayValue": "Mitigation timing follows the construction exposure window",
+        "plainLanguage": "Noise protections must be ready when disruptive construction begins.",
+        "expectedInDraft": false,
+        "paperSlot": null
+      }
+    },
+    {
+      "id": "stakeholder_alignment",
+      "regionId": "risks",
+      "regionSlot": 3,
+      "label": "Stakeholder alignment",
+      "summary": "Operating constraints and commitments spanning fourteen organizations.",
+      "metrics": {
+        "atomicCount": 20,
+        "sourceCount": 28,
+        "provenanceCount": 60,
+        "relationshipCount": 40,
+        "contractScopedCount": 6,
+        "densityPercent": 78
+      },
+      "representative": {
+        "id": "operating_alignment",
+        "label": "Operating alignment",
+        "displayValue": "Construction windows align with airport operating commitments",
+        "plainLanguage": "The project schedule respects the operating promises made to stakeholders.",
+        "expectedInDraft": false,
+        "paperSlot": null
+      }
+    },
+    {
+      "id": "credit_authority",
+      "regionId": "decisions",
+      "regionSlot": 0,
+      "label": "Credit authority",
+      "summary": "Approved terms, exceptions, and decision ownership.",
+      "metrics": {
+        "atomicCount": 24,
+        "sourceCount": 32,
+        "provenanceCount": 72,
+        "relationshipCount": 48,
+        "contractScopedCount": 4,
+        "densityPercent": 87
+      },
+      "representative": {
+        "id": "pricing_exception",
+        "label": "Pricing exception",
+        "displayValue": "Approved economics carry identified decision owners",
+        "plainLanguage": "Any exception can be traced to the people authorized to approve it.",
+        "expectedInDraft": false,
+        "paperSlot": null
+      }
+    },
+    {
+      "id": "closing_readiness",
+      "regionId": "decisions",
+      "regionSlot": 1,
+      "label": "Closing readiness",
+      "summary": "Conditions, document matches, and unresolved exceptions.",
+      "metrics": {
+        "atomicCount": 24,
+        "sourceCount": 30,
+        "provenanceCount": 72,
+        "relationshipCount": 48,
+        "contractScopedCount": 4,
+        "densityPercent": 94
+      },
+      "representative": {
+        "id": "closing_condition_clearance",
+        "label": "Closing condition clearance",
+        "displayValue": "No unresolved required-term mismatch at signing",
+        "plainLanguage": "The deal is ready only when remembered requirements match the checked paper.",
+        "expectedInDraft": true,
+        "paperSlot": 7
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "maya_relationships_origination",
+      "order": 0,
+      "railLabel": "Maya + origination",
+      "label": "Maya relationships and origination",
+      "summary": "The opening record establishes Project Asterline's facility and draw plan while preserving Maya Soren's institution-owned relationship routes after her Friday departure.",
+      "recordCount": 72,
+      "preloadedCount": 72,
+      "stagedLiveCount": 0,
+      "evidence": [
+        {
+          "id": "credit_authorization",
+          "order": 0,
+          "kind": "memo",
+          "kindLabel": "Credit memo",
+          "label": "CA-117 · approved credit authorization",
+          "stakeholder": "Harbor Glass Private Credit · credit committee",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": true },
+          "claims": [
+            { "clusterId": "capital_structure", "effect": "heard", "exampleIds": ["facility_commitment"] },
+            { "clusterId": "draw_schedule", "effect": "heard", "exampleIds": ["first_draw_window"] },
+            { "clusterId": "reserves_and_contingency", "effect": "heard", "exampleIds": ["contingency_reserve"] },
+            { "clusterId": "credit_authority", "effect": "heard", "exampleIds": ["pricing_exception"] },
+            { "clusterId": "closing_readiness", "effect": "heard", "exampleIds": ["closing_condition_clearance"] }
+          ]
+        },
+        {
+          "id": "opening_model",
+          "order": 1,
+          "kind": "model",
+          "kindLabel": "Financial model",
+          "label": "FM-018 · opening sources-and-uses model",
+          "stakeholder": "Asterline Infrastructure Holdings · treasury",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": true },
+          "historicalRelationship": "Historical edge: Maya noticed the facility model and draw plan were maintained by different organizations.",
+          "claims": [
+            { "clusterId": "capital_structure", "effect": "confirm", "exampleIds": ["facility_commitment"] },
+            { "clusterId": "draw_schedule", "effect": "confirm", "exampleIds": ["first_draw_window"] },
+            { "clusterId": "reserves_and_contingency", "effect": "confirm", "exampleIds": ["contingency_reserve"] }
+          ]
+        },
+        {
+          "id": "maya_departure_record",
+          "order": 2,
+          "kind": "note",
+          "kindLabel": "Transition note",
+          "label": "TR-011 · Friday, Sep 3 departure record",
+          "stakeholder": "Harbor Glass Private Credit · portfolio operations",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": false },
+          "historicalRelationship": "Historical provenance: Maya's authored navigation notes remain; Maya is no longer an active contact.",
+          "claims": [
+            { "clusterId": "institutional_continuity", "effect": "heard", "exampleIds": ["historical_route"] }
+          ]
+        }
+      ],
+      "clusterDeltas": [
+        { "clusterId": "capital_structure", "evidenceId": "opening_model", "atomicCount": 13, "sourceCount": 15, "provenanceCount": 37, "relationshipCount": 25, "contractScopedCount": 8 },
+        { "clusterId": "draw_schedule", "evidenceId": "opening_model", "atomicCount": 7, "sourceCount": 10, "provenanceCount": 22, "relationshipCount": 14, "contractScopedCount": 5 },
+        { "clusterId": "reserves_and_contingency", "evidenceId": "opening_model", "atomicCount": 6, "sourceCount": 8, "provenanceCount": 18, "relationshipCount": 12, "contractScopedCount": 4 },
+        { "clusterId": "institutional_continuity", "evidenceId": "maya_departure_record", "atomicCount": 4, "sourceCount": 5, "provenanceCount": 11, "relationshipCount": 7, "contractScopedCount": 0 },
+        { "clusterId": "credit_authority", "evidenceId": "credit_authorization", "atomicCount": 7, "sourceCount": 10, "provenanceCount": 22, "relationshipCount": 14, "contractScopedCount": 1 },
+        { "clusterId": "closing_readiness", "evidenceId": "credit_authorization", "atomicCount": 5, "sourceCount": 6, "provenanceCount": 14, "relationshipCount": 10, "contractScopedCount": 1 }
+      ]
+    },
+    {
+      "id": "economics_credit",
+      "order": 1,
+      "railLabel": "Economics + credit",
+      "label": "Economics and credit",
+      "summary": "Calls, models, counsel notes, and written follow-ups establish the broad economics, promise set, and owners of commercial and credit questions.",
+      "recordCount": 96,
+      "preloadedCount": 96,
+      "stagedLiveCount": 0,
+      "evidence": [
+        {
+          "id": "lender_sponsor_call",
+          "order": 0,
+          "kind": "call",
+          "kindLabel": "Microsoft Teams call summary",
+          "label": "Synthetic Teams · lender / sponsor working call",
+          "stakeholder": "Harbor Glass, Asterline Runway Company, and Asterline Infrastructure Holdings",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": true },
+          "historicalRelationship": "Historical edge: Maya asked which owner could substantiate each pre-draw condition.",
+          "claims": [
+            { "clusterId": "funding_conditions", "effect": "heard", "exampleIds": [] },
+            { "clusterId": "reporting_controls", "effect": "heard", "exampleIds": ["monthly_progress_package"] },
+            { "clusterId": "permitted_use", "effect": "heard", "exampleIds": ["eligible_project_costs"] },
+            { "clusterId": "completion_support", "effect": "heard", "exampleIds": ["completion_support_example"] },
+            { "clusterId": "stakeholder_alignment", "effect": "heard", "exampleIds": ["operating_alignment"] }
+          ]
+        },
+        {
+          "id": "counsel_notes",
+          "order": 1,
+          "kind": "notes",
+          "kindLabel": "SharePoint counsel notes",
+          "label": "Synthetic SharePoint · lender-counsel issues notes",
+          "stakeholder": "Juniper Ledger Counsel · lender counsel",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": true },
+          "claims": [
+            { "clusterId": "funding_conditions", "effect": "confirm", "exampleIds": [] },
+            { "clusterId": "reporting_controls", "effect": "confirm", "exampleIds": ["monthly_progress_package"] },
+            { "clusterId": "permitted_use", "effect": "confirm", "exampleIds": ["eligible_project_costs"] },
+            { "clusterId": "completion_support", "effect": "confirm", "exampleIds": ["completion_support_example"] }
+          ]
+        },
+        {
+          "id": "internal_message",
+          "order": 2,
+          "kind": "message",
+          "kindLabel": "Slack + WhatsApp messages",
+          "label": "Synthetic Slack + WhatsApp · cross-team follow-up",
+          "stakeholder": "Project finance, technical, and stakeholder teams",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": false },
+          "historicalRelationship": "Historical edge: Maya connected the operating-window questions to the construction review.",
+          "claims": [
+            { "clusterId": "stakeholder_alignment", "effect": "confirm", "exampleIds": ["operating_alignment"] }
+          ]
+        }
+      ],
+      "clusterDeltas": [
+        { "clusterId": "capital_structure", "evidenceId": "lender_sponsor_call", "atomicCount": 6, "sourceCount": 8, "provenanceCount": 19, "relationshipCount": 13, "contractScopedCount": 4 },
+        { "clusterId": "draw_schedule", "evidenceId": "lender_sponsor_call", "atomicCount": 5, "sourceCount": 7, "provenanceCount": 15, "relationshipCount": 10, "contractScopedCount": 4 },
+        { "clusterId": "reserves_and_contingency", "evidenceId": "lender_sponsor_call", "atomicCount": 4, "sourceCount": 5, "provenanceCount": 12, "relationshipCount": 8, "contractScopedCount": 2 },
+        { "clusterId": "funding_conditions", "evidenceId": "counsel_notes", "atomicCount": 5, "sourceCount": 6, "provenanceCount": 16, "relationshipCount": 11, "contractScopedCount": 5 },
+        { "clusterId": "reporting_controls", "evidenceId": "counsel_notes", "atomicCount": 5, "sourceCount": 8, "provenanceCount": 16, "relationshipCount": 11, "contractScopedCount": 4 },
+        { "clusterId": "permitted_use", "evidenceId": "counsel_notes", "atomicCount": 5, "sourceCount": 7, "provenanceCount": 14, "relationshipCount": 10, "contractScopedCount": 4 },
+        { "clusterId": "completion_support", "evidenceId": "counsel_notes", "atomicCount": 5, "sourceCount": 6, "provenanceCount": 13, "relationshipCount": 9, "contractScopedCount": 4 },
+        { "clusterId": "stakeholder_alignment", "evidenceId": "internal_message", "atomicCount": 4, "sourceCount": 6, "provenanceCount": 12, "relationshipCount": 8, "contractScopedCount": 1 }
+      ]
+    },
+    {
+      "id": "technical_construction",
+      "order": 2,
+      "railLabel": "Technical + construction",
+      "label": "Technical and construction",
+      "summary": "Technical evidence identifies the budget, engineering responsibility, schedule exposure, and the still-unfinished two-part first-draw path.",
+      "recordCount": 112,
+      "preloadedCount": 112,
+      "stagedLiveCount": 0,
+      "evidence": [
+        {
+          "id": "construction_estimate",
+          "order": 0,
+          "kind": "estimate",
+          "kindLabel": "Construction estimate",
+          "label": "CE-041 · construction and contingency estimate",
+          "stakeholder": "Copper Kite Construction · chief estimator",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": false },
+          "claims": [
+            { "clusterId": "construction_delivery", "effect": "heard", "exampleIds": ["runway_phasing"] },
+            { "clusterId": "environmental_noise", "effect": "heard", "exampleIds": ["noise_exposure_window"] },
+            { "clusterId": "reserves_and_contingency", "effect": "confirm", "exampleIds": ["contingency_reserve"] }
+          ]
+        },
+        {
+          "id": "noise_budget_model",
+          "order": 1,
+          "kind": "model",
+          "kindLabel": "Noise budget model",
+          "label": "FS-044 · approved mitigation funding schedule",
+          "stakeholder": "Asterline Infrastructure Holdings · treasury",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": true },
+          "historicalRelationship": "Historical edge: Maya noticed the amount support did not by itself establish the obligation.",
+          "claims": [
+            { "clusterId": "funding_conditions", "effect": "heard", "exampleIds": ["noise_funding_certification"] },
+            { "clusterId": "environmental_noise", "effect": "heard", "exampleIds": ["noise_exposure_window"] }
+          ]
+        },
+        {
+          "id": "engineer_scope",
+          "order": 2,
+          "kind": "report",
+          "kindLabel": "Engineering report",
+          "label": "ER-119 · independent engineer review · page 4",
+          "stakeholder": "Clearspan Engineering · Ada Rook",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": true },
+          "historicalRelationship": "Historical edge: Maya followed the certification dependency to the independent engineer.",
+          "claims": [
+            { "clusterId": "funding_conditions", "effect": "heard", "exampleIds": ["noise_funding_certification"] },
+            { "clusterId": "construction_delivery", "effect": "confirm", "exampleIds": ["runway_phasing"] }
+          ]
+        },
+        {
+          "id": "environmental_analysis",
+          "order": 3,
+          "kind": "analysis",
+          "kindLabel": "Environmental analysis",
+          "label": "NA-072 · runway noise and mitigation analysis",
+          "stakeholder": "Hushline Acoustics and Cedarline Environmental Advisory",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": false },
+          "claims": [
+            { "clusterId": "environmental_noise", "effect": "confirm", "exampleIds": ["noise_exposure_window"] }
+          ]
+        },
+        {
+          "id": "inspection_report",
+          "order": 4,
+          "kind": "inspection",
+          "kindLabel": "Inspection report",
+          "label": "IR-061 · runway works inspection sequence",
+          "stakeholder": "Clearspan Engineering · inspection team",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": false },
+          "claims": [
+            { "clusterId": "completion_support", "effect": "confirm", "exampleIds": ["completion_support_example"] }
+          ]
+        }
+      ],
+      "clusterDeltas": [
+        { "clusterId": "draw_schedule", "evidenceId": "noise_budget_model", "atomicCount": 5, "sourceCount": 6, "provenanceCount": 15, "relationshipCount": 10, "contractScopedCount": 3 },
+        { "clusterId": "reserves_and_contingency", "evidenceId": "construction_estimate", "atomicCount": 6, "sourceCount": 8, "provenanceCount": 18, "relationshipCount": 12, "contractScopedCount": 4 },
+        { "clusterId": "funding_conditions", "evidenceId": "engineer_scope", "atomicCount": 5, "sourceCount": 6, "provenanceCount": 15, "relationshipCount": 10, "contractScopedCount": 4 },
+        { "clusterId": "completion_support", "evidenceId": "inspection_report", "atomicCount": 7, "sourceCount": 9, "provenanceCount": 20, "relationshipCount": 13, "contractScopedCount": 5 },
+        { "clusterId": "construction_delivery", "evidenceId": "construction_estimate", "atomicCount": 15, "sourceCount": 21, "provenanceCount": 47, "relationshipCount": 31, "contractScopedCount": 6 },
+        { "clusterId": "environmental_noise", "evidenceId": "environmental_analysis", "atomicCount": 10, "sourceCount": 13, "provenanceCount": 29, "relationshipCount": 19, "contractScopedCount": 3 }
+      ]
+    },
+    {
+      "id": "authority_stakeholder_context",
+      "order": 3,
+      "railLabel": "Authority + context",
+      "label": "Authority and stakeholder context",
+      "summary": "Stakeholder evidence broadens the risk picture. A synthetic news summary is heard-only and cannot confirm a promise, close a gap, or change readiness.",
+      "recordCount": 72,
+      "preloadedCount": 72,
+      "stagedLiveCount": 0,
+      "evidence": [
+        {
+          "id": "airport_meeting",
+          "order": 0,
+          "kind": "meeting",
+          "kindLabel": "Stakeholder meeting",
+          "label": "SM-088 · airport operating-window meeting",
+          "stakeholder": "ProjectCo, airport office, airline, and contractor",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": false },
+          "claims": [
+            { "clusterId": "stakeholder_alignment", "effect": "confirm", "exampleIds": ["operating_alignment"] }
+          ]
+        },
+        {
+          "id": "sponsor_email",
+          "order": 1,
+          "kind": "email",
+          "kindLabel": "Email",
+          "label": "Synthetic email · reporting and operating follow-up",
+          "stakeholder": "Asterline Runway Company · program director",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": false },
+          "claims": [
+            { "clusterId": "reporting_controls", "effect": "confirm", "exampleIds": ["monthly_progress_package"] }
+          ]
+        },
+        {
+          "id": "community_notes",
+          "order": 2,
+          "kind": "notes",
+          "kindLabel": "Community notes",
+          "label": "CN-031 · mitigation question log",
+          "stakeholder": "Aster Point Community Air Forum",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": false, "canBlock": false },
+          "claims": [
+            { "clusterId": "environmental_noise", "effect": "heard", "exampleIds": ["noise_exposure_window"] },
+            { "clusterId": "stakeholder_alignment", "effect": "heard", "exampleIds": ["operating_alignment"] }
+          ]
+        },
+        {
+          "id": "public_coverage",
+          "order": 3,
+          "kind": "synthetic_external_news_summary",
+          "kindLabel": "Synthetic news summary",
+          "label": "Quiet external summary · runway-noise concern",
+          "stakeholder": "Invented public reporting · no real outlet",
+          "timestamp": "2027-07-28T08:40:00-07:00",
+          "timestampLabel": "Jul 28 · 08:40 PT",
+          "origin": "external",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": false, "canBlock": false },
+          "claims": [
+            { "clusterId": "environmental_noise", "effect": "heard", "exampleIds": [] }
+          ]
+        }
+      ],
+      "clusterDeltas": [
+        { "clusterId": "reporting_controls", "evidenceId": "sponsor_email", "atomicCount": 4, "sourceCount": 6, "provenanceCount": 11, "relationshipCount": 7, "contractScopedCount": 3 },
+        { "clusterId": "permitted_use", "evidenceId": "airport_meeting", "atomicCount": 3, "sourceCount": 4, "provenanceCount": 10, "relationshipCount": 6, "contractScopedCount": 2 },
+        { "clusterId": "completion_support", "evidenceId": "airport_meeting", "atomicCount": 2, "sourceCount": 3, "provenanceCount": 7, "relationshipCount": 4, "contractScopedCount": 2 },
+        { "clusterId": "institutional_continuity", "evidenceId": "community_notes", "atomicCount": 3, "sourceCount": 5, "provenanceCount": 11, "relationshipCount": 7, "contractScopedCount": 0 },
+        { "clusterId": "construction_delivery", "evidenceId": "airport_meeting", "atomicCount": 3, "sourceCount": 4, "provenanceCount": 8, "relationshipCount": 5, "contractScopedCount": 1 },
+        { "clusterId": "environmental_noise", "evidenceId": "public_coverage", "atomicCount": 7, "sourceCount": 10, "provenanceCount": 22, "relationshipCount": 15, "contractScopedCount": 3 },
+        { "clusterId": "stakeholder_alignment", "evidenceId": "airport_meeting", "atomicCount": 10, "sourceCount": 14, "provenanceCount": 30, "relationshipCount": 20, "contractScopedCount": 3 }
+      ]
+    },
+    {
+      "id": "historical_relationships_recovery",
+      "order": 4,
+      "railLabel": "Relationships + recovery",
+      "label": "Historical relationships and post-departure recovery",
+      "summary": "Monday through Wednesday, Deal Witness uses Maya's historical edges to rank Ada Rook, rejects a vague reply, obtains a sourced technical answer, retrieves Ren Ito's approved record, and prepares the EverOS capture.",
+      "recordCount": 78,
+      "preloadedCount": 78,
+      "stagedLiveCount": 0,
+      "evidence": [
+        {
+          "id": "term_sheet_markup",
+          "order": 0,
+          "kind": "markup",
+          "kindLabel": "Legal markup",
+          "label": "MK-207 · approved financing-condition markup",
+          "stakeholder": "Harbor Glass Private Credit and Harbor Glass Private Credit",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": true },
+          "historicalRelationship": "Historical edge: Maya connected the financing condition to the independent-engineer scope.",
+          "claims": [
+            { "clusterId": "capital_structure", "effect": "confirm", "exampleIds": ["facility_commitment"] },
+            { "clusterId": "draw_schedule", "effect": "confirm", "exampleIds": ["first_draw_window"] },
+            { "clusterId": "funding_conditions", "effect": "heard", "exampleIds": ["noise_funding_certification"] },
+            { "clusterId": "reporting_controls", "effect": "confirm", "exampleIds": ["monthly_progress_package"] },
+            { "clusterId": "permitted_use", "effect": "confirm", "exampleIds": ["eligible_project_costs"] },
+            { "clusterId": "completion_support", "effect": "confirm", "exampleIds": ["completion_support_example"] },
+            { "clusterId": "credit_authority", "effect": "confirm", "exampleIds": ["pricing_exception"] },
+            { "clusterId": "closing_readiness", "effect": "confirm", "exampleIds": ["closing_condition_clearance"] }
+          ]
+        },
+        {
+          "id": "approval_memo",
+          "order": 1,
+          "kind": "approval",
+          "kindLabel": "Approval memo",
+          "label": "CA-117 · prior credit-approval record",
+          "stakeholder": "Harbor Glass Private Credit · credit committee",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": true },
+          "claims": [
+            { "clusterId": "reserves_and_contingency", "effect": "confirm", "exampleIds": ["contingency_reserve"] },
+            { "clusterId": "credit_authority", "effect": "confirm", "exampleIds": ["pricing_exception"] }
+          ]
+        },
+        {
+          "id": "draft_checklist",
+          "order": 2,
+          "kind": "checklist",
+          "kindLabel": "Closing checklist",
+          "label": "source-0418 · stored closing requirements index",
+          "stakeholder": "Harbor Glass closing team and Harbor Glass Private Credit",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": true },
+          "claims": [
+            { "clusterId": "closing_readiness", "effect": "confirm", "exampleIds": ["closing_condition_clearance"] }
+          ]
+        },
+        {
+          "id": "maya_historical_crosswalk",
+          "order": 3,
+          "kind": "crosswalk",
+          "kindLabel": "Historical relationship receipt",
+          "label": "MF-301 · Maya-to-Ada and Maya-to-Ren relationship edges",
+          "stakeholder": "Historical provenance · Maya Soren unavailable",
+          "occurredAt": "2027-08-27T15:00:00.000Z",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": false, "canBlock": false },
+          "historicalRelationship": "Maya's institution-owned relationship memory links Ada Rook to engineering evidence and Ren Ito to approved legal records; it routes the search but proves neither fact.",
+          "claims": [
+            { "clusterId": "institutional_continuity", "effect": "heard", "exampleIds": ["historical_route"] },
+            { "clusterId": "funding_conditions", "effect": "heard", "exampleIds": ["noise_funding_certification"] }
+          ]
+        },
+        {
+          "id": "gap_exposure",
+          "order": 4,
+          "kind": "analysis",
+          "kindLabel": "Memory-gap analysis",
+          "label": "source-0425 · Monday unfinished first-draw path",
+          "stakeholder": "Deal Witness · institution-owned analysis",
+          "occurredAt": "2027-09-06T09:00:00.000Z",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": false, "canBlock": false },
+          "claims": [
+            { "clusterId": "funding_conditions", "effect": "heard", "exampleIds": ["noise_funding_certification"] }
+          ]
+        },
+        {
+          "id": "expert_ranking",
+          "order": 5,
+          "kind": "directory",
+          "kindLabel": "Who Knows What ranking",
+          "label": "Derived ranking · source-0424 + source-0425",
+          "stakeholder": "Deal Witness · source-backed expert recovery",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": false, "canBlock": false },
+          "claims": [
+            { "clusterId": "funding_conditions", "effect": "heard", "exampleIds": ["noise_funding_certification"] }
+          ]
+        },
+        {
+          "id": "question_to_expert",
+          "order": 6,
+          "kind": "prepared_call",
+          "kindLabel": "Prepared simulation",
+          "label": "source-0427 · evidence-grounded question to Ada Rook",
+          "stakeholder": "Clearspan Engineering · Ada Rook",
+          "occurredAt": "2027-09-06T09:30:00.000Z",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": false, "canBlock": false },
+          "claims": [
+            { "clusterId": "funding_conditions", "effect": "heard", "exampleIds": ["noise_funding_certification"] }
+          ]
+        },
+        {
+          "id": "expert_vague_reply",
+          "order": 7,
+          "kind": "transcript",
+          "kindLabel": "Prepared-call transcript",
+          "label": "source-0426 · Ada's vague reply · rejected",
+          "stakeholder": "Ada Rook · Clearspan Engineering",
+          "occurredAt": "2027-09-06T09:45:00.000Z",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": false, "canBlock": false },
+          "claims": [
+            { "clusterId": "funding_conditions", "effect": "heard", "exampleIds": ["noise_funding_certification"] }
+          ]
+        },
+        {
+          "id": "expert_answer",
+          "order": 8,
+          "kind": "answer",
+          "kindLabel": "Sourced expert answer",
+          "label": "source-0428 · Tuesday · Ada Rook sourced engineering answer",
+          "stakeholder": "Ada Rook · Clearspan Engineering",
+          "occurredAt": "2027-09-07T14:00:00.000Z",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": false },
+          "claims": [
+            { "clusterId": "funding_conditions", "effect": "confirm", "exampleIds": ["noise_funding_certification"] }
+          ]
+        },
+        {
+          "id": "approved_record_retrieval",
+          "order": 9,
+          "kind": "approval",
+          "kindLabel": "Approved internal record",
+          "label": "source-0429 · Wednesday retrieval · Ren Ito approved committee record",
+          "stakeholder": "Ren Ito · Harbor Glass Private Credit",
+          "occurredAt": "2027-09-08T15:50:00.000Z",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": true },
+          "claims": [
+            { "clusterId": "funding_conditions", "effect": "confirm", "exampleIds": ["noise_funding_certification"] }
+          ]
+        },
+        {
+          "id": "everos_receipt",
+          "order": 10,
+          "kind": "memory",
+          "kindLabel": "Prepared EverOS capture",
+          "label": "source-0430 · Wednesday · answer, attribution, receipts, and recipe",
+          "stakeholder": "Institution-owned prepared demo capture",
+          "occurredAt": "2027-09-08T16:45:00.000Z",
+          "origin": "approved",
+          "loadMode": "preloaded_metadata",
+          "governance": { "canConfirm": true, "canBlock": false },
+          "claims": [
+            { "clusterId": "institutional_continuity", "effect": "confirm", "exampleIds": ["historical_route"] }
+          ]
+        }
+      ],
+      "clusterDeltas": [
+        { "clusterId": "capital_structure", "evidenceId": "term_sheet_markup", "atomicCount": 9, "sourceCount": 11, "provenanceCount": 28, "relationshipCount": 18, "contractScopedCount": 6 },
+        { "clusterId": "draw_schedule", "evidenceId": "term_sheet_markup", "atomicCount": 5, "sourceCount": 6, "provenanceCount": 14, "relationshipCount": 10, "contractScopedCount": 4 },
+        { "clusterId": "reserves_and_contingency", "evidenceId": "approval_memo", "atomicCount": 4, "sourceCount": 5, "provenanceCount": 12, "relationshipCount": 8, "contractScopedCount": 2 },
+        { "clusterId": "funding_conditions", "evidenceId": "approved_record_retrieval", "atomicCount": 16, "sourceCount": 19, "provenanceCount": 47, "relationshipCount": 31, "contractScopedCount": 13 },
+        { "clusterId": "reporting_controls", "evidenceId": "term_sheet_markup", "atomicCount": 9, "sourceCount": 13, "provenanceCount": 27, "relationshipCount": 18, "contractScopedCount": 7 },
+        { "clusterId": "permitted_use", "evidenceId": "term_sheet_markup", "atomicCount": 8, "sourceCount": 11, "provenanceCount": 24, "relationshipCount": 16, "contractScopedCount": 6 },
+        { "clusterId": "completion_support", "evidenceId": "term_sheet_markup", "atomicCount": 8, "sourceCount": 12, "provenanceCount": 26, "relationshipCount": 18, "contractScopedCount": 7 },
+        { "clusterId": "institutional_continuity", "evidenceId": "everos_receipt", "atomicCount": 11, "sourceCount": 14, "provenanceCount": 32, "relationshipCount": 22, "contractScopedCount": 0 },
+        { "clusterId": "construction_delivery", "evidenceId": "maya_historical_crosswalk", "atomicCount": 8, "sourceCount": 10, "provenanceCount": 23, "relationshipCount": 16, "contractScopedCount": 3 },
+        { "clusterId": "environmental_noise", "evidenceId": "maya_historical_crosswalk", "atomicCount": 7, "sourceCount": 10, "provenanceCount": 21, "relationshipCount": 14, "contractScopedCount": 2 },
+        { "clusterId": "stakeholder_alignment", "evidenceId": "maya_historical_crosswalk", "atomicCount": 6, "sourceCount": 8, "provenanceCount": 18, "relationshipCount": 12, "contractScopedCount": 2 },
+        { "clusterId": "credit_authority", "evidenceId": "approval_memo", "atomicCount": 17, "sourceCount": 22, "provenanceCount": 50, "relationshipCount": 34, "contractScopedCount": 3 },
+        { "clusterId": "closing_readiness", "evidenceId": "draft_checklist", "atomicCount": 19, "sourceCount": 24, "provenanceCount": 58, "relationshipCount": 38, "contractScopedCount": 3 }
+      ]
+    },
+    {
+      "id": "financing_draft_v7",
+      "order": 5,
+      "railLabel": "Thursday · v7",
+      "label": "Financing draft v7",
+      "summary": "Thursday morning's staged synthetic draft contains 143 of 144 expected contract-scoped items and omits the selected example.",
+      "recordCount": 1,
+      "preloadedCount": 0,
+      "stagedLiveCount": 1,
+      "evidence": [
+        {
+          "id": "draft_v7",
+          "order": 0,
+          "kind": "draft",
+          "kindLabel": "Financing draft v7",
+          "label": "source-0431 · Thu 09:12 · staged demo input 431 of 432",
+          "stakeholder": "Lender and borrower counsel · wholly synthetic draft",
+          "occurredAt": "2027-09-09T09:12:00.000Z",
+          "origin": "approved",
+          "loadMode": "staged_live",
+          "governance": { "canConfirm": false, "canBlock": false },
+          "claims": []
+        }
+      ],
+      "clusterDeltas": []
+    },
+    {
+      "id": "financing_draft_v8",
+      "order": 6,
+      "railLabel": "Thursday · v8",
+      "label": "Financing draft v8 corrected",
+      "summary": "Thursday afternoon's corrected synthetic draft contains all 144 expected contract-scoped items, including the selected example.",
+      "recordCount": 1,
+      "preloadedCount": 0,
+      "stagedLiveCount": 1,
+      "evidence": [
+        {
+          "id": "draft_v8",
+          "order": 0,
+          "kind": "draft",
+          "kindLabel": "Financing draft v8 corrected",
+          "label": "source-0432 · Thu 15:40 · staged demo input 432 of 432",
+          "stakeholder": "Lender and borrower counsel · wholly synthetic draft",
+          "occurredAt": "2027-09-09T15:40:00.000Z",
+          "origin": "approved",
+          "loadMode": "staged_live",
+          "governance": { "canConfirm": false, "canBlock": false },
+          "claims": []
+        }
+      ],
+      "clusterDeltas": []
+    }
+  ],
+  "knowledgeDirectory": {
+    "kicker": "Who Knows What · source-backed recovery",
+    "title": "Rank the people who can actually close this gap",
+    "summary": "Historical relationship edges identify candidates. Capability and receipts determine who is contacted.",
+    "historicalNote": "Maya's historical edges help navigate the route; she is not an active contact.",
+    "capabilityLegend": [
+      { "id": "likely_knows", "icon": "?", "label": "Likely knows", "description": "Can orient the investigation but cannot close it alone." },
+      { "id": "can_certify", "icon": "◎", "label": "Can provide evidence / certify", "description": "Owns the evidence or professional certification needed to close the gap." },
+      { "id": "authorized_approve", "icon": "◆", "label": "Authorized to approve", "description": "Can authorize the operative legal or credit decision." }
+    ],
+    "contacts": [
+      {
+        "id": "ada_rook",
+        "rank": 1,
+        "name": "Ada Rook",
+        "role": "Independent-engineering director",
+        "organization": "Clearspan Engineering",
+        "subjectAreas": ["independent certification", "first-draw engineering conditions", "inspection evidence"],
+        "contactChannel": "Prepared simulation · browser-local transcript",
+        "capability": "can_certify",
+        "why": "ER-119 names Ada as the accountable independent engineer, and the historical route links her review to FS-044 and MK-207.",
+        "receiptIds": ["engineer_scope", "noise_budget_model", "term_sheet_markup", "maya_historical_crosswalk"],
+        "selected": true
+      },
+      {
+        "id": "ren_ito",
+        "rank": 2,
+        "name": "Ren Ito",
+        "role": "Credit committee chair",
+        "organization": "Harbor Glass Private Credit",
+        "subjectAreas": ["operative condition language", "legal approval", "closing drafting"],
+        "contactChannel": "Prepared simulation · approval follow-up",
+        "capability": "authorized_approve",
+        "why": "MK-207 carries her committee-approved condition and identifies who can authorize the legal wording.",
+        "receiptIds": ["term_sheet_markup", "counsel_notes", "draft_checklist", "approved_record_retrieval"],
+        "selected": false
+      },
+      {
+        "id": "talia_wren",
+        "rank": 3,
+        "name": "Talia Wren",
+        "role": "Project-controls lead",
+        "organization": "Asterline Runway Partners",
+        "subjectAreas": ["mitigation estimate", "construction contingency", "cost basis"],
+        "contactChannel": "Prepared simulation · estimate review",
+        "capability": "likely_knows",
+        "why": "CE-041 supports the mitigation amount, but Talia cannot certify the condition or approve legal language.",
+        "receiptIds": ["construction_estimate", "noise_budget_model"],
+        "selected": false
+      }
+    ]
+  },
+  "completionLoop": {
+    "kicker": "Active memory completion · post-departure replay",
+    "title": "A precise gap becomes a reusable institutional trail",
+    "modeLabel": "Prepared simulation · transcript and receipts are authoritative",
+    "stages": [
+      { "id": "ingest", "label": "Ingest evidence" },
+      { "id": "map", "label": "Map what is known" },
+      { "id": "expose", "label": "Expose a gap" },
+      { "id": "identify", "label": "Identify the expert" },
+      { "id": "ask", "label": "Ask with receipts" },
+      { "id": "capture", "label": "Capture substance" },
+      { "id": "update", "label": "Update memory" },
+      { "id": "use", "label": "Use it later" }
+    ],
+    "simulation": {
+      "label": "Prepared simulation",
+      "title": "Recovery call · Ada Rook",
+      "authorityLabel": "Transcript + cited receipts are the authority",
+      "playLabel": "Play prepared call",
+      "muteLabel": "Mute",
+      "unmuteLabel": "Unmute",
+      "skipLabel": "Skip audio",
+      "silentFallback": "Audio is optional. Every word remains visible in the transcript.",
+      "utteranceEntryIds": ["question_ada", "ada_vague", "followup_ada", "ada_substantive"]
+    },
+    "transcript": [
+      {
+        "id": "gap_explanation",
+        "stageId": "expose",
+        "speaker": "Deal Witness",
+        "role": "Memory-gap analysis",
+        "text": "The funding model carries the budget and the engineering package mentions certification, but the remembered trail does not yet tie both actions to the first construction draw.",
+        "substantive": false,
+        "status": "question",
+        "evidenceIds": ["noise_budget_model", "engineer_scope", "term_sheet_markup", "maya_historical_crosswalk"]
+      },
+      {
+        "id": "ranking_result",
+        "stageId": "identify",
+        "speaker": "Deal Witness",
+        "role": "Who Knows What ranking",
+        "text": "Ada Rook ranks first because ER-119 identifies her as independent-engineering director. Ren Ito can approve wording; Talia Wren supports the amount. Historical Maya edges explain the route, but Maya is not contacted.",
+        "substantive": false,
+        "status": "routing",
+        "evidenceIds": ["engineer_scope", "term_sheet_markup", "construction_estimate", "maya_historical_crosswalk"]
+      },
+      {
+        "id": "question_ada",
+        "stageId": "ask",
+        "speaker": "Deal Witness",
+        "role": "Prepared simulation · question",
+        "text": "FS-044 carries the mitigation budget, ER-119 identifies independent certification, and MK-207 contains the approved condition. Before the first construction draw, who must do what, and which receipts establish both parts?",
+        "substantive": false,
+        "status": "question",
+        "evidenceIds": ["noise_budget_model", "engineer_scope", "term_sheet_markup"]
+      },
+      {
+        "id": "ada_vague",
+        "stageId": "capture",
+        "speaker": "Ada Rook",
+        "role": "Prepared simulation · independent-engineering director",
+        "text": "It was handled in the engineering package; the draw should be okay.",
+        "substantive": false,
+        "status": "vague",
+        "evidenceIds": ["expert_vague_reply"]
+      },
+      {
+        "id": "followup_ada",
+        "stageId": "ask",
+        "speaker": "Deal Witness",
+        "role": "Evidence-grounded follow-up",
+        "text": "I cannot close the gap from “should be okay.” Please state the actor, action, timing, certification, and approved source citations in one sentence.",
+        "substantive": false,
+        "status": "question",
+        "evidenceIds": ["noise_budget_model", "engineer_scope", "term_sheet_markup"]
+      },
+      {
+        "id": "ada_substantive",
+        "stageId": "capture",
+        "speaker": "Ada Rook",
+        "role": "Prepared simulation · sourced expert answer",
+        "text": "Before the first construction draw, sponsor deposits the noise-mitigation budget and an independent engineer certifies it is fully funded. ER-119 page 4 is my certification basis, FS-044 line 18 is the approved budget, and MK-207 §4.2(b) is the committee-approved condition.",
+        "substantive": true,
+        "status": "substantive",
+        "evidenceIds": ["expert_answer", "engineer_scope", "noise_budget_model", "term_sheet_markup"]
+      },
+      {
+        "id": "ren_approved_record",
+        "stageId": "update",
+        "speaker": "Ren Ito",
+        "role": "Approved-record owner · Wednesday",
+        "text": "Source-0429 is the approved committee record: deposit and independent certification are required before lenders release the first construction draw.",
+        "substantive": true,
+        "status": "substantive",
+        "evidenceIds": ["approved_record_retrieval"]
+      },
+      {
+        "id": "memory_stored",
+        "stageId": "update",
+        "speaker": "EverOS",
+        "role": "Historical completion receipt · stored Wednesday",
+        "text": "Source-0430 preserves Ada's substantive answer, Ren's approved record, the cited receipts, Maya's historical navigation edge, and a reusable investigation recipe. It is a replay of preloaded metadata, not a shown live write.",
+        "substantive": true,
+        "status": "stored",
+        "evidenceIds": ["everos_receipt", "expert_answer", "approved_record_retrieval", "maya_historical_crosswalk"]
+      }
+    ],
+    "answerEntryId": "ada_substantive",
+    "closureEntryId": "ada_substantive",
+    "receiptEntryId": "memory_stored",
+    "receipt": {
+      "label": "EverOS · source-0430 · stored Wednesday · preloaded replay",
+      "title": "Answer + attribution + receipts + investigation recipe",
+      "items": [
+        "Ada Rook · sourced technical answer · Tuesday",
+        "Ren Ito · approved record · Wednesday",
+        "Maya Soren · historical relationship route only · MF-301",
+        "Institution-owned work memory · reusable after departure"
+      ],
+      "recipe": "Find the hollow path; rank accountable evidence owners; require actor, action, timing, certification, and citations; retrieve approval; preserve the route; check the current draft."
+    }
+  },
+  "drafts": [
+    {
+      "id": "closing_v7",
+      "sourceId": "financing_draft_v7",
+      "evidenceId": "draft_v7",
+      "label": "Closing draft · v7",
+      "revisionLabel": "Record 431 / 432 · staged demo input · Thu 09:12",
+      "links": [
+        { "exampleId": "facility_commitment", "excerpt": "Facility commitment: up to $380,000,000 in delayed-draw term loans." },
+        { "exampleId": "first_draw_window", "excerpt": "Initial construction draw occurs after delivery of the readiness package." },
+        { "exampleId": "contingency_reserve", "excerpt": "The project contingency is maintained in the controlled reserve account." },
+        { "exampleId": "monthly_progress_package", "excerpt": "Monthly reporting includes cost, schedule, and independent inspection status." },
+        { "exampleId": "eligible_project_costs", "excerpt": "Proceeds are limited to approved runway and supporting infrastructure costs." },
+        { "exampleId": "completion_support_example", "excerpt": "Sponsor completion support continues until the agreed completion test is met." },
+        { "exampleId": "closing_condition_clearance", "excerpt": "All remaining closing conditions must be satisfied or expressly waived." }
+      ]
+    },
+    {
+      "id": "closing_v8",
+      "sourceId": "financing_draft_v8",
+      "evidenceId": "draft_v8",
+      "revisionOf": "closing_v7",
+      "label": "Corrected closing draft · v8",
+      "revisionLabel": "Record 432 / 432 · staged demo input · Thu 15:40",
+      "links": [
+        { "exampleId": "facility_commitment", "excerpt": "Facility commitment: up to $380,000,000 in delayed-draw term loans." },
+        { "exampleId": "first_draw_window", "excerpt": "Initial construction draw occurs after delivery of the readiness package." },
+        { "exampleId": "contingency_reserve", "excerpt": "The project contingency is maintained in the controlled reserve account." },
+        { "exampleId": "noise_funding_certification", "excerpt": "Before the first construction draw, sponsor deposits the noise-mitigation budget and an independent engineer certifies it is fully funded." },
+        { "exampleId": "monthly_progress_package", "excerpt": "Monthly reporting includes cost, schedule, and independent inspection status." },
+        { "exampleId": "eligible_project_costs", "excerpt": "Proceeds are limited to approved runway and supporting infrastructure costs." },
+        { "exampleId": "completion_support_example", "excerpt": "Sponsor completion support continues until the agreed completion test is met." },
+        { "exampleId": "closing_condition_clearance", "excerpt": "All remaining closing conditions must be satisfied or expressly waived." }
+      ]
+    }
+  ],
+  "presentation": {
+    "decisionReasons": {
+      "REVIEWING": "Evidence is still being compressed or a representative gap remains open.",
+      "READY": "The demonstrated memory path is source-backed and the current checked paper has no shown mismatch.",
+      "HOLD_FOR_REVIEW": "Approved deal evidence confirms a required term that is absent from the checked draft."
+    },
+    "steps": [
+      {
+        "id": "impossible_volume",
+        "sourceThroughId": "maya_relationships_origination",
+        "evidenceThroughId": "maya_departure_record",
+        "draftId": null,
+        "decision": "REVIEWING",
+        "eyebrow": "01 · Monday",
+        "title": "Maya is already gone. The deal closes Friday.",
+        "narration": "Nine months. Fourteen organizations. Thirty-six people. Her institution-owned work routes remain; her judgment is not cloned.",
+        "historicalStatus": "Departed Friday, Sep 3 · unavailable Monday",
+        "riverMode": "volume",
+        "loopStageId": "ingest",
+        "transcriptThroughId": null,
+        "selectedExampleId": null,
+        "knowledgeState": "hidden",
+        "durationMs": 12000
+      },
+      {
+        "id": "evidence_river",
+        "sourceThroughId": "technical_construction",
+        "evidenceThroughId": "inspection_report",
+        "draftId": null,
+        "decision": "REVIEWING",
+        "eyebrow": "02 · Monday · Ingest",
+        "title": "430 records flow in",
+        "narration": "Synthetic Teams, Slack, WhatsApp, email, SharePoint, models, and documents replay from fixture metadata—not live connectors.",
+        "historicalStatus": "Every route stays attached to a receipt",
+        "riverMode": "flow",
+        "loopStageId": "ingest",
+        "transcriptThroughId": null,
+        "selectedExampleId": null,
+        "knowledgeState": "hidden",
+        "durationMs": 17000
+      },
+      {
+        "id": "compress_map",
+        "sourceThroughId": "authority_stakeholder_context",
+        "evidenceThroughId": "public_coverage",
+        "draftId": null,
+        "decision": "REVIEWING",
+        "eyebrow": "03 · Map",
+        "title": "A navigable memory takes shape",
+        "narration": "288 items compress into 13 stable clusters and 24 investigation paths.",
+        "historicalStatus": "Financial, technical, legal, and stakeholder routes remain navigable",
+        "riverMode": "compress",
+        "loopStageId": "map",
+        "transcriptThroughId": null,
+        "selectedExampleId": null,
+        "knowledgeState": "hidden",
+        "durationMs": 17000
+      },
+      {
+        "id": "historical_paths",
+        "sourceThroughId": "historical_relationships_recovery",
+        "evidenceThroughId": "maya_historical_crosswalk",
+        "draftId": null,
+        "decision": "REVIEWING",
+        "eyebrow": "04 · Monday · Navigate",
+        "title": "Eight paths are still hollow",
+        "narration": "Maya's historical edges route the search. They do not prove the answer.",
+        "historicalStatus": "Historical contribution attributed · Maya unavailable",
+        "riverMode": "paths",
+        "loopStageId": "expose",
+        "transcriptThroughId": "gap_explanation",
+        "selectedExampleId": null,
+        "knowledgeState": "hidden",
+        "durationMs": 15000
+      },
+      {
+        "id": "expose_gap",
+        "sourceThroughId": "historical_relationships_recovery",
+        "evidenceThroughId": "expert_ranking",
+        "draftId": null,
+        "decision": "REVIEWING",
+        "eyebrow": "05 · Monday · Rank",
+        "title": "Who should know?",
+        "narration": "One of 144 contract-scoped items opens. Ada can certify; Ren can approve.",
+        "historicalStatus": "Maya remains historical provenance only",
+        "riverMode": "paths",
+        "loopStageId": "identify",
+        "transcriptThroughId": "ranking_result",
+        "selectedExampleId": "noise_funding_certification",
+        "knowledgeState": "ranked",
+        "exampleKicker": "Selected for demo · one representative of 144 contract-scoped items",
+        "durationMs": 17000
+      },
+      {
+        "id": "vague_answer",
+        "sourceThroughId": "historical_relationships_recovery",
+        "evidenceThroughId": "expert_vague_reply",
+        "draftId": null,
+        "decision": "REVIEWING",
+        "eyebrow": "06 · Monday · Ask",
+        "title": "Vague is not enough",
+        "narration": "Ada's first answer is vague. Without a source, the path stays hollow.",
+        "historicalStatus": "Historical route identifies Ada Rook",
+        "riverMode": "paths",
+        "loopStageId": "capture",
+        "transcriptThroughId": "ada_vague",
+        "selectedExampleId": "noise_funding_certification",
+        "knowledgeState": "selected",
+        "exampleKicker": "Gap still open · vague is not provenance",
+        "durationMs": 16000
+      },
+      {
+        "id": "substantive_answer",
+        "sourceThroughId": "historical_relationships_recovery",
+        "evidenceThroughId": "expert_answer",
+        "draftId": null,
+        "decision": "REVIEWING",
+        "eyebrow": "07 · Tuesday · Evidence",
+        "title": "Ada supplies the source",
+        "narration": "Her answer names actor, action, timing, certification, and citation. Approval is still required.",
+        "historicalStatus": "Ada supplies technical evidence · Ren owns approval",
+        "riverMode": "memory",
+        "loopStageId": "capture",
+        "transcriptThroughId": "ada_substantive",
+        "selectedExampleId": "noise_funding_certification",
+        "knowledgeState": "confirmed",
+        "exampleKicker": "Technical answer sourced · approval pending",
+        "durationMs": 18000
+      },
+      {
+        "id": "memory_update",
+        "sourceThroughId": "historical_relationships_recovery",
+        "evidenceThroughId": "everos_receipt",
+        "draftId": null,
+        "decision": "READY",
+        "eyebrow": "08 · Wednesday · Confirm",
+        "title": "EverOS preserves the completed path",
+        "narration": "Ren's approved record joins Ada's sourced answer in source-0430 with attribution, receipts, and a reusable recipe. The replay itself makes no live write.",
+        "historicalStatus": "Maya's historical contribution remains visible after departure",
+        "riverMode": "memory",
+        "loopStageId": "update",
+        "transcriptThroughId": "memory_stored",
+        "selectedExampleId": "noise_funding_certification",
+        "knowledgeState": "confirmed",
+        "exampleKicker": "Completed memory · institution-owned",
+        "durationMs": 18000
+      },
+      {
+        "id": "draft_v7_check",
+        "sourceThroughId": "financing_draft_v7",
+        "evidenceThroughId": "draft_v7",
+        "draftId": "closing_v7",
+        "decision": "HOLD_FOR_REVIEW",
+        "eyebrow": "09 · Thursday · Check v7",
+        "title": "The memory catches an omission",
+        "narration": "The route stops at the paper: 143 of 144 items match.",
+        "historicalStatus": "Historical route + approved evidence remain available without Maya",
+        "riverMode": "check",
+        "loopStageId": "use",
+        "transcriptThroughId": "memory_stored",
+        "selectedExampleId": "noise_funding_certification",
+        "knowledgeState": "confirmed",
+        "exampleKicker": "Verified mismatch · one representative omission",
+        "calloutTitle": "Draft check · 143 of 144",
+        "calloutBody": "The selected first-draw term is remembered and confirmed, but absent from v7. Hold traces only to approved deal evidence and the checked draft.",
+        "durationMs": 20000
+      },
+      {
+        "id": "draft_v8_check",
+        "sourceThroughId": "financing_draft_v8",
+        "evidenceThroughId": "draft_v8",
+        "draftId": "closing_v8",
+        "decision": "READY",
+        "eyebrow": "10 · Thursday · Correct",
+        "title": "v8 reconnects memory to paper",
+        "narration": "The corrected clause restores both requirements. The deal remains on track for Friday.",
+        "historicalStatus": "Maya's historical contribution remains attributable and inspectable",
+        "riverMode": "check",
+        "loopStageId": "use",
+        "transcriptThroughId": "memory_stored",
+        "selectedExampleId": "noise_funding_certification",
+        "knowledgeState": "confirmed",
+        "exampleKicker": "Written · correction verified",
+        "calloutTitle": "Corrected check · 144 of 144",
+        "calloutBody": "v8 restores the missing dependency. Every demonstrated contract-scoped representative now connects to written paper.",
+        "durationMs": 18000
+      }
+    ]
+  }
+}
