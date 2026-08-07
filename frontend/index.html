@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Deal Witness Growth Lanes</title>
+<title>Deal Witness Memory Map</title>
 <style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
 </head>
 <body>
-<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Deal Witness Growth Lanes" srcdoc="&lt;!doctype html&gt;
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Deal Witness Memory Map" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
 &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
-&lt;title&gt;Deal Witness Growth Lanes&lt;/title&gt;
+&lt;title&gt;Deal Witness Memory Map&lt;/title&gt;
 &lt;style&gt;:root {
   color-scheme: light dark;
   background-color: var(
@@ -888,759 +888,852 @@ svg.lucide {
 html&gt;body{padding:0}&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div id=&quot;deal-witness-growth-lanes&quot; aria-label=&quot;Animated Deal Witness mockup showing source inputs becoming decisions, risks, promises, and monetary consequences&quot;&gt;
+&lt;div id=&quot;dw-memory-map&quot; aria-label=&quot;Deal Witness memory map for the synthetic Project Asterline financing&quot;&gt;
   &lt;style&gt;
-    #deal-witness-growth-lanes {
-      --dwl-paper: light-dark(#f5f1e8, #111923);
-      --dwl-surface: light-dark(#fffdf8, #182432);
-      --dwl-ink: light-dark(#11202b, #f5f1e8);
-      --dwl-muted: light-dark(#6f787f, #aab5be);
-      --dwl-line: light-dark(#cbc5b8, #3b4855);
-      --dwl-decision: #2f7897;
-      --dwl-risk: #d96d58;
-      --dwl-promise: #7c69bc;
-      --dwl-money: #c99a30;
-      color: var(--dwl-ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;
+    #dw-memory-map {
+      --dw-paper: light-dark(#f6f4ee, #111815);
+      --dw-panel: light-dark(#fbfaf6, #17201c);
+      --dw-ink: light-dark(#1e2928, #edf1eb);
+      --dw-muted: light-dark(#737b77, #a7b0aa);
+      --dw-faint: light-dark(rgba(30, 41, 40, 0.09), rgba(237, 241, 235, 0.10));
+      --dw-edge: light-dark(rgba(30, 41, 40, 0.085), rgba(237, 241, 235, 0.09));
+      --dw-active: light-dark(#247a78, #5eb8ae);
+      --dw-gap: light-dark(#a7503a, #e2896f);
+      --dw-good: light-dark(#496b50, #7fb38a);
+      --dw-heard: light-dark(#9a7431, #d3aa58);
+      color: var(--dw-ink);
+      font-family: &quot;Avenir Next&quot;, Avenir, &quot;Segoe UI&quot;, system-ui, sans-serif;
+      font-weight: 400;
       container-type: inline-size;
     }
 
-    #deal-witness-growth-lanes * { box-sizing: border-box; }
+    #dw-memory-map * { box-sizing: border-box; }
 
-    #deal-witness-growth-lanes .dwl-window {
-      min-height: 720px;
+    #dw-memory-map .dw-screen {
+      width: 100%;
+      height: 100vh;
+      aspect-ratio: auto;
+      min-height: 620px;
       overflow: hidden;
-      border: 1px solid var(--dwl-line);
-      border-radius: 22px;
-      background:
-        linear-gradient(light-dark(rgba(17,32,43,.028), rgba(255,255,255,.022)) 1px, transparent 1px),
-        linear-gradient(90deg, light-dark(rgba(17,32,43,.028), rgba(255,255,255,.022)) 1px, transparent 1px),
-        var(--dwl-paper);
-      background-size: 32px 32px;
-      box-shadow: 0 22px 70px light-dark(rgba(17,32,43,.13), rgba(0,0,0,.3));
+      background: var(--dw-paper);
+      border: 1px solid var(--dw-faint);
     }
 
-    #deal-witness-growth-lanes .dwl-header {
+    #dw-memory-map .dw-top {
+      height: 62px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      min-height: 80px;
-      padding: 18px 26px;
-      border-bottom: 1px solid var(--dwl-line);
-      background: light-dark(rgba(255,253,248,.92), rgba(17,25,35,.94));
+      gap: 28px;
+      padding: 0 24px;
+      border-bottom: 1px solid var(--dw-faint);
     }
 
-    #deal-witness-growth-lanes .dwl-brand {
+    #dw-memory-map .dw-brand {
       display: flex;
       align-items: center;
-      gap: 13px;
+      gap: 12px;
+      min-width: 0;
     }
 
-    #deal-witness-growth-lanes .dwl-brand-mark {
+    #dw-memory-map .dw-mark {
       position: relative;
-      width: 36px;
-      height: 36px;
-      border: 2px solid var(--dwl-ink);
-      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
     }
 
-    #deal-witness-growth-lanes .dwl-brand-mark::after {
+    #dw-memory-map .dw-mark::before,
+    #dw-memory-map .dw-mark::after {
       content: &quot;&quot;;
       position: absolute;
-      inset: 11px;
+      border: 1px solid var(--dw-ink);
       border-radius: 50%;
-      background: var(--dwl-ink);
     }
 
-    #deal-witness-growth-lanes .dwl-brand strong {
-      display: block;
-      font-size: 15px;
-      letter-spacing: .15em;
+    #dw-memory-map .dw-mark::before { inset: 3px 10px 3px 3px; }
+    #dw-memory-map .dw-mark::after { inset: 3px 3px 3px 10px; }
+
+    #dw-memory-map .dw-brand strong,
+    #dw-memory-map .dw-brand span { display: block; }
+
+    #dw-memory-map .dw-brand strong {
+      font-weight: 500;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
-    #deal-witness-growth-lanes .dwl-brand small {
-      display: block;
-      margin-top: 3px;
-      color: var(--dwl-muted);
-      font-size: 10px;
+    #dw-memory-map .dw-brand span {
+      color: var(--dw-muted);
+      letter-spacing: 0.02em;
     }
 
-    #deal-witness-growth-lanes .dwl-stakes {
+    #dw-memory-map .dw-deadline {
       display: flex;
       align-items: center;
       gap: 14px;
-      font-size: 9px;
-      font-weight: 850;
-      letter-spacing: .1em;
+      white-space: nowrap;
+      color: var(--dw-muted);
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    #deal-witness-growth-lanes .dwl-stakes span:first-child {
-      padding: 7px 10px;
-      border: 1px solid var(--dwl-risk);
-      border-radius: 999px;
-      color: var(--dwl-risk);
+    #dw-memory-map .dw-deadline b {
+      color: var(--dw-ink);
+      font-weight: 500;
     }
 
-    #deal-witness-growth-lanes .dwl-stakes i {
-      width: 52px;
-      border-top: 1px solid var(--dwl-line);
+    #dw-memory-map .dw-deadline i {
+      width: 44px;
+      border-top: 1px solid var(--dw-faint);
     }
 
-    #deal-witness-growth-lanes .dwl-intro {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 28px;
-      padding: 26px 30px 20px;
-    }
-
-    #deal-witness-growth-lanes .dwl-intro h1 {
-      margin: 0;
-      max-width: 740px;
-      font-size: clamp(28px, 4.2cqi, 48px);
-      line-height: .97;
-      letter-spacing: -.055em;
-    }
-
-    #deal-witness-growth-lanes .dwl-intro p {
-      margin: 0 0 4px;
-      max-width: 260px;
-      color: var(--dwl-muted);
-      font-size: 11px;
-      font-weight: 650;
-      line-height: 1.45;
-      text-align: right;
-    }
-
-    #deal-witness-growth-lanes .dwl-body {
+    #dw-memory-map .dw-main {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 246px;
-      gap: 24px;
-      padding: 0 28px 24px;
+      grid-template-columns: minmax(0, 1fr) 272px;
+      height: calc(100% - 62px);
+      min-height: 556px;
     }
 
-    #deal-witness-growth-lanes .dwl-chart {
+    #dw-memory-map .dw-graph-zone {
       position: relative;
       min-width: 0;
-      height: 500px;
-      overflow: hidden;
-      border: 1px solid var(--dwl-line);
-      border-radius: 18px;
-      background: light-dark(rgba(255,253,248,.86), rgba(24,36,50,.88));
+      border-right: 1px solid var(--dw-faint);
     }
 
-    #deal-witness-growth-lanes .dwl-lane-headings {
+    #dw-memory-map .dw-lanes {
       position: absolute;
-      z-index: 2;
+      z-index: 3;
       top: 0;
       left: 0;
       right: 0;
       display: grid;
-      grid-template-columns: 15% repeat(4, 1fr);
-      align-items: stretch;
+      grid-template-columns: 17% 20% 21% 22% 20%;
       height: 58px;
-      border-bottom: 1px solid var(--dwl-line);
-      background: light-dark(rgba(255,253,248,.94), rgba(24,36,50,.95));
-    }
-
-    #deal-witness-growth-lanes .dwl-lane-title {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 13px;
-      border-left: 1px solid var(--dwl-line);
-    }
-
-    #deal-witness-growth-lanes .dwl-lane-title:first-child { border-left: 0; }
-
-    #deal-witness-growth-lanes .dwl-lane-title b {
-      font-size: 11px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    #deal-witness-growth-lanes .dwl-lane-title small {
-      margin-top: 3px;
-      color: var(--dwl-muted);
-      font-size: 8px;
-      line-height: 1.25;
-    }
-
-    #deal-witness-growth-lanes .dwl-lane-title[data-lane=&quot;decision&quot;] b { color: var(--dwl-decision); }
-    #deal-witness-growth-lanes .dwl-lane-title[data-lane=&quot;risk&quot;] b { color: var(--dwl-risk); }
-    #deal-witness-growth-lanes .dwl-lane-title[data-lane=&quot;promise&quot;] b { color: var(--dwl-promise); }
-    #deal-witness-growth-lanes .dwl-lane-title[data-lane=&quot;money&quot;] b { color: var(--dwl-money); }
-
-    #deal-witness-growth-lanes .dwl-chart svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    #deal-witness-growth-lanes .dwl-divider {
-      stroke: var(--dwl-line);
-      stroke-width: 1;
-    }
-
-    #deal-witness-growth-lanes .dwl-volume-axis {
-      fill: var(--dwl-muted);
-      font-size: 8px;
-      font-weight: 800;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-    }
-
-    #deal-witness-growth-lanes .dwl-path {
-      fill: none;
-      stroke: var(--dwl-line);
-      stroke-width: 1.35;
-      opacity: .7;
-      transition: d .5s ease;
-    }
-
-    #deal-witness-growth-lanes .dwl-path[data-segment=&quot;source&quot;] { stroke-dasharray: 3 4; }
-    #deal-witness-growth-lanes .dwl-path[data-segment=&quot;decision-risk&quot;] { stroke: var(--dwl-risk); }
-    #deal-witness-growth-lanes .dwl-path[data-segment=&quot;risk-promise&quot;] { stroke: var(--dwl-promise); }
-    #deal-witness-growth-lanes .dwl-path[data-segment=&quot;promise-money&quot;] { stroke: var(--dwl-money); }
-
-    #deal-witness-growth-lanes .dwl-path.dwl-new-path {
-      stroke-width: 2.4;
-      stroke-dasharray: 500;
-      stroke-dashoffset: 500;
-      animation: dwl-draw .7s ease forwards;
-    }
-
-    @keyframes dwl-draw { to { stroke-dashoffset: 0; } }
-
-    #deal-witness-growth-lanes .dwl-new-node {
-      animation: dwl-pop .45s ease both;
-    }
-
-    @keyframes dwl-pop {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    #deal-witness-growth-lanes .dwl-node circle {
-      fill: var(--dwl-surface);
-      stroke: var(--dwl-node-color);
-      stroke-width: 2.1;
-    }
-
-    #deal-witness-growth-lanes .dwl-node[data-kind=&quot;source&quot;] rect {
-      fill: var(--dwl-source-color);
-      stroke: none;
-      rx: 7;
-    }
-
-    #deal-witness-growth-lanes .dwl-node text {
-      fill: var(--dwl-ink);
-      font-size: 7.5px;
-      font-weight: 800;
-      text-anchor: middle;
+      padding: 0 10px;
+      background: linear-gradient(to bottom, var(--dw-paper) 74%, transparent);
       pointer-events: none;
     }
 
-    #deal-witness-growth-lanes .dwl-node[data-kind=&quot;source&quot;] text {
-      fill: white;
-      font-size: 6.5px;
-      letter-spacing: .04em;
+    #dw-memory-map .dw-lane-label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 12px;
+      border-left: 1px solid var(--dw-faint);
+    }
+
+    #dw-memory-map .dw-lane-label:first-child { border-left: 0; }
+
+    #dw-memory-map .dw-lane-label b {
+      font-weight: 500;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
-    #deal-witness-growth-lanes .dwl-density-note {
+    #dw-memory-map .dw-lane-label span { color: var(--dw-muted); }
+
+    #dw-memory-map .dw-graph {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 556px;
+      touch-action: manipulation;
+    }
+
+    #dw-memory-map .dw-lane-rule {
+      stroke: var(--dw-faint);
+      stroke-width: 1;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #dw-memory-map .dw-edge {
+      fill: none;
+      stroke: var(--dw-edge);
+      stroke-width: 0.7;
+      vector-effect: non-scaling-stroke;
+      transition: stroke 160ms ease, stroke-width 160ms ease, opacity 160ms ease;
+    }
+
+    #dw-memory-map .dw-edge.is-related {
+      stroke: color-mix(in srgb, var(--dw-active) 54%, transparent);
+      stroke-width: 1.15;
+    }
+
+    #dw-memory-map .dw-edge.is-gap {
+      stroke: var(--dw-gap);
+      stroke-width: 1.6;
+    }
+
+    #dw-memory-map .dw-edge.is-new {
+      stroke: var(--dw-active);
+      stroke-width: 2.1;
+      stroke-dasharray: 900;
+      stroke-dashoffset: 900;
+      animation: dw-memory-trace 1.6s ease-out forwards;
+    }
+
+    #dw-memory-map .dw-node {
+      color: color-mix(in srgb, var(--dw-ink) 36%, transparent);
+      cursor: pointer;
+      transition: color 160ms ease, opacity 160ms ease;
+    }
+
+    #dw-memory-map .dw-node .dw-hit {
+      fill: transparent;
+      stroke: none;
+    }
+
+    #dw-memory-map .dw-node .dw-core {
+      fill: currentColor;
+      stroke: var(--dw-paper);
+      stroke-width: 1.5;
+      vector-effect: non-scaling-stroke;
+    }
+
+    #dw-memory-map .dw-node[data-kind=&quot;input&quot;] .dw-core,
+    #dw-memory-map .dw-node[data-kind=&quot;promise&quot;] .dw-core {
+      transform-box: fill-box;
+      transform-origin: center;
+      transform: rotate(45deg);
+    }
+
+    #dw-memory-map .dw-node[data-kind=&quot;risk&quot;] .dw-core {
+      fill: var(--dw-paper);
+      stroke: currentColor;
+    }
+
+    #dw-memory-map .dw-node[data-kind=&quot;money&quot;] .dw-core { stroke-width: 0; }
+
+    #dw-memory-map .dw-node.is-related { color: var(--dw-active); }
+    #dw-memory-map .dw-node.is-gap { color: var(--dw-gap); }
+
+    #dw-memory-map .dw-node.is-gap .dw-core {
+      fill: var(--dw-paper);
+      stroke: var(--dw-gap);
+      stroke-width: 2;
+    }
+
+    #dw-memory-map .dw-node.is-new {
+      color: var(--dw-active);
+      animation: dw-memory-node 900ms ease-out both;
+    }
+
+    #dw-memory-map .dw-node-label {
+      display: none !important;
+      fill: var(--dw-ink);
+      paint-order: stroke;
+      stroke: var(--dw-paper);
+      stroke-width: 5px;
+      stroke-linejoin: round;
+      font-weight: 500;
+      pointer-events: none;
+    }
+
+    #dw-memory-map .dw-node.is-related .dw-node-label,
+    #dw-memory-map .dw-node.is-gap .dw-node-label { display: none; }
+
+    #dw-memory-map .dw-source-line {
+      fill: var(--dw-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    #dw-memory-map .dw-field-note {
       position: absolute;
-      right: 14px;
-      bottom: 12px;
-      padding: 7px 9px;
-      border: 1px solid var(--dwl-line);
-      border-radius: 999px;
-      background: var(--dwl-surface);
-      color: var(--dwl-muted);
-      font-size: 8px;
-      font-weight: 800;
-      letter-spacing: .06em;
-      text-transform: uppercase;
+      left: 24px;
+      bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--dw-muted);
+      pointer-events: none;
     }
 
-    #deal-witness-growth-lanes .dwl-talk {
+    #dw-memory-map .dw-field-note span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    #dw-memory-map .dw-field-note i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--dw-ink) 36%, transparent);
+    }
+
+    #dw-memory-map .dw-field-note .dw-gap-key {
+      border: 1px solid var(--dw-gap);
+      background: transparent;
+    }
+
+    #dw-memory-map .dw-rail {
       display: flex;
       flex-direction: column;
       min-width: 0;
+      background: var(--dw-panel);
     }
 
-    #deal-witness-growth-lanes .dwl-talk-label {
-      margin: 0 0 8px;
-      color: var(--dwl-muted);
-      font-size: 9px;
-      font-weight: 850;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+    #dw-memory-map .dw-rail &gt; section {
+      padding: 20px 22px;
+      border-bottom: 1px solid var(--dw-faint);
     }
 
-    #deal-witness-growth-lanes .dwl-talk h2 {
-      margin: 0 0 16px;
-      font-size: 22px;
-      line-height: 1.02;
-      letter-spacing: -.04em;
+    #dw-memory-map .dw-stakes strong {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
     }
 
-    #deal-witness-growth-lanes .dwl-talk-card {
+    #dw-memory-map .dw-stakes span { color: var(--dw-muted); }
+
+    #dw-memory-map .dw-scale {
+      display: grid;
+      gap: 0;
+    }
+
+    #dw-memory-map .dw-scale-row {
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      align-items: baseline;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--dw-faint);
+    }
+
+    #dw-memory-map .dw-scale-row:last-child { border-bottom: 0; }
+
+    #dw-memory-map .dw-scale-row b {
+      font-variant-numeric: tabular-nums;
+      font-weight: 500;
+    }
+
+    #dw-memory-map .dw-scale-row span { color: var(--dw-muted); }
+
+    #dw-memory-map .dw-current {
       flex: 1;
-      padding: 20px;
-      border: 1px solid var(--dwl-line);
-      border-radius: 16px;
-      background: var(--dwl-surface);
+      min-height: 0;
     }
 
-    #deal-witness-growth-lanes .dwl-talk-card strong {
-      display: block;
-      margin-bottom: 12px;
-      font-size: 16px;
-      line-height: 1.15;
-      letter-spacing: -.02em;
-    }
-
-    #deal-witness-growth-lanes .dwl-talk-card p {
-      margin: 0;
-      color: var(--dwl-muted);
-      font-size: 11px;
-      line-height: 1.55;
-    }
-
-    #deal-witness-growth-lanes .dwl-flow-sentence {
-      display: grid;
-      gap: 9px;
-      margin-top: 24px;
-    }
-
-    #deal-witness-growth-lanes .dwl-flow-sentence div {
-      display: grid;
-      grid-template-columns: 22px 1fr;
-      gap: 8px;
-      align-items: center;
-      color: var(--dwl-muted);
-      font-size: 10px;
-      line-height: 1.3;
-      opacity: .28;
-      transition: opacity .25s ease;
-    }
-
-    #deal-witness-growth-lanes .dwl-flow-sentence div[data-active=&quot;true&quot;] { opacity: 1; color: var(--dwl-ink); }
-
-    #deal-witness-growth-lanes .dwl-flow-sentence i {
-      display: grid;
-      width: 22px;
-      height: 22px;
-      place-items: center;
-      border: 1px solid currentColor;
-      border-radius: 50%;
-      font-size: 8px;
-      font-style: normal;
-      font-weight: 900;
-    }
-
-    #deal-witness-growth-lanes .dwl-counter {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 26px;
-      padding-top: 14px;
-      border-top: 1px solid var(--dwl-line);
-    }
-
-    #deal-witness-growth-lanes .dwl-counter b {
-      display: block;
-      margin: 0;
-      font-size: 24px;
-      letter-spacing: -.05em;
-    }
-
-    #deal-witness-growth-lanes .dwl-counter span {
-      color: var(--dwl-muted);
-      font-size: 8px;
-      font-weight: 800;
-      letter-spacing: .06em;
+    #dw-memory-map .dw-current-label {
+      margin: 0 0 10px;
+      color: var(--dw-muted);
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
-    #deal-witness-growth-lanes .dwl-footer {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 20px;
-      min-height: 72px;
-      padding: 13px 26px;
-      border-top: 1px solid var(--dwl-line);
-      background: light-dark(rgba(255,253,248,.94), rgba(17,25,35,.94));
+    #dw-memory-map .dw-current strong {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
     }
 
-    #deal-witness-growth-lanes .dwl-controls { display: flex; gap: 7px; }
+    #dw-memory-map .dw-current p {
+      margin: 0;
+      color: var(--dw-muted);
+    }
 
-    #deal-witness-growth-lanes .dwl-control {
-      min-width: 40px;
+    #dw-memory-map .dw-current-state {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      color: var(--dw-active);
+    }
+
+    #dw-memory-map .dw-current-state i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    #dw-memory-map .dw-current-state[data-state=&quot;gap&quot;] { color: var(--dw-gap); }
+
+    #dw-memory-map .dw-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 14px 14px 16px;
+    }
+
+    #dw-memory-map .dw-control {
       min-height: 36px;
-      padding: 0 12px;
-      border: 1px solid var(--dwl-line);
-      border-radius: 9px;
-      background: var(--dwl-surface);
-      color: var(--dwl-ink);
+      border: 1px solid var(--dw-faint);
+      background: transparent;
+      color: var(--dw-ink);
       cursor: pointer;
       font: inherit;
-      font-size: 10px;
-      font-weight: 850;
+      font-weight: 500;
     }
 
-    #deal-witness-growth-lanes .dwl-control[data-primary=&quot;true&quot;] {
-      min-width: 76px;
-      border-color: var(--dwl-ink);
-      background: var(--dwl-ink);
-      color: var(--dwl-paper);
+    #dw-memory-map .dw-control:hover,
+    #dw-memory-map .dw-control:focus-visible { border-color: var(--dw-active); }
+
+    #dw-memory-map .dw-control[data-main=&quot;true&quot;] {
+      background: var(--dw-ink);
+      color: var(--dw-paper);
+      border-color: var(--dw-ink);
     }
 
-    #deal-witness-growth-lanes .dwl-progress {
-      position: relative;
-      height: 4px;
+    #dw-memory-map .dw-control[data-gap=&quot;true&quot;] {
+      grid-column: 1 / -1;
+      color: var(--dw-gap);
+      border-color: color-mix(in srgb, var(--dw-gap) 42%, transparent);
+    }
+
+    #dw-memory-map .dw-live {
+      position: absolute;
+      width: 1px;
+      height: 1px;
       overflow: hidden;
-      border-radius: 999px;
-      background: var(--dwl-line);
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
     }
 
-    #deal-witness-growth-lanes .dwl-progress span {
-      display: block;
-      width: 0;
-      height: 100%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, var(--dwl-decision), var(--dwl-risk), var(--dwl-promise), var(--dwl-money));
-      transition: width .4s ease;
+    @keyframes dw-memory-trace {
+      0% { stroke-dashoffset: 900; opacity: 1; }
+      70% { stroke-dashoffset: 0; opacity: 1; }
+      100% { stroke-dashoffset: 0; opacity: 0.54; stroke-width: 1.15; }
     }
 
-    #deal-witness-growth-lanes .dwl-footer-note {
-      color: var(--dwl-muted);
-      font-size: 8px;
-      font-weight: 750;
-      line-height: 1.35;
-      text-align: right;
-      text-transform: uppercase;
-    }
-
-    @container (max-width: 800px) {
-      #deal-witness-growth-lanes .dwl-intro { align-items: flex-start; }
-      #deal-witness-growth-lanes .dwl-intro p { display: none; }
-      #deal-witness-growth-lanes .dwl-body { grid-template-columns: 1fr; }
-      #deal-witness-growth-lanes .dwl-talk { display: grid; grid-template-columns: 170px 1fr; gap: 16px; }
-      #deal-witness-growth-lanes .dwl-talk-label { grid-column: 1 / -1; margin: 0; }
-      #deal-witness-growth-lanes .dwl-talk h2 { margin: 0; }
-      #deal-witness-growth-lanes .dwl-talk-card { min-height: 180px; }
-    }
-
-    @container (max-width: 520px) {
-      #deal-witness-growth-lanes .dwl-header { align-items: flex-start; padding: 15px 16px; }
-      #deal-witness-growth-lanes .dwl-brand small { display: none; }
-      #deal-witness-growth-lanes .dwl-stakes i { display: none; }
-      #deal-witness-growth-lanes .dwl-intro { padding: 20px 16px 15px; }
-      #deal-witness-growth-lanes .dwl-body { padding: 0 14px 18px; }
-      #deal-witness-growth-lanes .dwl-chart { height: 430px; }
-      #deal-witness-growth-lanes .dwl-lane-title { padding: 0 4px; }
-      #deal-witness-growth-lanes .dwl-lane-title small { display: none; }
-      #deal-witness-growth-lanes .dwl-talk { display: block; }
-      #deal-witness-growth-lanes .dwl-talk h2 { margin-bottom: 12px; }
-      #deal-witness-growth-lanes .dwl-footer { grid-template-columns: 1fr; padding: 12px 16px; }
-      #deal-witness-growth-lanes .dwl-controls { justify-content: center; }
-      #deal-witness-growth-lanes .dwl-footer-note { display: none; }
+    @keyframes dw-memory-node {
+      0% { opacity: 0; transform: scale(0.2); }
+      58% { opacity: 1; transform: scale(1.8); }
+      100% { opacity: 1; transform: scale(1); }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      #deal-witness-growth-lanes *,
-      #deal-witness-growth-lanes *::before,
-      #deal-witness-growth-lanes *::after { animation-duration: .001ms !important; }
+      #dw-memory-map .dw-edge,
+      #dw-memory-map .dw-node { animation: none !important; transition: none !important; }
+    }
+
+    @container (max-width: 820px) {
+      #dw-memory-map .dw-screen { aspect-ratio: auto; min-height: 760px; }
+      #dw-memory-map .dw-top { height: auto; min-height: 62px; flex-wrap: wrap; padding-block: 12px; }
+      #dw-memory-map .dw-deadline i { display: none; }
+      #dw-memory-map .dw-main { grid-template-columns: 1fr; height: auto; }
+      #dw-memory-map .dw-graph-zone { height: 510px; border-right: 0; border-bottom: 1px solid var(--dw-faint); }
+      #dw-memory-map .dw-graph { min-height: 510px; }
+      #dw-memory-map .dw-rail { display: grid; grid-template-columns: 1fr 1fr; }
+      #dw-memory-map .dw-rail &gt; section { padding: 14px 18px; }
+      #dw-memory-map .dw-current { grid-column: 1 / -1; }
+      #dw-memory-map .dw-controls { grid-column: 1 / -1; }
+    }
+
+    @container (max-width: 520px) {
+      #dw-memory-map .dw-screen { min-height: 850px; }
+      #dw-memory-map .dw-brand span { display: none; }
+      #dw-memory-map .dw-deadline { width: 100%; justify-content: space-between; }
+      #dw-memory-map .dw-graph-zone { height: 450px; }
+      #dw-memory-map .dw-graph { min-height: 450px; }
+      #dw-memory-map .dw-lane-label { padding-left: 4px; }
+      #dw-memory-map .dw-lane-label span { display: none; }
+      #dw-memory-map .dw-field-note { gap: 9px; left: 12px; }
+      #dw-memory-map .dw-rail { grid-template-columns: 1fr; }
+      #dw-memory-map .dw-current,
+      #dw-memory-map .dw-controls { grid-column: auto; }
     }
   &lt;/style&gt;
 
-  &lt;section class=&quot;dwl-window&quot;&gt;
-    &lt;header class=&quot;dwl-header&quot;&gt;
-      &lt;div class=&quot;dwl-brand&quot;&gt;&lt;span class=&quot;dwl-brand-mark&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Deal Witness&lt;/strong&gt;&lt;small&gt;High-value person recovery · synthetic replay&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
-      &lt;div class=&quot;dwl-stakes&quot;&gt;&lt;span&gt;Maya already left&lt;/span&gt;&lt;i&gt;&lt;/i&gt;&lt;span&gt;Close in 4 days&lt;/span&gt;&lt;/div&gt;
+  &lt;section class=&quot;dw-screen&quot;&gt;
+    &lt;header class=&quot;dw-top&quot;&gt;
+      &lt;div class=&quot;dw-brand&quot;&gt;
+        &lt;span class=&quot;dw-mark&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+        &lt;div&gt;&lt;strong&gt;Deal Witness&lt;/strong&gt;&lt;span&gt;Project Asterline · synthetic memory replay&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;dw-deadline&quot;&gt;&lt;b&gt;Maya left Monday&lt;/b&gt;&lt;i aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Close Friday&lt;/span&gt;&lt;/div&gt;
     &lt;/header&gt;
 
-    &lt;div class=&quot;dwl-intro&quot;&gt;
-      &lt;h1&gt;Every new input grows the shape of the deal.&lt;/h1&gt;
-      &lt;p&gt;Each decision-bearing input adds a decision. Those decisions reuse and expand shared risks, promises, and monetary consequences.&lt;/p&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;dwl-body&quot;&gt;
-      &lt;section class=&quot;dwl-chart&quot;&gt;
-        &lt;div class=&quot;dwl-lane-headings&quot; aria-hidden=&quot;true&quot;&gt;
-          &lt;div class=&quot;dwl-lane-title&quot;&gt;&lt;b&gt;Inputs&lt;/b&gt;&lt;small&gt;conversations + files&lt;/small&gt;&lt;/div&gt;
-          &lt;div class=&quot;dwl-lane-title&quot; data-lane=&quot;decision&quot;&gt;&lt;b&gt;Decisions&lt;/b&gt;&lt;small&gt;what people agreed&lt;/small&gt;&lt;/div&gt;
-          &lt;div class=&quot;dwl-lane-title&quot; data-lane=&quot;risk&quot;&gt;&lt;b&gt;Risks&lt;/b&gt;&lt;small&gt;what could go wrong&lt;/small&gt;&lt;/div&gt;
-          &lt;div class=&quot;dwl-lane-title&quot; data-lane=&quot;promise&quot;&gt;&lt;b&gt;Promises&lt;/b&gt;&lt;small&gt;mitigations + covenants&lt;/small&gt;&lt;/div&gt;
-          &lt;div class=&quot;dwl-lane-title&quot; data-lane=&quot;money&quot;&gt;&lt;b&gt;Money&lt;/b&gt;&lt;small&gt;when capital moves&lt;/small&gt;&lt;/div&gt;
+    &lt;div class=&quot;dw-main&quot;&gt;
+      &lt;section class=&quot;dw-graph-zone&quot; aria-label=&quot;Deal memory graph&quot;&gt;
+        &lt;div class=&quot;dw-lanes&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;div class=&quot;dw-lane-label&quot;&gt;&lt;b&gt;Inputs&lt;/b&gt;&lt;span&gt;decision-bearing records&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;dw-lane-label&quot;&gt;&lt;b&gt;Decisions&lt;/b&gt;&lt;span&gt;what the team chose&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;dw-lane-label&quot;&gt;&lt;b&gt;Risks&lt;/b&gt;&lt;span&gt;what choice exposed&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;dw-lane-label&quot;&gt;&lt;b&gt;Promises&lt;/b&gt;&lt;span&gt;negotiated mitigations&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;dw-lane-label&quot;&gt;&lt;b&gt;Money&lt;/b&gt;&lt;span&gt;funding consequences&lt;/span&gt;&lt;/div&gt;
         &lt;/div&gt;
-        &lt;svg viewBox=&quot;0 0 1000 500&quot; role=&quot;img&quot; aria-label=&quot;A growing left-to-right causal graph with vertical lanes for decisions, risks, promises, and money&quot;&gt;
-          &lt;line class=&quot;dwl-divider&quot; x1=&quot;150&quot; y1=&quot;58&quot; x2=&quot;150&quot; y2=&quot;500&quot;&gt;&lt;/line&gt;
-          &lt;line class=&quot;dwl-divider&quot; x1=&quot;362.5&quot; y1=&quot;58&quot; x2=&quot;362.5&quot; y2=&quot;500&quot;&gt;&lt;/line&gt;
-          &lt;line class=&quot;dwl-divider&quot; x1=&quot;575&quot; y1=&quot;58&quot; x2=&quot;575&quot; y2=&quot;500&quot;&gt;&lt;/line&gt;
-          &lt;line class=&quot;dwl-divider&quot; x1=&quot;787.5&quot; y1=&quot;58&quot; x2=&quot;787.5&quot; y2=&quot;500&quot;&gt;&lt;/line&gt;
-          &lt;text class=&quot;dwl-volume-axis&quot; x=&quot;14&quot; y=&quot;482&quot;&gt;MORE EVIDENCE ↓ · VIEW COMPRESSES TO FIT&lt;/text&gt;
-          &lt;g id=&quot;dwl-path-layer&quot;&gt;&lt;/g&gt;
-          &lt;g id=&quot;dwl-node-layer&quot;&gt;&lt;/g&gt;
+        &lt;svg class=&quot;dw-graph&quot; viewBox=&quot;0 0 1000 620&quot; role=&quot;img&quot; aria-labelledby=&quot;dw-map-title dw-map-desc&quot;&gt;
+          &lt;title id=&quot;dw-map-title&quot;&gt;Project Asterline institutional memory map&lt;/title&gt;
+          &lt;desc id=&quot;dw-map-desc&quot;&gt;Decision-bearing records create stable decisions that reuse and expand linked risks, promises, and monetary consequences.&lt;/desc&gt;
+          &lt;g aria-hidden=&quot;true&quot;&gt;
+            &lt;line class=&quot;dw-lane-rule&quot; x1=&quot;170&quot; y1=&quot;58&quot; x2=&quot;170&quot; y2=&quot;585&quot;&gt;&lt;/line&gt;
+            &lt;line class=&quot;dw-lane-rule&quot; x1=&quot;370&quot; y1=&quot;58&quot; x2=&quot;370&quot; y2=&quot;585&quot;&gt;&lt;/line&gt;
+            &lt;line class=&quot;dw-lane-rule&quot; x1=&quot;580&quot; y1=&quot;58&quot; x2=&quot;580&quot; y2=&quot;585&quot;&gt;&lt;/line&gt;
+            &lt;line class=&quot;dw-lane-rule&quot; x1=&quot;800&quot; y1=&quot;58&quot; x2=&quot;800&quot; y2=&quot;585&quot;&gt;&lt;/line&gt;
+          &lt;/g&gt;
+          &lt;g id=&quot;dw-edge-layer&quot;&gt;&lt;/g&gt;
+          &lt;g id=&quot;dw-node-layer&quot;&gt;&lt;/g&gt;
         &lt;/svg&gt;
-        &lt;div class=&quot;dwl-density-note&quot; id=&quot;dwl-density-note&quot;&gt;Scale · 1 decision path&lt;/div&gt;
+        &lt;div class=&quot;dw-field-note&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;span&gt;&lt;i&gt;&lt;/i&gt; remembered&lt;/span&gt;
+          &lt;span&gt;&lt;i class=&quot;dw-gap-key&quot;&gt;&lt;/i&gt; hollow gap&lt;/span&gt;
+          &lt;span&gt;select any path to trace its receipt&lt;/span&gt;
+        &lt;/div&gt;
       &lt;/section&gt;
 
-      &lt;aside class=&quot;dwl-talk&quot;&gt;
-        &lt;p class=&quot;dwl-talk-label&quot; id=&quot;dwl-talk-label&quot;&gt;Beat 1 · the input arrives&lt;/p&gt;
-        &lt;h2 id=&quot;dwl-talk-title&quot;&gt;Evidence attaches to a decision.&lt;/h2&gt;
-        &lt;div class=&quot;dwl-talk-card&quot;&gt;
-          &lt;strong id=&quot;dwl-current-source&quot;&gt;Microsoft Teams · credit call&lt;/strong&gt;
-          &lt;p id=&quot;dwl-current-detail&quot;&gt;Deal Witness preserves who said what, when, and where the source lives.&lt;/p&gt;
-          &lt;div class=&quot;dwl-flow-sentence&quot; id=&quot;dwl-flow-sentence&quot;&gt;
-            &lt;div data-active=&quot;true&quot;&gt;&lt;i&gt;1&lt;/i&gt;&lt;span&gt;Attach the evidence&lt;/span&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;i&gt;2&lt;/i&gt;&lt;span&gt;Add the decision it records&lt;/span&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;i&gt;3&lt;/i&gt;&lt;span&gt;Reuse and expand downstream paths&lt;/span&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;i&gt;4&lt;/i&gt;&lt;span&gt;Trace the consequence to money&lt;/span&gt;&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class=&quot;dwl-counter&quot;&gt;
-            &lt;div&gt;&lt;b id=&quot;dwl-record-count&quot;&gt;0&lt;/b&gt;&lt;span&gt;records learned&lt;/span&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;b id=&quot;dwl-path-count&quot;&gt;0&lt;/b&gt;&lt;span&gt;decisions mapped&lt;/span&gt;&lt;/div&gt;
-          &lt;/div&gt;
+      &lt;aside class=&quot;dw-rail&quot; aria-label=&quot;Memory status and controls&quot;&gt;
+        &lt;section class=&quot;dw-stakes&quot;&gt;
+          &lt;strong&gt;$380M financing&lt;/strong&gt;
+          &lt;span&gt;Nine months of deal history must still work without Maya.&lt;/span&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;dw-scale&quot; aria-label=&quot;Synthetic corpus scale&quot;&gt;
+          &lt;div class=&quot;dw-scale-row&quot;&gt;&lt;b id=&quot;dw-record-count&quot;&gt;0&lt;/b&gt;&lt;span&gt;source records represented&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;dw-scale-row&quot;&gt;&lt;b&gt;288&lt;/b&gt;&lt;span&gt;atomic items&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;dw-scale-row&quot;&gt;&lt;b id=&quot;dw-decision-count&quot;&gt;0&lt;/b&gt;&lt;span&gt;of 72 decisions mapped&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;dw-scale-row&quot;&gt;&lt;b&gt;13&lt;/b&gt;&lt;span&gt;stable clusters&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;dw-scale-row&quot;&gt;&lt;b&gt;24&lt;/b&gt;&lt;span&gt;investigation paths&lt;/span&gt;&lt;/div&gt;
+        &lt;/section&gt;
+        &lt;section class=&quot;dw-current&quot;&gt;
+          &lt;p class=&quot;dw-current-label&quot; id=&quot;dw-current-label&quot;&gt;Selected receipt&lt;/p&gt;
+          &lt;strong id=&quot;dw-current-title&quot;&gt;Financial model note · reserve sizing&lt;/strong&gt;
+          &lt;p id=&quot;dw-current-copy&quot;&gt;A remembered decision reuses established downside, covenant, and reserve relationships.&lt;/p&gt;
+          &lt;div class=&quot;dw-current-state&quot; id=&quot;dw-current-state&quot;&gt;&lt;i aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Source-linked memory&lt;/span&gt;&lt;/div&gt;
+        &lt;/section&gt;
+        &lt;div class=&quot;dw-controls&quot; aria-label=&quot;Memory replay controls&quot;&gt;
+          &lt;button class=&quot;dw-control&quot; id=&quot;dw-replay&quot; data-main=&quot;true&quot; type=&quot;button&quot;&gt;Replay history&lt;/button&gt;
+          &lt;button class=&quot;dw-control&quot; id=&quot;dw-next&quot; type=&quot;button&quot;&gt;Next document&lt;/button&gt;
+          &lt;button class=&quot;dw-control&quot; id=&quot;dw-gap&quot; data-gap=&quot;true&quot; type=&quot;button&quot;&gt;Highlight the open gap&lt;/button&gt;
         &lt;/div&gt;
       &lt;/aside&gt;
     &lt;/div&gt;
-
-    &lt;footer class=&quot;dwl-footer&quot;&gt;
-      &lt;div class=&quot;dwl-controls&quot;&gt;
-        &lt;button class=&quot;dwl-control&quot; id=&quot;dwl-reset&quot; type=&quot;button&quot;&gt;↺&lt;/button&gt;
-        &lt;button class=&quot;dwl-control&quot; id=&quot;dwl-play&quot; data-primary=&quot;true&quot; type=&quot;button&quot;&gt;Replay&lt;/button&gt;
-        &lt;button class=&quot;dwl-control&quot; id=&quot;dwl-next&quot; type=&quot;button&quot;&gt;+ Input&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;dwl-progress&quot;&gt;&lt;span id=&quot;dwl-progress-fill&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-      &lt;div class=&quot;dwl-footer-note&quot;&gt;Representative inputs · shared paths · 432-record synthetic corpus&lt;/div&gt;
-    &lt;/footer&gt;
+    &lt;div class=&quot;dw-live&quot; id=&quot;dw-live&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
   &lt;/section&gt;
 
   &lt;script&gt;
     (() =&gt; {
-      const root = document.getElementById(&#x27;deal-witness-growth-lanes&#x27;);
-      const pathLayer = root.querySelector(&#x27;#dwl-path-layer&#x27;);
-      const nodeLayer = root.querySelector(&#x27;#dwl-node-layer&#x27;);
-      const talkLabel = root.querySelector(&#x27;#dwl-talk-label&#x27;);
-      const talkTitle = root.querySelector(&#x27;#dwl-talk-title&#x27;);
-      const currentSource = root.querySelector(&#x27;#dwl-current-source&#x27;);
-      const currentDetail = root.querySelector(&#x27;#dwl-current-detail&#x27;);
-      const flowSentence = root.querySelector(&#x27;#dwl-flow-sentence&#x27;);
-      const recordCount = root.querySelector(&#x27;#dwl-record-count&#x27;);
-      const pathCount = root.querySelector(&#x27;#dwl-path-count&#x27;);
-      const densityNote = root.querySelector(&#x27;#dwl-density-note&#x27;);
-      const progressFill = root.querySelector(&#x27;#dwl-progress-fill&#x27;);
-      const playButton = root.querySelector(&#x27;#dwl-play&#x27;);
-      const nextButton = root.querySelector(&#x27;#dwl-next&#x27;);
-      const resetButton = root.querySelector(&#x27;#dwl-reset&#x27;);
+      const root = document.getElementById(&quot;dw-memory-map&quot;);
+      if (!root || root.dataset.ready === &quot;true&quot;) return;
+      root.dataset.ready = &quot;true&quot;;
 
-      const laneX = { source: 78, decision: 254, risk: 469, promise: 682, money: 893 };
-      const colors = { decision: &#x27;#2f7897&#x27;, risk: &#x27;#d96d58&#x27;, promise: &#x27;#7c69bc&#x27;, money: &#x27;#c99a30&#x27; };
-      const sourceColors = { Teams: &#x27;#6554c0&#x27;, Email: &#x27;#3976b8&#x27;, SharePoint: &#x27;#168b8d&#x27;, Slack: &#x27;#3aa17e&#x27;, WhatsApp: &#x27;#42a86b&#x27;, Model: &#x27;#b7892f&#x27;, Document: &#x27;#68747e&#x27; };
-      const events = [
-        { source:&#x27;Teams&#x27;, sourceLabel:&#x27;TEAMS&#x27;, context:&#x27;Microsoft Teams · credit call&#x27;, decisionKey:&#x27;draw-authorization&#x27;, decision:&#x27;Release first draw?&#x27;, branches:[
-          { risk:&#x27;No certificate&#x27;, promise:&#x27;Engineer certifies&#x27;, money:&#x27;$42M draw&#x27; },
-          { risk:&#x27;Budget unproven&#x27;, promise:&#x27;Sponsor funds first&#x27;, money:&#x27;$42M draw&#x27; }
-        ]},
-        { source:&#x27;Email&#x27;, sourceLabel:&#x27;EMAIL&#x27;, context:&#x27;Email · noise-work negotiation&#x27;, decisionKey:&#x27;mitigation-scope&#x27;, decision:&#x27;Accept mitigation scope?&#x27;, branches:[
-          { risk:&#x27;Cost overrun&#x27;, promise:&#x27;$18.6M earmark&#x27;, money:&#x27;$42M draw&#x27; },
-          { risk:&#x27;Budget unproven&#x27;, promise:&#x27;Sponsor funds first&#x27;, money:&#x27;$42M draw&#x27; }
-        ]},
-        { source:&#x27;SharePoint&#x27;, sourceLabel:&#x27;SP&#x27;, context:&#x27;SharePoint · permit register&#x27;, decisionKey:&#x27;permits&#x27;, decision:&#x27;Sequence permits?&#x27;, branches:[
-          { risk:&#x27;Opening delay&#x27;, promise:&#x27;Permit before works&#x27;, money:&#x27;$11M reserve&#x27; },
-          { risk:&#x27;Approval conflict&#x27;, promise:&#x27;Authority confirmed&#x27;, money:&#x27;$11M reserve&#x27; }
-        ]},
-        { source:&#x27;Slack&#x27;, sourceLabel:&#x27;SLACK&#x27;, context:&#x27;Slack · deal-team discussion&#x27;, decisionKey:&#x27;contingency&#x27;, decision:&#x27;Use contingency?&#x27;, branches:[
-          { risk:&#x27;Cost overrun&#x27;, promise:&#x27;Lender consent&#x27;, money:&#x27;$42M draw&#x27; }
-        ]},
-        { source:&#x27;WhatsApp&#x27;, sourceLabel:&#x27;WA&#x27;, context:&#x27;WhatsApp · contractor exchange&#x27;, decisionKey:&#x27;site-access&#x27;, decision:&#x27;Grant site access?&#x27;, branches:[
-          { risk:&#x27;Uninsured work&#x27;, promise:&#x27;Evidence before entry&#x27;, money:&#x27;Draw withheld&#x27; }
-        ]},
-        { source:&#x27;Model&#x27;, sourceLabel:&#x27;MODEL&#x27;, context:&#x27;Model · operating forecast&#x27;, decisionKey:&#x27;reserve&#x27;, decision:&#x27;Size revenue reserve?&#x27;, branches:[
-          { risk:&#x27;Traffic downside&#x27;, promise:&#x27;Quarterly top-up&#x27;, money:&#x27;Reserve funded&#x27; }
-        ]},
-        { source:&#x27;Document&#x27;, sourceLabel:&#x27;DOC&#x27;, context:&#x27;Document · completion schedule&#x27;, decisionKey:&#x27;completion&#x27;, decision:&#x27;Define completion?&#x27;, branches:[
-          { risk:&#x27;Test ambiguity&#x27;, promise:&#x27;Independent test&#x27;, money:&#x27;Final draw&#x27; }
-        ]},
-        { source:&#x27;Teams&#x27;, sourceLabel:&#x27;TEAMS&#x27;, context:&#x27;Microsoft Teams · closing call&#x27;, decisionKey:&#x27;close&#x27;, decision:&#x27;Approve close?&#x27;, branches:[
-          { risk:&#x27;Missing draft term&#x27;, promise:&#x27;Correct v8&#x27;, money:&#x27;$380M facility&#x27; }
-        ]}
+      const svgNS = &quot;http://www.w3.org/2000/svg&quot;;
+      const edgeLayer = root.querySelector(&quot;#dw-edge-layer&quot;);
+      const nodeLayer = root.querySelector(&quot;#dw-node-layer&quot;);
+      const recordCount = root.querySelector(&quot;#dw-record-count&quot;);
+      const decisionCount = root.querySelector(&quot;#dw-decision-count&quot;);
+      const currentLabel = root.querySelector(&quot;#dw-current-label&quot;);
+      const currentTitle = root.querySelector(&quot;#dw-current-title&quot;);
+      const currentCopy = root.querySelector(&quot;#dw-current-copy&quot;);
+      const currentState = root.querySelector(&quot;#dw-current-state&quot;);
+      const live = root.querySelector(&quot;#dw-live&quot;);
+      const replayButton = root.querySelector(&quot;#dw-replay&quot;);
+      const nextButton = root.querySelector(&quot;#dw-next&quot;);
+      const gapButton = root.querySelector(&quot;#dw-gap&quot;);
+
+      const x = { input: 86, decision: 267, risk: 474, promise: 690, money: 892 };
+      const totals = { input: 72, decision: 72, risk: 38, promise: 46, money: 20 };
+      const steps = { input: 29, decision: 31, risk: 17, promise: 19, money: 7 };
+      const top = 82;
+      const height = 458;
+      const baseDecisionCount = 64;
+      const baseDownstream = { risk: 34, promise: 42, money: 18 };
+
+      const decisionNames = [
+        &quot;Reserve sizing&quot;, &quot;Draw sequence&quot;, &quot;Permit order&quot;, &quot;Completion test&quot;, &quot;Contingency use&quot;,
+        &quot;Noise-work scope&quot;, &quot;Insurance evidence&quot;, &quot;Sponsor funding&quot;, &quot;Revenue sweep&quot;, &quot;Contractor access&quot;
+      ];
+      const riskNames = [
+        &quot;Traffic downside&quot;, &quot;Uncertified works&quot;, &quot;Permit delay&quot;, &quot;Budget leakage&quot;, &quot;Scope drift&quot;,
+        &quot;Cost overrun&quot;, &quot;Coverage lapse&quot;, &quot;Test ambiguity&quot;, &quot;Draft mismatch&quot;, &quot;Funding shortfall&quot;
+      ];
+      const promiseNames = [
+        &quot;Reserve top-up&quot;, &quot;Engineer certificate&quot;, &quot;Consent before use&quot;, &quot;Sponsor funds first&quot;,
+        &quot;Permit before works&quot;, &quot;Independent test&quot;, &quot;Evidence before entry&quot;, &quot;Quarterly review&quot;
+      ];
+      const moneyNames = [
+        &quot;$42M first draw&quot;, &quot;$18.6M earmark&quot;, &quot;$11M reserve&quot;, &quot;$380M facility&quot;,
+        &quot;Contingency locked&quot;, &quot;Final draw&quot;, &quot;Revenue reserve&quot;
       ];
 
-      let visibleCount = 0;
-      let playing = false;
-      let runToken = 0;
-
-      function svgElement(name, attrs = {}) {
-        const element = document.createElementNS(&#x27;http://www.w3.org/2000/svg&#x27;, name);
-        Object.entries(attrs).forEach(([key, value]) =&gt; element.setAttribute(key, String(value)));
-        return element;
-      }
-
-      function yPositions(count) {
-        if (count &lt;= 1) return [275];
-        const top = 92;
-        const bottom = 462;
-        return Array.from({length: count}, (_, index) =&gt; top + index * ((bottom - top) / (count - 1)));
-      }
-
-      function shortLines(label) {
-        if (label.length &lt;= 17) return [label];
-        const words = label.split(&#x27; &#x27;);
-        let first = &#x27;&#x27;;
-        let second = &#x27;&#x27;;
-        words.forEach(word =&gt; {
-          if ((first + &#x27; &#x27; + word).trim().length &lt;= 15 &amp;&amp; !second) first = (first + &#x27; &#x27; + word).trim();
-          else second = (second + &#x27; &#x27; + word).trim();
-        });
-        return [first, second].filter(Boolean);
-      }
-
-      function addNode(kind, x, y, label, sourceType, isNew) {
-        const group = svgElement(&#x27;g&#x27;, { class: `dwl-node${isNew ? &#x27; dwl-new-node&#x27; : &#x27;&#x27;}`, transform: `translate(${x} ${y})`, &#x27;data-kind&#x27;: kind });
-        if (kind === &#x27;source&#x27;) {
-          group.style.setProperty(&#x27;--dwl-source-color&#x27;, sourceColors[sourceType]);
-          group.appendChild(svgElement(&#x27;rect&#x27;, { x:-31, y:-13, width:62, height:26 }));
-        } else {
-          group.style.setProperty(&#x27;--dwl-node-color&#x27;, colors[kind]);
-          group.appendChild(svgElement(&#x27;circle&#x27;, { r: kind === &#x27;decision&#x27; ? 25 : kind === &#x27;money&#x27; ? 20 : 19 }));
+      const incoming = [
+        {
+          source: &quot;Teams · credit committee call&quot;,
+          copy: &quot;A new draw decision reuses the existing budget and certification controls.&quot;,
+          decision: &quot;Stage first draw gate&quot;, risks: [2, 17], promises: [5, 20], money: [3]
+        },
+        {
+          source: &quot;Email · counsel and engineer exchange&quot;,
+          copy: &quot;The record adds one decision and expands the graph with a certification risk.&quot;,
+          decision: &quot;Define certification evidence&quot;, risks: [34, 4], promises: [42, 5], money: [3]
+        },
+        {
+          source: &quot;SharePoint · permit register v12&quot;,
+          copy: &quot;Permit sequencing connects back into promises the team already negotiated.&quot;,
+          decision: &quot;Lock permit sequence&quot;, risks: [2, 18], promises: [4, 21], money: [2]
+        },
+        {
+          source: &quot;Model · base case update&quot;,
+          copy: &quot;The revised forecast reuses the downside path and changes its reserve consequence.&quot;,
+          decision: &quot;Re-size revenue reserve&quot;, risks: [0, 35], promises: [0, 43], money: [6, 18]
+        },
+        {
+          source: &quot;Construction update · package 04&quot;,
+          copy: &quot;One field update creates a decision but shares risks with earlier workstreams.&quot;,
+          decision: &quot;Release early works&quot;, risks: [1, 5], promises: [6, 12], money: [0]
+        },
+        {
+          source: &quot;Approval memo · technical conditions&quot;,
+          copy: &quot;The approved record confirms who owns evidence and what can authorize funding.&quot;,
+          decision: &quot;Approve evidence owner&quot;, risks: [34, 36], promises: [42, 44], money: [0]
+        },
+        {
+          source: &quot;Meeting record · closing readiness&quot;,
+          copy: &quot;The closing decision reuses the certification path and reveals a hollow promise.&quot;,
+          decision: &quot;Prepare closing draft&quot;, risks: [34, 8], promises: [42, 10], money: [0, 3]
+        },
+        {
+          source: &quot;Financing draft v7 · document check&quot;,
+          copy: &quot;The draft omits a verified certification promise. The $42M draw path stays open for review.&quot;,
+          decision: &quot;Hold first draw&quot;, risks: [34], promises: [42], money: [0], gap: true
         }
-        const lines = shortLines(label);
-        lines.forEach((line, index) =&gt; {
-          const text = svgElement(&#x27;text&#x27;, { y: lines.length === 1 ? 3 : -2 + index * 10 });
-          text.textContent = line;
-          group.appendChild(text);
+      ];
+
+      const nodes = new Map();
+      const edges = new Map();
+      const paths = new Map();
+      const nodePaths = new Map();
+      let visibleBaseline = 0;
+      let visibleIncoming = 0;
+      let selectedPathId = null;
+      let replayToken = 0;
+
+      function element(name, attributes = {}) {
+        const item = document.createElementNS(svgNS, name);
+        Object.entries(attributes).forEach(([key, value]) =&gt; item.setAttribute(key, String(value)));
+        return item;
+      }
+
+      function stableY(kind, index) {
+        const total = totals[kind];
+        const slot = (index * steps[kind] + (kind.length * 3)) % total;
+        return top + (slot / Math.max(1, total - 1)) * height;
+      }
+
+      function nodeId(kind, index) { return `${kind}-${String(index).padStart(2, &quot;0&quot;)}`; }
+
+      function labelFor(kind, index, override) {
+        if (override) return override;
+        if (kind === &quot;input&quot;) return `Record ${index + 1}`;
+        if (kind === &quot;decision&quot;) return decisionNames[index % decisionNames.length];
+        if (kind === &quot;risk&quot;) return riskNames[index % riskNames.length];
+        if (kind === &quot;promise&quot;) return promiseNames[index % promiseNames.length];
+        return moneyNames[index % moneyNames.length];
+      }
+
+      function addNode(kind, index, options = {}) {
+        const id = nodeId(kind, index);
+        if (nodes.has(id)) return nodes.get(id);
+        const y = stableY(kind, index);
+        const node = { id, kind, index, x: x[kind], y, label: labelFor(kind, index, options.label), gap: Boolean(options.gap) };
+        const group = element(&quot;g&quot;, { class: `dw-node${options.isNew ? &quot; is-new&quot; : &quot;&quot;}`, &quot;data-kind&quot;: kind, &quot;data-node-id&quot;: id });
+        const hit = element(&quot;circle&quot;, { class: &quot;dw-hit&quot;, cx: node.x, cy: node.y, r: 13 });
+        let core;
+        if (kind === &quot;input&quot;) core = element(&quot;rect&quot;, { class: &quot;dw-core&quot;, x: node.x - 2.5, y: node.y - 2.5, width: 5, height: 5, rx: 0.7 });
+        else if (kind === &quot;promise&quot;) core = element(&quot;rect&quot;, { class: &quot;dw-core&quot;, x: node.x - 3, y: node.y - 3, width: 6, height: 6, rx: 0.8 });
+        else if (kind === &quot;money&quot;) core = element(&quot;rect&quot;, { class: &quot;dw-core&quot;, x: node.x - 1.4, y: node.y - 5, width: 2.8, height: 10, rx: 1 });
+        else core = element(&quot;circle&quot;, { class: &quot;dw-core&quot;, cx: node.x, cy: node.y, r: kind === &quot;decision&quot; ? 4 : 3.5 });
+        const label = element(&quot;text&quot;, { class: &quot;dw-node-label&quot;, x: node.x + 9, y: node.y - 8, &quot;text-anchor&quot;: &quot;start&quot; });
+        label.textContent = node.label;
+        group.append(hit, core, label);
+        group.addEventListener(&quot;pointerenter&quot;, () =&gt; {
+          const candidates = nodePaths.get(id) || [];
+          if (candidates.length) selectPath(candidates[candidates.length - 1], false);
         });
+        group.addEventListener(&quot;click&quot;, () =&gt; {
+          const candidates = nodePaths.get(id) || [];
+          if (candidates.length) selectPath(candidates[candidates.length - 1], true);
+        });
+        node.element = group;
         nodeLayer.appendChild(group);
+        nodes.set(id, node);
+        return node;
       }
 
-      function addCurve(x1, y1, x2, y2, segment, isNew, offset = 0) {
-        const curve = svgElement(&#x27;path&#x27;, {
-          class: `dwl-path${isNew ? &#x27; dwl-new-path&#x27; : &#x27;&#x27;}`,
-          &#x27;data-segment&#x27;: segment,
-          d: `M${x1},${y1} C${x1 + 55},${y1 + offset} ${x2 - 55},${y2 - offset} ${x2},${y2}`
+      function addEdge(fromId, toId, pathId, isNew) {
+        const id = `${pathId}:${fromId}:${toId}`;
+        if (edges.has(id)) return edges.get(id);
+        const from = nodes.get(fromId);
+        const to = nodes.get(toId);
+        const bend = ((from.index * 11 + to.index * 7) % 19) - 9;
+        const span = Math.max(44, (to.x - from.x) * 0.38);
+        const path = element(&quot;path&quot;, {
+          class: `dw-edge${isNew ? &quot; is-new&quot; : &quot;&quot;}`,
+          d: `M${from.x},${from.y} C${from.x + span},${from.y + bend} ${to.x - span},${to.y - bend} ${to.x},${to.y}`,
+          &quot;data-path-id&quot;: pathId
         });
-        pathLayer.appendChild(curve);
+        edgeLayer.appendChild(path);
+        const edge = { id, pathId, fromId, toId, element: path };
+        edges.set(id, edge);
+        return edge;
       }
 
-      function render() {
-        pathLayer.replaceChildren();
-        nodeLayer.replaceChildren();
-        const visible = events.slice(0, visibleCount);
-        const sourceYs = yPositions(visible.length);
-        const collect = (items, keyFor, labelFor) =&gt; {
-          const map = new Map();
-          items.forEach((item, eventIndex) =&gt; {
-            const key = keyFor(item);
-            if (!map.has(key)) map.set(key, { key, label: labelFor(item), firstSeen: item.eventIndex ?? eventIndex });
-          });
-          return [...map.values()];
+      function registerNodePath(id, pathId) {
+        if (!nodePaths.has(id)) nodePaths.set(id, []);
+        nodePaths.get(id).push(pathId);
+      }
+
+      function buildPath(index, spec, isNew) {
+        const pathId = `path-${index}`;
+        if (paths.has(pathId)) return paths.get(pathId);
+        const input = addNode(&quot;input&quot;, index, { isNew });
+        const decision = addNode(&quot;decision&quot;, index, { isNew, label: spec.decision });
+        const riskNodes = spec.risks.map((item) =&gt; addNode(&quot;risk&quot;, item, { isNew: isNew &amp;&amp; item &gt;= baseDownstream.risk }));
+        const promiseNodes = spec.promises.map((item) =&gt; addNode(&quot;promise&quot;, item, { isNew: isNew &amp;&amp; item &gt;= baseDownstream.promise, gap: Boolean(spec.gap &amp;&amp; item === 42) }));
+        const moneyNodes = spec.money.map((item) =&gt; addNode(&quot;money&quot;, item, { isNew: isNew &amp;&amp; item &gt;= baseDownstream.money }));
+        if (spec.gap) promiseNodes.forEach((node) =&gt; { node.gap = true; node.element.classList.add(&quot;is-gap&quot;); });
+        const pathNodes = [input, decision, ...riskNodes, ...promiseNodes, ...moneyNodes];
+        const pathEdges = [];
+        pathEdges.push(addEdge(input.id, decision.id, pathId, isNew));
+        riskNodes.forEach((risk) =&gt; pathEdges.push(addEdge(decision.id, risk.id, pathId, isNew)));
+        promiseNodes.forEach((promise, item) =&gt; pathEdges.push(addEdge(riskNodes[item % riskNodes.length].id, promise.id, pathId, isNew)));
+        moneyNodes.forEach((money, item) =&gt; pathEdges.push(addEdge(promiseNodes[item % promiseNodes.length].id, money.id, pathId, isNew)));
+        const record = { id: pathId, index, spec, nodes: pathNodes, edges: pathEdges.filter(Boolean) };
+        pathNodes.forEach((node) =&gt; registerNodePath(node.id, pathId));
+        paths.set(pathId, record);
+        return record;
+      }
+
+      function baselineSpec(index) {
+        const firstRisk = (index * 7 + 3) % baseDownstream.risk;
+        const secondRisk = (index * 11 + 9) % baseDownstream.risk;
+        const firstPromise = (firstRisk * 5 + index) % baseDownstream.promise;
+        const secondPromise = (secondRisk * 3 + index) % baseDownstream.promise;
+        return {
+          source: [&quot;Meeting record&quot;, &quot;Email&quot;, &quot;Technical report&quot;, &quot;Model note&quot;, &quot;Counsel markup&quot;, &quot;Approval memo&quot;][index % 6] + ` · record ${index + 1}`,
+          copy: &quot;A historical decision remains connected to the risks, promises, and monetary consequences it changed.&quot;,
+          decision: decisionNames[index % decisionNames.length],
+          risks: index % 3 === 0 ? [firstRisk, secondRisk] : [firstRisk],
+          promises: index % 4 === 0 ? [firstPromise, secondPromise] : [firstPromise],
+          money: [(firstPromise * 7 + index) % baseDownstream.money]
         };
-        const decisions = collect(visible, event =&gt; event.decisionKey, event =&gt; event.decision);
-        const branchRows = visible.flatMap((event, eventIndex) =&gt; event.branches.map(branch =&gt; ({ event, eventIndex, branch })));
-        const risks = collect(branchRows, row =&gt; row.branch.risk, row =&gt; row.branch.risk);
-        const promises = collect(branchRows, row =&gt; row.branch.promise, row =&gt; row.branch.promise);
-        const money = collect(branchRows, row =&gt; row.branch.money, row =&gt; row.branch.money);
-        const positionMap = nodes =&gt; new Map(nodes.map((node, index) =&gt; [node.key, yPositions(nodes.length)[index]]));
-        const decisionY = positionMap(decisions);
-        const riskY = positionMap(risks);
-        const promiseY = positionMap(promises);
-        const moneyY = positionMap(money);
+      }
 
-        visible.forEach((event, eventIndex) =&gt; {
-          const isNew = eventIndex === visible.length - 1;
-          const sourceY = sourceYs[eventIndex];
-          const sharedDecisionY = decisionY.get(event.decisionKey);
-          addCurve(laneX.source + 31, sourceY, laneX.decision - 27, sharedDecisionY, &#x27;source&#x27;, isNew);
-          event.branches.forEach(branch =&gt; {
-            const branchRiskY = riskY.get(branch.risk);
-            const branchPromiseY = promiseY.get(branch.promise);
-            const branchMoneyY = moneyY.get(branch.money);
-            addCurve(laneX.decision + 27, sharedDecisionY, laneX.risk - 23, branchRiskY, &#x27;decision-risk&#x27;, isNew);
-            addCurve(laneX.risk + 23, branchRiskY, laneX.promise - 23, branchPromiseY, &#x27;risk-promise&#x27;, isNew);
-            addCurve(laneX.promise + 23, branchPromiseY, laneX.money - 23, branchMoneyY, &#x27;promise-money&#x27;, isNew);
+      function updateSelection(pathId) {
+        const selected = paths.get(pathId);
+        if (!selected) return;
+        nodes.forEach((node) =&gt; node.element.classList.remove(&quot;is-related&quot;));
+        edges.forEach((edge) =&gt; edge.element.classList.remove(&quot;is-related&quot;, &quot;is-gap&quot;));
+        selected.nodes.forEach((node) =&gt; node.element.classList.add(node.gap &amp;&amp; selected.spec.gap ? &quot;is-gap&quot; : &quot;is-related&quot;));
+        selected.edges.forEach((edge) =&gt; edge.element.classList.add(selected.spec.gap ? &quot;is-gap&quot; : &quot;is-related&quot;));
+      }
+
+      function selectPath(pathId, announce) {
+        const selected = paths.get(pathId);
+        if (!selected) return;
+        selectedPathId = pathId;
+        updateSelection(pathId);
+        currentLabel.textContent = selected.spec.gap ? &quot;Open gap · verified receipt&quot; : &quot;Selected receipt&quot;;
+        currentTitle.textContent = selected.spec.source;
+        currentCopy.textContent = selected.spec.copy;
+        currentState.dataset.state = selected.spec.gap ? &quot;gap&quot; : &quot;linked&quot;;
+        currentState.querySelector(&quot;span&quot;).textContent = selected.spec.gap ? &quot;Hollow path · hold for review&quot; : &quot;Source-linked memory&quot;;
+        if (announce) live.textContent = `${selected.spec.source}. ${selected.spec.copy}`;
+      }
+
+      function addIncoming(index, announce) {
+        if (index &gt;= incoming.length) return null;
+        const record = buildPath(baseDecisionCount + index, incoming[index], true);
+        visibleIncoming = Math.max(visibleIncoming, index + 1);
+        decisionCount.textContent = String(baseDecisionCount + visibleIncoming);
+        recordCount.textContent = String(Math.round(432 * (baseDecisionCount + visibleIncoming) / totals.decision));
+        selectPath(record.id, announce);
+        return record;
+      }
+
+      function addBaseline(index, announce) {
+        const record = buildPath(index, baselineSpec(index), true);
+        visibleBaseline = Math.max(visibleBaseline, index + 1);
+        decisionCount.textContent = String(visibleBaseline);
+        recordCount.textContent = String(Math.round(432 * visibleBaseline / totals.decision));
+        if (announce) selectPath(record.id, false);
+        return record;
+      }
+
+      function clearGraph() {
+        edgeLayer.replaceChildren();
+        nodeLayer.replaceChildren();
+        nodes.clear();
+        edges.clear();
+        paths.clear();
+        nodePaths.clear();
+        visibleBaseline = 0;
+        visibleIncoming = 0;
+        selectedPathId = null;
+        decisionCount.textContent = &quot;0&quot;;
+        recordCount.textContent = &quot;0&quot;;
+        currentLabel.textContent = &quot;Memory forming&quot;;
+        currentTitle.textContent = &quot;Scanning synthetic deal records&quot;;
+        currentCopy.textContent = &quot;Each document adds a tiny decision mark. Its links reinforce or extend findings already in institutional memory.&quot;;
+        currentState.dataset.state = &quot;linked&quot;;
+        currentState.querySelector(&quot;span&quot;).textContent = &quot;Evidence arriving over time&quot;;
+      }
+
+      function resetWeek() {
+        replayToken += 1;
+        for (let index = 0; index &lt; incoming.length; index += 1) {
+          const pathId = `path-${baseDecisionCount + index}`;
+          const record = paths.get(pathId);
+          if (!record) continue;
+          record.edges.forEach((edge) =&gt; { edge.element.remove(); edges.delete(edge.id); });
+          record.nodes.forEach((node) =&gt; {
+            const stillUsed = [...paths.values()].some((candidate) =&gt; candidate.id !== pathId &amp;&amp; candidate.nodes.some((item) =&gt; item.id === node.id));
+            if (!stillUsed) { node.element.remove(); nodes.delete(node.id); nodePaths.delete(node.id); }
+            else nodePaths.set(node.id, (nodePaths.get(node.id) || []).filter((item) =&gt; item !== pathId));
           });
-          addNode(&#x27;source&#x27;, laneX.source, sourceY, event.sourceLabel, event.source, isNew);
-        });
-        decisions.forEach(node =&gt; addNode(&#x27;decision&#x27;, laneX.decision, decisionY.get(node.key), node.label, &#x27;&#x27;, node.firstSeen === visible.length - 1));
-        risks.forEach(node =&gt; addNode(&#x27;risk&#x27;, laneX.risk, riskY.get(node.key), node.label, &#x27;&#x27;, node.firstSeen === visible.length - 1));
-        promises.forEach(node =&gt; addNode(&#x27;promise&#x27;, laneX.promise, promiseY.get(node.key), node.label, &#x27;&#x27;, node.firstSeen === visible.length - 1));
-        money.forEach(node =&gt; addNode(&#x27;money&#x27;, laneX.money, moneyY.get(node.key), node.label, &#x27;&#x27;, node.firstSeen === visible.length - 1));
+          paths.delete(pathId);
+        }
+        visibleIncoming = 0;
+        decisionCount.textContent = String(baseDecisionCount);
+        selectPath(&quot;path-63&quot;, false);
+      }
 
-        const recordScale = visibleCount === 0 ? 0 : Math.round(432 * visibleCount / events.length);
-        recordCount.textContent = String(recordScale);
-        pathCount.textContent = String(decisions.length);
-        densityNote.textContent = visibleCount === 0 ? &#x27;Waiting for evidence&#x27; : `Scale compressed · ${visibleCount} inputs · ${decisions.length} decisions`;
-        progressFill.style.width = `${100 * visibleCount / events.length}%`;
-        if (visibleCount &gt; 0) {
-          const event = visible[visible.length - 1];
-          const priorBranches = visible.slice(0, -1).flatMap(prior =&gt; prior.branches);
-          const reused = event.branches.some(branch =&gt; priorBranches.some(prior =&gt;
-            prior.risk === branch.risk || prior.promise === branch.promise || prior.money === branch.money));
-          currentSource.textContent = event.context;
-          talkLabel.textContent = reused ? &#x27;New decision · shared downstream memory&#x27; : &#x27;New decision · new route&#x27;;
-          talkTitle.textContent = reused ? &#x27;The decision reuses and expands an existing flow.&#x27; : &#x27;The document adds a decision and opens a path.&#x27;;
-          currentDetail.textContent = reused
-            ? &#x27;A new decision node is preserved, while matching risks, promises, and money stay shared—so the institution sees one connected deal.&#x27;
-            : &#x27;Deal Witness preserves the decision in the document, then traces its risks, negotiated promises, and monetary consequences left to right.&#x27;;
-          [...flowSentence.children].forEach(item =&gt; item.dataset.active = &#x27;true&#x27;);
+      function wait(ms) { return new Promise((resolve) =&gt; setTimeout(resolve, ms)); }
+
+      async function replayHistory() {
+        const token = ++replayToken;
+        clearGraph();
+        replayButton.textContent = &quot;Building memory&quot;;
+        replayButton.disabled = true;
+        nextButton.disabled = true;
+        for (let index = 0; index &lt; baseDecisionCount; index += 1) {
+          if (token !== replayToken) break;
+          addBaseline(index, index &lt; 10 || index % 6 === 5 || index === baseDecisionCount - 1);
+          await wait(index &lt; 12 ? 155 : 72);
+        }
+        if (token === replayToken) {
+          replayButton.textContent = &quot;Replay history&quot;;
+          replayButton.disabled = false;
+          nextButton.disabled = false;
+          selectPath(&quot;path-63&quot;, false);
+          live.textContent = &quot;Nine months of synthetic memory mapped. Add the closing-week documents one at a time.&quot;;
         }
       }
 
-      const wait = milliseconds =&gt; new Promise(resolve =&gt; setTimeout(resolve, milliseconds));
-      async function replay() {
-        playing = true;
-        const token = ++runToken;
-        visibleCount = 0;
-        render();
-        playButton.textContent = &#x27;Playing&#x27;;
-        for (let index = 1; index &lt;= events.length; index += 1) {
-          if (token !== runToken) break;
-          visibleCount = index;
-          render();
-          await wait(index &lt;= 4 ? 900 : 620);
-        }
-        if (token === runToken) {
-          playing = false;
-          playButton.textContent = &#x27;Replay&#x27;;
-          talkLabel.textContent = &#x27;The memory keeps growing&#x27;;
-          talkTitle.textContent = &#x27;Every new source reuses or extends the causal graph.&#x27;;
-          currentDetail.textContent = &#x27;Evidence accumulates around shared decisions. The view compresses as their risks, promises, and monetary consequences expand.&#x27;;
-          [...flowSentence.children].forEach(item =&gt; item.dataset.active = &#x27;true&#x27;);
-        }
+      function revealAllIncoming() {
+        while (visibleIncoming &lt; incoming.length) addIncoming(visibleIncoming, false);
       }
 
-      playButton.addEventListener(&#x27;click&#x27;, () =&gt; {
-        if (playing) { runToken += 1; playing = false; playButton.textContent = &#x27;Replay&#x27;; }
-        else replay();
-      });
-      nextButton.addEventListener(&#x27;click&#x27;, () =&gt; {
-        if (visibleCount &gt;= events.length) return;
-        runToken += 1;
-        playing = false;
-        playButton.textContent = &#x27;Replay&#x27;;
-        visibleCount = Math.min(events.length, visibleCount + 1);
-        render();
-        nextButton.disabled = visibleCount &gt;= events.length;
-      });
-      resetButton.addEventListener(&#x27;click&#x27;, () =&gt; {
-        runToken += 1;
-        playing = false;
-        playButton.textContent = &#x27;Replay&#x27;;
-        visibleCount = 0;
-        render();
+      replayButton.addEventListener(&quot;click&quot;, replayHistory);
+      nextButton.addEventListener(&quot;click&quot;, () =&gt; {
+        replayToken += 1;
+        replayButton.textContent = &quot;Replay history&quot;;
+        replayButton.disabled = false;
         nextButton.disabled = false;
+        if (visibleIncoming &lt; incoming.length) addIncoming(visibleIncoming, true);
+        else selectPath(&quot;path-71&quot;, true);
+      });
+      gapButton.addEventListener(&quot;click&quot;, () =&gt; {
+        replayToken += 1;
+        replayButton.textContent = &quot;Replay history&quot;;
+        replayButton.disabled = false;
+        nextButton.disabled = false;
+        while (visibleBaseline &lt; baseDecisionCount) addBaseline(visibleBaseline, false);
+        revealAllIncoming();
+        selectPath(&quot;path-71&quot;, true);
       });
 
-      render();
-      setTimeout(replay, 350);
+      replayHistory();
     })();
   &lt;/script&gt;
 &lt;/div&gt;
