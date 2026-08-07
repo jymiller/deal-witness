@@ -115,6 +115,21 @@ A successful check emits only a redacted status object with
 `"connected": true`. It does not add or flush memory, print search results, or
 make the synthetic preflight a valid Memory Knee result.
 
+Deal Witness uses a dedicated EverOS Memory Space named **Deal Witness** in
+**Team Collaboration** scenario mode. EverOS API keys are bound to a Memory
+Space, so the local `EVEROS_API_KEY` must belong to that space rather than
+`default_space`. Before loading the demo corpus, run the bounded synthetic
+bootstrap probe:
+
+```bash
+.venv/bin/python scripts/verify_deal_witness_space.py --write
+```
+
+The probe adds four wholly synthetic messages from two participants, flushes
+the session, and succeeds only when EverOS returns separately attributed
+episodes for both people. It never prints the credential or generated memory
+contents.
+
 ## Submission clock
 
 - Internal feature and content freeze: **2026-08-07 14:30 PDT**
