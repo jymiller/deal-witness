@@ -1,0 +1,100 @@
+{
+  "id": "expert-ranking-selected-example",
+  "selected_example_item_id": "item-commitment-001",
+  "display_surface": "who_knows_what_side_panel",
+  "deal_map_region": null,
+  "is_fifth_deal_map_region": false,
+  "generated_from": "deterministic historical evidence, person-role metadata, and relationship memory",
+  "provider_generated_concepts_used": false,
+  "maya_status": {
+    "person_id": "person-maya-soren",
+    "departed_at": "2027-09-03T17:00:00.000Z",
+    "candidate_for_contact": false,
+    "historical_relationship_basis_record_id": "source-0424"
+  },
+  "ranked_candidates": [
+    {
+      "rank": 1,
+      "person_id": "person-ada-rook",
+      "organization_id": "org-clearspan",
+      "role": "independent-engineering director",
+      "subject_areas": [
+        "independent-engineer certification",
+        "noise-mitigation funding evidence",
+        "first-draw technical package"
+      ],
+      "prepared_contact_channel": "prepared_simulated_call",
+      "capabilities": {
+        "likely_knows": true,
+        "can_provide_evidence": true,
+        "can_certify": true,
+        "authorized_to_confirm": true,
+        "authorized_to_approve": false
+      },
+      "why_this_person": "Historical Maya relationship evidence links Ada to the certification path; her earlier technical authorship identifies Clearspan as the independent engineer; Ada can provide and certify engineering evidence.",
+      "evidence_basis_record_ids": [
+        "source-0169",
+        "source-0424",
+        "source-0425"
+      ],
+      "relationship_basis_ids": [
+        "relationship-0271",
+        "relationship-0481"
+      ]
+    },
+    {
+      "rank": 2,
+      "person_id": "person-ren-ito",
+      "organization_id": "org-harbor-glass",
+      "role": "credit committee chair",
+      "subject_areas": [
+        "approved credit conditions",
+        "release authorization",
+        "committee records"
+      ],
+      "prepared_contact_channel": "prepared_transcript",
+      "capabilities": {
+        "likely_knows": true,
+        "can_provide_evidence": true,
+        "can_certify": false,
+        "authorized_to_confirm": true,
+        "authorized_to_approve": true
+      },
+      "why_this_person": "Historical Maya relationship evidence and Ren's participation in an earlier approval record link him to credit decisions. He can own approval evidence but cannot issue the engineering certification.",
+      "evidence_basis_record_ids": [
+        "source-0356",
+        "source-0424"
+      ],
+      "relationship_basis_ids": [
+        "relationship-0271",
+        "relationship-0481"
+      ]
+    },
+    {
+      "rank": 3,
+      "person_id": "person-talia-wren",
+      "organization_id": "org-asterline-runway",
+      "role": "project-controls lead",
+      "subject_areas": [
+        "project controls",
+        "draw coordination context"
+      ],
+      "prepared_contact_channel": "prepared_transcript",
+      "capabilities": {
+        "likely_knows": true,
+        "can_provide_evidence": false,
+        "can_certify": false,
+        "authorized_to_confirm": false,
+        "authorized_to_approve": false
+      },
+      "why_this_person": "Talia appears in working project-control records and can explain context, but the receipts do not show authority to confirm, approve, or certify the term.",
+      "evidence_basis_record_ids": [
+        "source-0425"
+      ],
+      "relationship_basis_ids": []
+    }
+  ],
+  "selected_contact_person_id": "person-ada-rook",
+  "selection_reason": "Highest source-backed fit for certification evidence; selection is based on capabilities and receipts, not source volume.",
+  "synthetic": true
+}

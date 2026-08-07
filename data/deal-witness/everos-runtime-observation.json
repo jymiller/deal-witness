@@ -1,0 +1,25 @@
+{
+  "observation_type": "provider_runtime_extraction_summary",
+  "app_id": "deal-witness",
+  "project_id": "synthetic-airport-discovery-v1",
+  "session_ids": [
+    "foundation",
+    "gap-resolution",
+    "later-use"
+  ],
+  "input_message_count": 20,
+  "observed_episode_count": 10,
+  "observed_profile_count": 5,
+  "profiles_represent_distinct_participants": true,
+  "shared_episodes_across_participants_observed": true,
+  "memory_space_mode_inference": "behavior_consistent_with_team_collaboration",
+  "memory_space_mode_confirmed": false,
+  "operational_gate_path": "data/deal-witness/everos-operational-gate.json",
+  "fixture_truth": false,
+  "source_truth": false,
+  "provider_generated_concepts_predeclared": false,
+  "provider_generated_concepts_copied_into_fixture": false,
+  "interpretation": "A live EverOS Cloud observation supplied by the co-leader shows that provider concepts can emerge from the synthetic discovery seed. Counts are runtime diagnostics only; deterministic fixture and source truth remain in the generated corpus.",
+  "concepts": "intentionally omitted",
+  "secrets_included": false
+}

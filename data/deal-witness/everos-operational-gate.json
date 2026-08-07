@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "gate_id": "everos-team-collaboration-space-confirmation",
+  "scope": "operational_preload_only",
+  "demo_narration": false,
+  "fixture_truth": false,
+  "source_truth": false,
+  "status": "blocked_pending_console_confirmation",
+  "required_scenario_mode": "Team Collaboration",
+  "observed_space_label": "default_space",
+  "console_confirmation": {
+    "required": true,
+    "confirmed": false,
+    "confirmed_mode": null,
+    "confirmed_at": null,
+    "confirmed_by": null
+  },
+  "runtime_observation": {
+    "distinct_profile_count": 5,
+    "shared_episodes_across_participants_observed": true,
+    "inference": "The observed profiles and shared episodes are consistent with Team Collaboration behavior.",
+    "inference_is_confirmation": false
+  },
+  "provider_constraints": {
+    "scenario_mode_immutable_after_first_data": true,
+    "documented_v2_api_read_endpoint_available": false,
+    "documented_v2_api_change_endpoint_available": false,
+    "app_id_changes_scenario_mode": false,
+    "project_id_changes_scenario_mode": false,
+    "api_key_is_bound_to_memory_space": true
+  },
+  "prohibited_until_confirmed": [
+    "bulk_load_430_preload_ready_records",
+    "represent_default_space_as_confirmed_team_collaboration",
+    "treat_runtime_provider_concepts_as_fixture_truth"
+  ],
+  "resolution": {
+    "if_team_collaboration": "Record Console confirmation, then separately authorize any bulk load.",
+    "if_personal": "Create a fresh memory space explicitly configured for Team Collaboration, obtain its environment-bound key, and reseed before any bulk load."
+  },
+  "secret_handling": {
+    "interface": "environment variables only",
+    "secret_values_in_file": false,
+    "print_or_log_secret_values": false
+  }
+}

@@ -1,48 +1,63 @@
-# Deal Witness — Product Contract (Canonical Draft v1)
+# Deal Witness — One-Page Product Contract
 
-> Synthetic demo only. All names, entities, events, and deal terms are invented and are not modeled on any actual company, transaction, or person.
+> **Wholly synthetic demo.** Every name, organization, event, source, quote, amount, and term is invented and does not describe a real financing or airport project.
 
 ## One sentence
 
-Deal Witness turns scattered deal conversations and documents into a small, source-backed map that catches when a remembered promise is missing from the closing contract.
+Deal Witness maps deal evidence, finds memory gaps, asks source-backed experts grounded questions, stores attributable answers and investigation recipes, and later exposes verified terms missing from the contract.
 
 ## User
 
-The deal teammate taking over Maya's work and deciding whether a synthetic $24 million loan can keep moving toward its Friday close.
+The Harbor Glass team inheriting Project Asterline, a synthetic **$380 million private-credit runway and infrastructure financing**. Maya Soren departed Friday, September 3, 2027; recovery begins Monday, September 6; closing is Friday, September 10. Maya cannot be contacted and appears only on historical provenance and relationship edges.
 
 ## Value
 
-- Preserve the reasoning behind a deal when its lead becomes unavailable.
-- Show one concept becoming better supported—**HEARD → CONFIRMED → IN CONTRACT**—instead of making duplicate facts look like progress.
-- Trace every conclusion to a short, human-readable source.
-- Stop a closing review when a required, well-supported promise is absent from the current draft.
+- Compress nine months of evidence into 13 clusters while preserving 288 underlying items and citations.
+- Expose gaps, distinguish expert capabilities, and keep vague replies open until substantive, attributable evidence arrives.
+- Preserve the gap-to-answer path in EverOS for later draft checks without claiming to reproduce Maya's judgment.
 
-## Canonical demo behavior
+## Corpus and map
 
-The core map contains 12 stable concepts in four fixed, plain-English regions: **Money, Promises, Risks, Decisions**. A covenant is described as **“a promise that protects the money.”** The critical promise is always displayed as: **“Owners cannot take cash out of the business without lender permission.”**
+The corpus spans **9 months**, **14 organizations**, **36 named people and roles**, and **432 records across 12 channels**. Its **288 atomic items**—72 decisions, 108 commitments, 72 risks, and 36 questions—have **864 provenance links**, **576 typed relationships**, and **144 contract-scoped items**.
 
-`READY` means only that the evidence loaded so far has no unresolved demo blocker; it is not legal approval or authority to close. When closing draft v7 is checked, its missing critical promise changes the status from `READY` to `HOLD FOR REVIEW`. Corrected draft v8 contains the promise, repairs the broken connection, and returns the status to `READY`.
+Five bundles contain **430 stored, preload-ready fixture records**: relationship and origination history (72), economics and credit work (96), technical and construction evidence (112), authority and stakeholder context (72), and historical relationships & recovery (78). Evidence River replays fixture metadata; it does not claim a live EverOS bulk load. Only v7 and v8 are staged live, one record each.
+
+The map has exactly four regions and 13 clusters: **Money**—Facility & pricing, Sources & uses, Draw schedule & liquidity; **Promises**—Construction & completion, First-draw requirements, Reporting & controls, Stakeholder & mitigation commitments; **Risks**—Delivery & cost, Permits & community, Coordination & knowledge continuity; **Decisions**—Credit & structure, Design & scope, Release & escalation.
+
+## Post-departure recovery loop
+
+1. Evidence River compresses into the map and exposes a hollow `HEARD` item (`source-0425`).
+2. Deal Witness searches historical evidence and relationships. Maya appears only on edge `source-0424`; the system never asks her.
+3. **Who Knows What**, a side panel—not a fifth region—ranks candidates using independent fields: `likely_knows`, `can_provide_evidence`, `can_certify`, `authorized_to_confirm`, and `authorized_to_approve`. **Why this person?** cites the basis. Ada Rook of synthetic Clearspan Independent Engineering ranks first for technical evidence and certification, not lender approval.
+4. A prepared Ada simulation performs no real dialing, calendar action, meeting, or messaging. The grounded question (`source-0427`) receives a vague reply (`source-0426`) that stays open. Ada's later substantive answer (`source-0428`) and Ren Ito's approved record (`source-0429`) together advance the item to `CONFIRMED`. Transcript and provenance stay synchronized, with the same timed silent fallback.
+5. EverOS stores answer, attribution, receipts, and investigation recipe. `source-0430` is the prepared demo capture, and the map visibly fills.
+
+## Selected example and state machine
+
+One selectable example among 144 contract-scoped items reads:
+
+> Before lenders release the first construction draw, the sponsor must deposit the noise-mitigation budget and an independent engineer must certify it is fully funded.
+
+It is `selected_for_demo`, not central, highest-risk, or unique. The three snapshots are Wednesday post-departure recovery `READY`; Thursday v7 at 09:12Z with 143 of 144 matched, **Remembered, but missing from draft**, and `HOLD FOR REVIEW`; and Thursday v8 at 15:40Z with all 144 matched, `IN CONTRACT`, and `READY`. Friday close is not a fourth snapshot.
+
+## Runtime boundary
+
+A live EverOS observation separately reads **20 messages, 10 episodes, and 5 profiles** under supplied IDs. It is inference-only—not fixture truth, deal-source truth, or confirmation—and cannot alter totals, states, matches, or readiness. Concept labels appear only after observation; they are never predeclared.
 
 ## Non-goals
 
-- Give legal advice, judge enforceability, or replace counsel or a human reviewer.
-- Automatically approve, close, sign, or edit a loan.
-- Replace a CRM, data room, underwriting system, or document-management system.
-- Treat a larger source count as stronger evidence without a qualifying confirmation.
-- Model every deal detail or make architecture and integration choices in this story contract.
-- Use real deal data, real-company lookalikes, or non-synthetic evidence.
+- Contact Maya; replace an expert or decision-maker; or reconstruct human judgment.
+- Give legal or technical advice, judge enforceability, or draft replacement language.
+- Treat likelihood, vague answers, relationships, seniority, volume, or runtime inference as confirmation.
+- Perform real outreach, add a fifth map region, collapse authority fields into one score, or use non-synthetic evidence.
 
 ## Acceptance criteria
 
-1. The opening establishes that the fictional $24 million loan closes Friday and Maya leaves tomorrow.
-2. The core map has exactly 12 stable concept IDs and only the four user-facing regions **Money, Promises, Risks, Decisions**.
-3. The critical promise appears verbatim as **“Owners cannot take cash out of the business without lender permission.”**
-4. Any use of *covenant* is immediately explained as **“a promise that protects the money.”**
-5. The evidence pack contains a negotiation call, internal message, approved deal memo, Maya's exit answer, and closing draft; the closing-draft artifact has omitted v7 and corrected v8 versions.
-6. Every concept exposes its sources, verification state, and current-draft match state. `CONFIRMED` means better-supported memory, not legal correctness; `IN CONTRACT` means present in the checked draft, not enforceable.
-7. The call first marks the critical promise `HEARD`. The approved memo confirms the same concept. Additional sources attach to that concept rather than creating duplicate nodes.
-8. In v7, the critical promise remains `CONFIRMED`, its contract match is `MISSING`, and its connection to the draft is visibly broken and labeled **Remembered, but missing from draft**.
-9. The v7 mismatch is the sole blocker and changes `READY` to `HOLD FOR REVIEW`, with links to the remembered sources and the checked draft.
-10. In v8, the critical promise becomes `IN CONTRACT`, its contract match is `MATCHED`, the connection is repaired, and the status returns to `READY`.
-11. The map never uses source volume as a confidence score; state changes require an approved source, explicit human confirmation, or a direct result from checking the current draft. Only a match can advance a concept to `IN CONTRACT`.
-12. The scripted story finishes in three minutes, is understandable without legal or finance expertise, uses only synthetic facts, and matches the validated JSON fixture.
+1. Monday opens with Maya already gone and Friday close ahead; no exit interview, Maya contact, or pre-departure completion appears.
+2. Evidence River and compression come first; all counts, IDs, references, timestamps, relationships, and three snapshots validate deterministically.
+3. Who Knows What remains a cited side panel with distinct capability fields; Maya is historical-only.
+4. The prepared Ada loop is explicitly non-live, keeps the vague answer open, synchronizes transcript/provenance, and supports silent fallback.
+5. Only sourced Ada and Ren evidence confirms; EverOS retains attribution, receipts, and the investigation recipe.
+6. The 20/10/5 observation remains inference-only and never supplies fixture facts, source truth, status, or predeclared concepts.
+7. The selected item progresses `HEARD → CONFIRMED → MISSING / broken → IN CONTRACT / repaired` and alone drives `READY → HOLD FOR REVIEW → READY`.
+8. `CONFIRMED` is not truth or legal correctness, `IN CONTRACT` is not enforceability, and `READY` is not permission to close, fund, or release money.

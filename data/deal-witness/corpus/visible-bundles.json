@@ -1,0 +1,86 @@
+[
+  {
+    "id": "bundle-01-maya-relationships-origination",
+    "title": "Maya relationships and origination",
+    "record_count": 72,
+    "load_mode": "preloaded_replay",
+    "artifact_path": "data/deal-witness/evidence/01-maya-relationships-origination.md",
+    "coverage_start": "2027-01-11T09:00:00.000Z",
+    "coverage_end": "2027-02-28T17:00:00.000Z",
+    "maya_replay_role": "noticing relationship context",
+    "display_order": 1,
+    "synthetic": true
+  },
+  {
+    "id": "bundle-02-economics-credit",
+    "title": "Economics and credit",
+    "record_count": 96,
+    "load_mode": "preloaded_replay",
+    "artifact_path": "data/deal-witness/evidence/02-economics-credit.md",
+    "coverage_start": "2027-02-05T09:00:00.000Z",
+    "coverage_end": "2027-04-30T17:00:00.000Z",
+    "maya_replay_role": "connecting economics and credit decisions",
+    "display_order": 2,
+    "synthetic": true
+  },
+  {
+    "id": "bundle-03-technical-construction",
+    "title": "Technical and construction",
+    "record_count": 112,
+    "load_mode": "preloaded_replay",
+    "artifact_path": "data/deal-witness/evidence/03-technical-construction.md",
+    "coverage_start": "2027-03-03T09:00:00.000Z",
+    "coverage_end": "2027-06-25T17:00:00.000Z",
+    "maya_replay_role": "following technical dependencies",
+    "display_order": 3,
+    "synthetic": true
+  },
+  {
+    "id": "bundle-04-authority-stakeholder-context",
+    "title": "Authority and stakeholder context",
+    "record_count": 72,
+    "load_mode": "preloaded_replay",
+    "artifact_path": "data/deal-witness/evidence/04-authority-stakeholder-context.md",
+    "coverage_start": "2027-04-09T09:00:00.000Z",
+    "coverage_end": "2027-07-30T17:00:00.000Z",
+    "maya_replay_role": "noticing cross-domain questions",
+    "display_order": 4,
+    "synthetic": true
+  },
+  {
+    "id": "bundle-05-historical-relationships-recovery",
+    "title": "Historical relationships and post-departure recovery",
+    "record_count": 78,
+    "load_mode": "preloaded_replay",
+    "artifact_path": "data/deal-witness/evidence/05-historical-relationships-recovery.md",
+    "coverage_start": "2027-02-18T09:00:00.000Z",
+    "coverage_end": "2027-09-08T16:45:00.000Z",
+    "maya_replay_role": "historical provenance and relationship edges only",
+    "display_order": 5,
+    "synthetic": true
+  },
+  {
+    "id": "bundle-06-financing-draft-v7",
+    "title": "Financing draft v7",
+    "record_count": 1,
+    "load_mode": "staged_live",
+    "artifact_path": "data/deal-witness/evidence/06-financing-draft-v7.md",
+    "coverage_start": "2027-09-09T09:12:00.000Z",
+    "coverage_end": "2027-09-09T09:12:00.000Z",
+    "maya_replay_role": null,
+    "display_order": 6,
+    "synthetic": true
+  },
+  {
+    "id": "bundle-07-financing-draft-v8-corrected",
+    "title": "Financing draft v8 corrected",
+    "record_count": 1,
+    "load_mode": "staged_live",
+    "artifact_path": "data/deal-witness/evidence/07-financing-draft-v8-corrected.md",
+    "coverage_start": "2027-09-09T15:40:00.000Z",
+    "coverage_end": "2027-09-09T15:40:00.000Z",
+    "maya_replay_role": null,
+    "display_order": 7,
+    "synthetic": true
+  }
+]

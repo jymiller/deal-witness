@@ -1,0 +1,100 @@
+[
+  {
+    "id": "org-asterline-infrastructure",
+    "name": "Asterline Infrastructure Holdings",
+    "role": "project sponsor",
+    "synthetic": true,
+    "display_order": 1
+  },
+  {
+    "id": "org-asterline-runway",
+    "name": "Asterline Runway Company",
+    "role": "project company",
+    "synthetic": true,
+    "display_order": 2
+  },
+  {
+    "id": "org-harbor-glass",
+    "name": "Harbor Glass Private Credit",
+    "role": "lead private-credit lender",
+    "synthetic": true,
+    "display_order": 3
+  },
+  {
+    "id": "org-cobalt-finch",
+    "name": "Cobalt Finch Capital",
+    "role": "co-lender coordinator",
+    "synthetic": true,
+    "display_order": 4
+  },
+  {
+    "id": "org-skyvale-authority",
+    "name": "Skyvale Airport Authority",
+    "role": "airport authority",
+    "synthetic": true,
+    "display_order": 5
+  },
+  {
+    "id": "org-civic-aerodrome-review",
+    "name": "Civic Aerodrome Review Office",
+    "role": "aviation review office",
+    "synthetic": true,
+    "display_order": 6
+  },
+  {
+    "id": "org-copper-kite",
+    "name": "Copper Kite Construction",
+    "role": "engineering and construction contractor",
+    "synthetic": true,
+    "display_order": 7
+  },
+  {
+    "id": "org-north-loom",
+    "name": "North Loom Engineering",
+    "role": "runway design engineer",
+    "synthetic": true,
+    "display_order": 8
+  },
+  {
+    "id": "org-clearspan",
+    "name": "Clearspan Independent Engineering",
+    "role": "independent engineer",
+    "synthetic": true,
+    "display_order": 9
+  },
+  {
+    "id": "org-morrow-field",
+    "name": "Morrow Field Environment",
+    "role": "environmental and noise adviser",
+    "synthetic": true,
+    "display_order": 10
+  },
+  {
+    "id": "org-almanac-counsel",
+    "name": "Almanac Project Counsel",
+    "role": "sponsor counsel",
+    "synthetic": true,
+    "display_order": 11
+  },
+  {
+    "id": "org-juniper-ledger",
+    "name": "Juniper Ledger Counsel",
+    "role": "lender counsel",
+    "synthetic": true,
+    "display_order": 12
+  },
+  {
+    "id": "org-beacon-quill",
+    "name": "Beacon Quill Risk Partners",
+    "role": "insurance and construction-risk adviser",
+    "synthetic": true,
+    "display_order": 13
+  },
+  {
+    "id": "org-skyvale-community",
+    "name": "Skyvale Community Coordination Forum",
+    "role": "community coordination group",
+    "synthetic": true,
+    "display_order": 14
+  }
+]

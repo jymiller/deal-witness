@@ -1,0 +1,132 @@
+[
+  {
+    "id": "cluster-money-facility-pricing",
+    "region": "Money",
+    "label": "Facility & pricing",
+    "display_order": 1,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 22,
+    "target_item_count": 22
+  },
+  {
+    "id": "cluster-money-sources-uses",
+    "region": "Money",
+    "label": "Sources & uses",
+    "display_order": 2,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 22,
+    "target_item_count": 22
+  },
+  {
+    "id": "cluster-money-draw-liquidity",
+    "region": "Money",
+    "label": "Draw schedule & liquidity",
+    "display_order": 3,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 22,
+    "target_item_count": 22
+  },
+  {
+    "id": "cluster-promises-construction-completion",
+    "region": "Promises",
+    "label": "Construction & completion",
+    "display_order": 4,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 24,
+    "target_item_count": 24
+  },
+  {
+    "id": "cluster-promises-first-draw",
+    "region": "Promises",
+    "label": "First-draw requirements",
+    "display_order": 5,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 24,
+    "target_item_count": 24
+  },
+  {
+    "id": "cluster-promises-reporting-controls",
+    "region": "Promises",
+    "label": "Reporting & controls",
+    "display_order": 6,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 24,
+    "target_item_count": 24
+  },
+  {
+    "id": "cluster-promises-stakeholder-mitigation",
+    "region": "Promises",
+    "label": "Stakeholder & mitigation commitments",
+    "display_order": 7,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 24,
+    "target_item_count": 24
+  },
+  {
+    "id": "cluster-risks-delivery-cost",
+    "region": "Risks",
+    "label": "Delivery & cost",
+    "display_order": 8,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 24,
+    "target_item_count": 24
+  },
+  {
+    "id": "cluster-risks-permits-community",
+    "region": "Risks",
+    "label": "Permits & community",
+    "display_order": 9,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 24,
+    "target_item_count": 24
+  },
+  {
+    "id": "cluster-risks-coordination-knowledge",
+    "region": "Risks",
+    "label": "Coordination & knowledge continuity",
+    "display_order": 10,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 24,
+    "target_item_count": 24
+  },
+  {
+    "id": "cluster-decisions-credit-structure",
+    "region": "Decisions",
+    "label": "Credit & structure",
+    "display_order": 11,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 18,
+    "target_item_count": 18
+  },
+  {
+    "id": "cluster-decisions-design-scope",
+    "region": "Decisions",
+    "label": "Design & scope",
+    "display_order": 12,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 18,
+    "target_item_count": 18
+  },
+  {
+    "id": "cluster-decisions-release-escalation",
+    "region": "Decisions",
+    "label": "Release & escalation",
+    "display_order": 13,
+    "visible": true,
+    "density_definition": "Supported atomic items divided by total atomic items in the cluster; never an evidence-confidence score.",
+    "item_count": 18,
+    "target_item_count": 18
+  }
+]

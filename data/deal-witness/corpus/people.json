@@ -1,0 +1,1190 @@
+[
+  {
+    "id": "person-lena-voss",
+    "name": "Lena Voss",
+    "role": "sponsor managing director",
+    "organization_id": "org-asterline-infrastructure",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "sponsor managing director",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": true
+    },
+    "display_order": 1
+  },
+  {
+    "id": "person-omar-vale",
+    "name": "Omar Vale",
+    "role": "sponsor finance director",
+    "organization_id": "org-asterline-infrastructure",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "sponsor finance director",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 2
+  },
+  {
+    "id": "person-priya-dune",
+    "name": "Priya Dune",
+    "role": "sponsor project director",
+    "organization_id": "org-asterline-infrastructure",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "sponsor project director",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 3
+  },
+  {
+    "id": "person-ellis-march",
+    "name": "Ellis March",
+    "role": "sponsor treasury lead",
+    "organization_id": "org-asterline-infrastructure",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "sponsor treasury lead",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 4
+  },
+  {
+    "id": "person-jonah-crest",
+    "name": "Jonah Crest",
+    "role": "project-company chief executive",
+    "organization_id": "org-asterline-runway",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "project-company chief executive",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 5
+  },
+  {
+    "id": "person-talia-wren",
+    "name": "Talia Wren",
+    "role": "project-controls lead",
+    "organization_id": "org-asterline-runway",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "project-controls lead",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 6
+  },
+  {
+    "id": "person-marc-ives",
+    "name": "Marc Ives",
+    "role": "draw coordinator",
+    "organization_id": "org-asterline-runway",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "draw coordinator",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 7
+  },
+  {
+    "id": "person-maya-soren",
+    "name": "Maya Soren",
+    "role": "senior deal lead and cross-organization analytical hub",
+    "organization_id": "org-harbor-glass",
+    "synthetic": true,
+    "is_maya": true,
+    "relationship_started_at": "2016-04-18T09:00:00.000Z",
+    "trusted_analytical_hub": true,
+    "departed_at": "2027-09-03T17:00:00.000Z",
+    "available_for_recovery_contact": false,
+    "subject_areas": [
+      "senior deal lead and cross-organization analytical hub",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 8
+  },
+  {
+    "id": "person-ren-ito",
+    "name": "Ren Ito",
+    "role": "credit committee chair",
+    "organization_id": "org-harbor-glass",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "credit committee chair",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": true,
+      "authorized_to_approve": true
+    },
+    "display_order": 9
+  },
+  {
+    "id": "person-celia-north",
+    "name": "Celia North",
+    "role": "portfolio-risk lead",
+    "organization_id": "org-harbor-glass",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "portfolio-risk lead",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 10
+  },
+  {
+    "id": "person-anton-reef",
+    "name": "Anton Reef",
+    "role": "loan-operations lead",
+    "organization_id": "org-harbor-glass",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "loan-operations lead",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 11
+  },
+  {
+    "id": "person-nia-calder",
+    "name": "Nia Calder",
+    "role": "co-lender lead",
+    "organization_id": "org-cobalt-finch",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "co-lender lead",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 12
+  },
+  {
+    "id": "person-felix-orr",
+    "name": "Felix Orr",
+    "role": "syndication manager",
+    "organization_id": "org-cobalt-finch",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "syndication manager",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 13
+  },
+  {
+    "id": "person-dara-pike",
+    "name": "Dara Pike",
+    "role": "portfolio analyst",
+    "organization_id": "org-cobalt-finch",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "portfolio analyst",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 14
+  },
+  {
+    "id": "person-amara-quinn",
+    "name": "Amara Quinn",
+    "role": "authority program director",
+    "organization_id": "org-skyvale-authority",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "authority program director",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": true
+    },
+    "display_order": 15
+  },
+  {
+    "id": "person-theo-bell",
+    "name": "Theo Bell",
+    "role": "airfield-operations lead",
+    "organization_id": "org-skyvale-authority",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "airfield-operations lead",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 16
+  },
+  {
+    "id": "person-ines-ward",
+    "name": "Ines Ward",
+    "role": "public-engagement director",
+    "organization_id": "org-skyvale-authority",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "public-engagement director",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 17
+  },
+  {
+    "id": "person-sora-keene",
+    "name": "Sora Keene",
+    "role": "aviation-review director",
+    "organization_id": "org-civic-aerodrome-review",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "aviation-review director",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 18
+  },
+  {
+    "id": "person-bram-holt",
+    "name": "Bram Holt",
+    "role": "permit-review counsel",
+    "organization_id": "org-civic-aerodrome-review",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "permit-review counsel",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 19
+  },
+  {
+    "id": "person-keira-moss",
+    "name": "Keira Moss",
+    "role": "construction program executive",
+    "organization_id": "org-copper-kite",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "construction program executive",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 20
+  },
+  {
+    "id": "person-luc-renn",
+    "name": "Luc Renn",
+    "role": "construction scheduler",
+    "organization_id": "org-copper-kite",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "construction scheduler",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 21
+  },
+  {
+    "id": "person-veda-snow",
+    "name": "Veda Snow",
+    "role": "commercial manager",
+    "organization_id": "org-copper-kite",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "commercial manager",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 22
+  },
+  {
+    "id": "person-ian-fable",
+    "name": "Ian Fable",
+    "role": "lead runway designer",
+    "organization_id": "org-north-loom",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "lead runway designer",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 23
+  },
+  {
+    "id": "person-meera-sol",
+    "name": "Meera Sol",
+    "role": "pavement-systems engineer",
+    "organization_id": "org-north-loom",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "pavement-systems engineer",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 24
+  },
+  {
+    "id": "person-ada-rook",
+    "name": "Ada Rook",
+    "role": "independent-engineering director",
+    "organization_id": "org-clearspan",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "independent-engineering director",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": true,
+      "authorized_to_confirm": true,
+      "authorized_to_approve": false
+    },
+    "display_order": 25
+  },
+  {
+    "id": "person-noel-brant",
+    "name": "Noel Brant",
+    "role": "certification lead",
+    "organization_id": "org-clearspan",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "certification lead",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": true,
+      "authorized_to_confirm": true,
+      "authorized_to_approve": false
+    },
+    "display_order": 26
+  },
+  {
+    "id": "person-esme-lark",
+    "name": "Esme Lark",
+    "role": "environmental-acoustics lead",
+    "organization_id": "org-morrow-field",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "environmental-acoustics lead",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 27
+  },
+  {
+    "id": "person-ravi-fen",
+    "name": "Ravi Fen",
+    "role": "mitigation analyst",
+    "organization_id": "org-morrow-field",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "mitigation analyst",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 28
+  },
+  {
+    "id": "person-gwen-alder",
+    "name": "Gwen Alder",
+    "role": "sponsor counsel",
+    "organization_id": "org-almanac-counsel",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "sponsor counsel",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 29
+  },
+  {
+    "id": "person-tobias-quill",
+    "name": "Tobias Quill",
+    "role": "project-agreements counsel",
+    "organization_id": "org-almanac-counsel",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "project-agreements counsel",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 30
+  },
+  {
+    "id": "person-mira-stone",
+    "name": "Mira Stone",
+    "role": "lender counsel",
+    "organization_id": "org-juniper-ledger",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "lender counsel",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": true,
+      "authorized_to_approve": false
+    },
+    "display_order": 31
+  },
+  {
+    "id": "person-devon-lake",
+    "name": "Devon Lake",
+    "role": "financing associate",
+    "organization_id": "org-juniper-ledger",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "financing associate",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 32
+  },
+  {
+    "id": "person-june-hollow",
+    "name": "June Hollow",
+    "role": "insurance adviser",
+    "organization_id": "org-beacon-quill",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "insurance adviser",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 33
+  },
+  {
+    "id": "person-arlo-pruitt",
+    "name": "Arlo Pruitt",
+    "role": "construction-risk analyst",
+    "organization_id": "org-beacon-quill",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "construction-risk analyst",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 34
+  },
+  {
+    "id": "person-selah-reed",
+    "name": "Selah Reed",
+    "role": "community-forum chair",
+    "organization_id": "org-skyvale-community",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "community-forum chair",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": true,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 35
+  },
+  {
+    "id": "person-milo-hart",
+    "name": "Milo Hart",
+    "role": "resident liaison",
+    "organization_id": "org-skyvale-community",
+    "synthetic": true,
+    "is_maya": false,
+    "relationship_started_at": null,
+    "trusted_analytical_hub": false,
+    "departed_at": null,
+    "available_for_recovery_contact": true,
+    "subject_areas": [
+      "resident liaison",
+      "Project Asterline"
+    ],
+    "prepared_contact_channel": {
+      "mode": "prepared_simulated_contact",
+      "live_delivery_enabled": false,
+      "real_dialing_enabled": false,
+      "calendar_integration_enabled": false,
+      "meeting_platform_integration_enabled": false,
+      "messaging_integration_enabled": false,
+      "silent_fallback": "synchronized prepared transcript"
+    },
+    "knowledge_capabilities": {
+      "likely_knows": true,
+      "can_provide_evidence": false,
+      "can_certify": false,
+      "authorized_to_confirm": false,
+      "authorized_to_approve": false
+    },
+    "display_order": 36
+  }
+]

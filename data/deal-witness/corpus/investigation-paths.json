@@ -1,0 +1,1655 @@
+[
+  {
+    "id": "investigation-path-001",
+    "selected_for_demo": true,
+    "question_item_id": "item-investigation-question-001",
+    "originating_risk_item_id": "item-risk-001",
+    "resolved_item_id": "item-commitment-001",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The stored receipts connect noise mitigation to first draw but do not show the approved funding and certification condition. Ada, what must be funded and certified before release, and which source controls?",
+    "maya_historical_relationship_basis": {
+      "person_id": "person-maya-soren",
+      "source_record_id": "source-0424",
+      "historical_only": true,
+      "available_for_contact": false,
+      "purpose": "Shows whom Maya trusted for engineering evidence and credit approval; it does not establish the financing term."
+    },
+    "expert_ranking_id": "expert-ranking-selected-example",
+    "initial_non_answer": {
+      "source_record_id": "source-0426",
+      "attributed_to_person_id": "person-ada-rook",
+      "answer": "The budget is covered.",
+      "sufficient_to_close_gap": false,
+      "reason": "No funding schedule, approved release condition, certification receipt, or citation."
+    },
+    "substantive_answer": {
+      "text": "Before lenders release the first construction draw, the sponsor must deposit the noise-mitigation budget and an independent engineer must certify it is fully funded.",
+      "attributed_to_person_ids": [
+        "person-ada-rook",
+        "person-ren-ito"
+      ],
+      "receipt_source_record_ids": [
+        "source-0428",
+        "source-0429"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "prepared_outreach": {
+      "contact_person_id": "person-ada-rook",
+      "channel": "prepared_simulated_call",
+      "label": "Prepared / simulated — no real dialing or messaging",
+      "real_dialing": false,
+      "calendar_action": false,
+      "meeting_platform_action": false,
+      "messaging_action": false,
+      "synchronized_transcript_and_provenance": true,
+      "silent_fallback": "prepared transcript and provenance panel",
+      "transcript_source_record_ids": [
+        "source-0427",
+        "source-0426",
+        "source-0428"
+      ]
+    },
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-07-12T12:00:00.000Z",
+        "source_record_ids": [
+          "source-0315"
+        ],
+        "result": "background signal raises a question only"
+      },
+      {
+        "kind": "gap_exposed",
+        "at": "2027-09-06T09:00:00.000Z",
+        "source_record_ids": [
+          "source-0425"
+        ],
+        "result": "hollow path remains HEARD after Maya has gone"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-09-06T09:10:00.000Z",
+        "source_record_ids": [
+          "source-0424",
+          "source-0425"
+        ],
+        "result": "historical evidence and relationship edges identify candidate experts"
+      },
+      {
+        "kind": "ranked_experts",
+        "at": "2027-09-06T09:20:00.000Z",
+        "source_record_ids": [
+          "source-0424",
+          "source-0425"
+        ],
+        "result": "Ada Rook ranks first with source-backed Why this person reasoning"
+      },
+      {
+        "kind": "prepared_question",
+        "at": "2027-09-06T09:30:00.000Z",
+        "source_record_ids": [
+          "source-0427"
+        ],
+        "person_ids": [
+          "person-ada-rook"
+        ],
+        "result": "prepared simulated outreach asks a receipt-grounded question"
+      },
+      {
+        "kind": "insufficient_answer",
+        "at": "2027-09-06T09:45:00.000Z",
+        "source_record_ids": [
+          "source-0426"
+        ],
+        "person_ids": [
+          "person-ada-rook"
+        ],
+        "result": "vague reply leaves the gap open"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-09-08T10:00:00.000Z",
+        "source_record_ids": [
+          "source-0428",
+          "source-0429"
+        ],
+        "person_ids": [
+          "person-ada-rook",
+          "person-ren-ito"
+        ],
+        "result": "substantive answer and approved receipt close the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-09-08T16:45:00.000Z",
+        "source_record_ids": [
+          "source-0430"
+        ],
+        "person_ids": [
+          "person-ada-rook",
+          "person-ren-ito"
+        ],
+        "result": "EverOS stores answer, attribution, receipts, timestamps, citations, transcript, and recipe"
+      }
+    ],
+    "investigation_recipe": {
+      "trigger": "supported cluster contains an unresolved dependency path",
+      "question_pattern": "State the known receipts, name the missing fact, ask who owns it, and request the controlling source.",
+      "closure_rule": "Do not close on a vague or unattributed answer; require a substantive answer plus a qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-002",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-002",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-010",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves construction sequence before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-02-27T08:19:26.197Z",
+        "source_record_ids": [
+          "source-0070"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-08-21T07:19:05.455Z",
+        "source_record_ids": [
+          "source-0423"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-08-21T07:19:05.455Z",
+        "source_record_ids": [
+          "source-0059"
+        ],
+        "person_ids": [
+          "person-noel-brant"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-08-21T07:19:05.455Z",
+        "source_record_ids": [
+          "source-0059"
+        ],
+        "person_ids": [
+          "person-noel-brant"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-08-21T07:19:05.455Z",
+        "source_record_ids": [
+          "source-0059"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document contractor obligation before milestone 2.",
+      "attributed_to_person_ids": [
+        "person-noel-brant"
+      ],
+      "receipt_source_record_ids": [
+        "source-0059"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-003",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-003",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-017",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves review timing before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-05-08T07:07:34.054Z",
+        "source_record_ids": [
+          "source-0233"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-06-24T07:38:52.394Z",
+        "source_record_ids": [
+          "source-0329"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-06-24T07:38:52.394Z",
+        "source_record_ids": [
+          "source-0084"
+        ],
+        "person_ids": [
+          "person-talia-wren"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-06-24T07:38:52.394Z",
+        "source_record_ids": [
+          "source-0084"
+        ],
+        "person_ids": [
+          "person-talia-wren"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-06-24T07:38:52.394Z",
+        "source_record_ids": [
+          "source-0084"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document cross-team dependency before milestone 9.",
+      "attributed_to_person_ids": [
+        "person-talia-wren"
+      ],
+      "receipt_source_record_ids": [
+        "source-0084"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-004",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-004",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-024",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves sponsor equity before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-07-22T19:08:27.042Z",
+        "source_record_ids": [
+          "source-0347"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-07-22T19:08:27.042Z",
+        "source_record_ids": [
+          "source-0108"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-07-22T19:08:27.042Z",
+        "source_record_ids": [
+          "source-0108"
+        ],
+        "person_ids": [
+          "person-talia-wren"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-07-22T19:08:27.042Z",
+        "source_record_ids": [
+          "source-0108"
+        ],
+        "person_ids": [
+          "person-talia-wren"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-07-22T19:08:27.042Z",
+        "source_record_ids": [
+          "source-0108"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document monthly reporting before milestone 7.",
+      "attributed_to_person_ids": [
+        "person-talia-wren"
+      ],
+      "receipt_source_record_ids": [
+        "source-0108"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-005",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-005",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-033",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves review owner before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-03-24T10:10:44.211Z",
+        "source_record_ids": [
+          "source-0126"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-05-21T16:29:43.784Z",
+        "source_record_ids": [
+          "source-0246"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-05-21T16:29:43.784Z",
+        "source_record_ids": [
+          "source-0124"
+        ],
+        "person_ids": [
+          "person-marc-ives"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-05-21T16:29:43.784Z",
+        "source_record_ids": [
+          "source-0124"
+        ],
+        "person_ids": [
+          "person-marc-ives"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-05-21T16:29:43.784Z",
+        "source_record_ids": [
+          "source-0124"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document cross-team dependency before milestone 7.",
+      "attributed_to_person_ids": [
+        "person-marc-ives"
+      ],
+      "receipt_source_record_ids": [
+        "source-0124"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-006",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-006",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-042",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves operating protocol before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-03-07T13:22:44.211Z",
+        "source_record_ids": [
+          "source-0107"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-06-17T11:14:03.243Z",
+        "source_record_ids": [
+          "source-0272"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-06-17T11:14:03.243Z",
+        "source_record_ids": [
+          "source-0143"
+        ],
+        "person_ids": [
+          "person-ian-fable"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-06-17T11:14:03.243Z",
+        "source_record_ids": [
+          "source-0143"
+        ],
+        "person_ids": [
+          "person-ian-fable"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-06-17T11:14:03.243Z",
+        "source_record_ids": [
+          "source-0143"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document contractor obligation before milestone 7.",
+      "attributed_to_person_ids": [
+        "person-ian-fable"
+      ],
+      "receipt_source_record_ids": [
+        "source-0143"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-007",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-007",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-050",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves capitalized interest before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-05-11T00:26:11.831Z",
+        "source_record_ids": [
+          "source-0301"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-05-11T00:26:11.831Z",
+        "source_record_ids": [
+          "source-0169"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-05-11T00:26:11.831Z",
+        "source_record_ids": [
+          "source-0169"
+        ],
+        "person_ids": [
+          "person-anton-reef"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-05-11T00:26:11.831Z",
+        "source_record_ids": [
+          "source-0169"
+        ],
+        "person_ids": [
+          "person-anton-reef"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-05-11T00:26:11.831Z",
+        "source_record_ids": [
+          "source-0169"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document engineer certification before milestone 6.",
+      "attributed_to_person_ids": [
+        "person-anton-reef"
+      ],
+      "receipt_source_record_ids": [
+        "source-0169"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-008",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-008",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-058",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves completion test before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-03-27T02:05:41.053Z",
+        "source_record_ids": [
+          "source-0129"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-06-24T16:16:45.405Z",
+        "source_record_ids": [
+          "source-0279"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-06-24T16:16:45.405Z",
+        "source_record_ids": [
+          "source-0189"
+        ],
+        "person_ids": [
+          "person-anton-reef"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-06-24T16:16:45.405Z",
+        "source_record_ids": [
+          "source-0189"
+        ],
+        "person_ids": [
+          "person-anton-reef"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-06-24T16:16:45.405Z",
+        "source_record_ids": [
+          "source-0189"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document change approval before milestone 5.",
+      "attributed_to_person_ids": [
+        "person-anton-reef"
+      ],
+      "receipt_source_record_ids": [
+        "source-0189"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-009",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-009",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-065",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves funding condition before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-03-07T13:22:44.211Z",
+        "source_record_ids": [
+          "source-0107"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-04-04T07:20:32.432Z",
+        "source_record_ids": [
+          "source-0200"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-04-04T07:20:32.432Z",
+        "source_record_ids": [
+          "source-0200"
+        ],
+        "person_ids": [
+          "person-anton-reef"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-04-04T07:20:32.432Z",
+        "source_record_ids": [
+          "source-0200"
+        ],
+        "person_ids": [
+          "person-anton-reef"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-04-04T07:20:32.432Z",
+        "source_record_ids": [
+          "source-0200"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document cross-team dependency before milestone 3.",
+      "attributed_to_person_ids": [
+        "person-anton-reef"
+      ],
+      "receipt_source_record_ids": [
+        "source-0200"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-010",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-010",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-074",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves construction sequence before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-04-25T09:10:06.316Z",
+        "source_record_ids": [
+          "source-0162"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-04-25T09:10:06.316Z",
+        "source_record_ids": [
+          "source-0218"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-04-25T09:10:06.316Z",
+        "source_record_ids": [
+          "source-0218"
+        ],
+        "person_ids": [
+          "person-ravi-fen"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-04-25T09:10:06.316Z",
+        "source_record_ids": [
+          "source-0218"
+        ],
+        "person_ids": [
+          "person-ravi-fen"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-04-25T09:10:06.316Z",
+        "source_record_ids": [
+          "source-0218"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document operating protocol before milestone 3.",
+      "attributed_to_person_ids": [
+        "person-ravi-fen"
+      ],
+      "receipt_source_record_ids": [
+        "source-0218"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-011",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-011",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-083",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves interface delay before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-03-18T19:48:38.919Z",
+        "source_record_ids": [
+          "source-0184"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-03-18T19:48:38.919Z",
+        "source_record_ids": [
+          "source-0357"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-05-09T07:50:48.649Z",
+        "source_record_ids": [
+          "source-0234"
+        ],
+        "person_ids": [
+          "person-anton-reef"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-05-09T07:50:48.649Z",
+        "source_record_ids": [
+          "source-0234"
+        ],
+        "person_ids": [
+          "person-anton-reef"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-05-09T07:50:48.649Z",
+        "source_record_ids": [
+          "source-0234"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document contact continuity before milestone 3.",
+      "attributed_to_person_ids": [
+        "person-anton-reef"
+      ],
+      "receipt_source_record_ids": [
+        "source-0234"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-012",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-012",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-092",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves completion test before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-06-21T14:07:01.622Z",
+        "source_record_ids": [
+          "source-0276"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-06-21T14:07:01.622Z",
+        "source_record_ids": [
+          "source-0311"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-06-21T14:07:01.622Z",
+        "source_record_ids": [
+          "source-0245"
+        ],
+        "person_ids": [
+          "person-talia-wren"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-06-21T14:07:01.622Z",
+        "source_record_ids": [
+          "source-0245"
+        ],
+        "person_ids": [
+          "person-talia-wren"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-06-21T14:07:01.622Z",
+        "source_record_ids": [
+          "source-0245"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document release gate before milestone 3.",
+      "attributed_to_person_ids": [
+        "person-talia-wren"
+      ],
+      "receipt_source_record_ids": [
+        "source-0245"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-013",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-013",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-commitment-101",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves review owner before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-02-25T07:18:35.493Z",
+        "source_record_ids": [
+          "source-0067"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-06-05T02:35:08.108Z",
+        "source_record_ids": [
+          "source-0260"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-06-05T02:35:08.108Z",
+        "source_record_ids": [
+          "source-0260"
+        ],
+        "person_ids": [
+          "person-esme-lark"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-06-05T02:35:08.108Z",
+        "source_record_ids": [
+          "source-0260"
+        ],
+        "person_ids": [
+          "person-esme-lark"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-06-05T02:35:08.108Z",
+        "source_record_ids": [
+          "source-0260"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The responsible synthetic stakeholder committed to document community coordination before milestone 3.",
+      "attributed_to_person_ids": [
+        "person-esme-lark"
+      ],
+      "receipt_source_record_ids": [
+        "source-0260"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-014",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-014",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-decision-001",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves tenor before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-02-22T13:57:27.887Z",
+        "source_record_ids": [
+          "source-0063"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-06-16T10:30:48.649Z",
+        "source_record_ids": [
+          "source-0271"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-06-16T10:30:48.649Z",
+        "source_record_ids": [
+          "source-0271"
+        ],
+        "person_ids": [
+          "person-ian-fable"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-06-16T10:30:48.649Z",
+        "source_record_ids": [
+          "source-0271"
+        ],
+        "person_ids": [
+          "person-ian-fable"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-06-16T10:30:48.649Z",
+        "source_record_ids": [
+          "source-0271"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The synthetic deal team recorded decision 001 for construction milestone, subject to the cited dependencies and review path.",
+      "attributed_to_person_ids": [
+        "person-ian-fable"
+      ],
+      "receipt_source_record_ids": [
+        "source-0271"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-015",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-015",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-decision-009",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves record retention before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-01-27T00:46:28.732Z",
+        "source_record_ids": [
+          "source-0024"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-02-06T05:50:42.254Z",
+        "source_record_ids": [
+          "source-0039"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-04-09T09:00:00.000Z",
+        "source_record_ids": [
+          "source-0281"
+        ],
+        "person_ids": [
+          "person-marc-ives"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-04-09T09:00:00.000Z",
+        "source_record_ids": [
+          "source-0281"
+        ],
+        "person_ids": [
+          "person-marc-ives"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-04-09T09:00:00.000Z",
+        "source_record_ids": [
+          "source-0281"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The synthetic deal team recorded decision 009 for cost escalation, subject to the cited dependencies and review path.",
+      "attributed_to_person_ids": [
+        "person-marc-ives"
+      ],
+      "receipt_source_record_ids": [
+        "source-0281"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-016",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-016",
+    "originating_risk_item_id": null,
+    "resolved_item_id": "item-decision-017",
+    "status": "completed",
+    "gap_state_before": "hollow",
+    "gap_state_after": "source_backed_human_confirmed",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves completion test before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-04-09T09:40:25.263Z",
+        "source_record_ids": [
+          "source-0144"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "searched_historical_memory",
+        "at": "2027-04-25T04:43:05.915Z",
+        "source_record_ids": [
+          "source-0291"
+        ],
+        "result": "historical evidence identifies an accountable expert path"
+      },
+      {
+        "kind": "contacted_expert",
+        "at": "2027-04-25T04:43:05.915Z",
+        "source_record_ids": [
+          "source-0291"
+        ],
+        "person_ids": [
+          "person-ren-ito"
+        ],
+        "result": "prepared non-Maya expert interaction"
+      },
+      {
+        "kind": "confirmed",
+        "at": "2027-04-25T04:43:05.915Z",
+        "source_record_ids": [
+          "source-0291"
+        ],
+        "person_ids": [
+          "person-ren-ito"
+        ],
+        "result": "qualifying evidence closes the gap"
+      },
+      {
+        "kind": "captured",
+        "at": "2027-04-25T04:43:05.915Z",
+        "source_record_ids": [
+          "source-0291"
+        ],
+        "result": "EverOS stores the answer, receipts, and recipe"
+      }
+    ],
+    "substantive_answer": {
+      "text": "The synthetic deal team recorded decision 017 for commitment fee, subject to the cited dependencies and review path.",
+      "attributed_to_person_ids": [
+        "person-ren-ito"
+      ],
+      "receipt_source_record_ids": [
+        "source-0291"
+      ],
+      "sufficient_to_close_gap": true
+    },
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-017",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-017",
+    "originating_risk_item_id": null,
+    "resolved_item_id": null,
+    "status": "open",
+    "gap_state_before": "hollow",
+    "gap_state_after": "hollow",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves community coordination before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-01-11T09:00:00.000Z",
+        "source_record_ids": [
+          "source-0001"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "insufficient_answer",
+        "at": "2027-03-23T12:52:25.263Z",
+        "source_record_ids": [
+          "source-0125"
+        ],
+        "result": "gap remains open"
+      }
+    ],
+    "substantive_answer": null,
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-018",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-018",
+    "originating_risk_item_id": null,
+    "resolved_item_id": null,
+    "status": "open",
+    "gap_state_before": "hollow",
+    "gap_state_after": "hollow",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves contingency before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-01-16T19:42:15.211Z",
+        "source_record_ids": [
+          "source-0009"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "insufficient_answer",
+        "at": "2027-02-05T09:00:00.000Z",
+        "source_record_ids": [
+          "source-0073"
+        ],
+        "result": "gap remains open"
+      }
+    ],
+    "substantive_answer": null,
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-019",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-019",
+    "originating_risk_item_id": null,
+    "resolved_item_id": null,
+    "status": "open",
+    "gap_state_before": "hollow",
+    "gap_state_after": "hollow",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves completion support before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-01-22T06:24:30.423Z",
+        "source_record_ids": [
+          "source-0017"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "insufficient_answer",
+        "at": "2027-07-08T13:23:39.718Z",
+        "source_record_ids": [
+          "source-0338"
+        ],
+        "result": "gap remains open"
+      }
+    ],
+    "substantive_answer": null,
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-020",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-020",
+    "originating_risk_item_id": null,
+    "resolved_item_id": null,
+    "status": "open",
+    "gap_state_before": "hollow",
+    "gap_state_after": "hollow",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves release gate before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-02-08T06:51:32.958Z",
+        "source_record_ids": [
+          "source-0042"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "insufficient_answer",
+        "at": "2027-02-23T22:38:01.690Z",
+        "source_record_ids": [
+          "source-0065"
+        ],
+        "result": "gap remains open"
+      }
+    ],
+    "substantive_answer": null,
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-021",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-021",
+    "originating_risk_item_id": null,
+    "resolved_item_id": null,
+    "status": "open",
+    "gap_state_before": "hollow",
+    "gap_state_after": "hollow",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves lender allocation before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-01-11T09:00:00.000Z",
+        "source_record_ids": [
+          "source-0001"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "insufficient_answer",
+        "at": "2027-03-23T12:52:25.263Z",
+        "source_record_ids": [
+          "source-0125"
+        ],
+        "result": "gap remains open"
+      }
+    ],
+    "substantive_answer": null,
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-022",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-022",
+    "originating_risk_item_id": null,
+    "resolved_item_id": null,
+    "status": "open",
+    "gap_state_before": "hollow",
+    "gap_state_after": "hollow",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves construction sequence before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-01-16T19:42:15.211Z",
+        "source_record_ids": [
+          "source-0009"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "insufficient_answer",
+        "at": "2027-02-05T09:00:00.000Z",
+        "source_record_ids": [
+          "source-0073"
+        ],
+        "result": "gap remains open"
+      }
+    ],
+    "substantive_answer": null,
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-023",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-023",
+    "originating_risk_item_id": null,
+    "resolved_item_id": null,
+    "status": "open",
+    "gap_state_before": "hollow",
+    "gap_state_after": "hollow",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves interface delay before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-01-22T06:24:30.423Z",
+        "source_record_ids": [
+          "source-0017"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "insufficient_answer",
+        "at": "2027-07-08T13:23:39.718Z",
+        "source_record_ids": [
+          "source-0338"
+        ],
+        "result": "gap remains open"
+      }
+    ],
+    "substantive_answer": null,
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  },
+  {
+    "id": "investigation-path-024",
+    "selected_for_demo": false,
+    "question_item_id": "item-investigation-question-024",
+    "originating_risk_item_id": null,
+    "resolved_item_id": null,
+    "status": "open",
+    "gap_state_before": "hollow",
+    "gap_state_after": "hollow",
+    "prepared_interaction": true,
+    "live_outreach": false,
+    "question": "The investigation asks which approved source resolves first-draw evidence before the next review.",
+    "steps": [
+      {
+        "kind": "noticed",
+        "at": "2027-02-08T06:51:32.958Z",
+        "source_record_ids": [
+          "source-0042"
+        ],
+        "result": "gap exposed"
+      },
+      {
+        "kind": "insufficient_answer",
+        "at": "2027-02-23T22:38:01.690Z",
+        "source_record_ids": [
+          "source-0065"
+        ],
+        "result": "gap remains open"
+      }
+    ],
+    "substantive_answer": null,
+    "investigation_recipe": {
+      "trigger": "hollow source path",
+      "closure_rule": "Require a substantive attributed answer and qualifying receipt.",
+      "stored_in": "EverOS",
+      "reusable": true
+    },
+    "institution_owned": true,
+    "preserved_after_maya_departure": true
+  }
+]
