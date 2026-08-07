@@ -1115,7 +1115,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
     @keyframes dwl-draw { to { stroke-dashoffset: 0; } }
 
-    #deal-witness-growth-lanes .dwl-node {
+    #deal-witness-growth-lanes .dwl-new-node {
       animation: dwl-pop .45s ease both;
     }
 
@@ -1368,7 +1368,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
     &lt;div class=&quot;dwl-intro&quot;&gt;
       &lt;h1&gt;Every new input grows the shape of the deal.&lt;/h1&gt;
-      &lt;p&gt;One source becomes a decision. Decisions expose risks. Negotiated mitigations become promises. Promises govern money.&lt;/p&gt;
+      &lt;p&gt;Each decision-bearing input adds a decision. Those decisions reuse and expand shared risks, promises, and monetary consequences.&lt;/p&gt;
     &lt;/div&gt;
 
     &lt;div class=&quot;dwl-body&quot;&gt;
@@ -1394,19 +1394,19 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       &lt;aside class=&quot;dwl-talk&quot;&gt;
         &lt;p class=&quot;dwl-talk-label&quot; id=&quot;dwl-talk-label&quot;&gt;Beat 1 · the input arrives&lt;/p&gt;
-        &lt;h2 id=&quot;dwl-talk-title&quot;&gt;A conversation becomes a decision.&lt;/h2&gt;
+        &lt;h2 id=&quot;dwl-talk-title&quot;&gt;Evidence attaches to a decision.&lt;/h2&gt;
         &lt;div class=&quot;dwl-talk-card&quot;&gt;
           &lt;strong id=&quot;dwl-current-source&quot;&gt;Microsoft Teams · credit call&lt;/strong&gt;
           &lt;p id=&quot;dwl-current-detail&quot;&gt;Deal Witness preserves who said what, when, and where the source lives.&lt;/p&gt;
           &lt;div class=&quot;dwl-flow-sentence&quot; id=&quot;dwl-flow-sentence&quot;&gt;
-            &lt;div data-active=&quot;true&quot;&gt;&lt;i&gt;1&lt;/i&gt;&lt;span&gt;Extract a decision&lt;/span&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;i&gt;2&lt;/i&gt;&lt;span&gt;Populate its risks&lt;/span&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;i&gt;3&lt;/i&gt;&lt;span&gt;Connect negotiated promises&lt;/span&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;i&gt;4&lt;/i&gt;&lt;span&gt;Show the monetary consequence&lt;/span&gt;&lt;/div&gt;
+            &lt;div data-active=&quot;true&quot;&gt;&lt;i&gt;1&lt;/i&gt;&lt;span&gt;Attach the evidence&lt;/span&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;i&gt;2&lt;/i&gt;&lt;span&gt;Add the decision it records&lt;/span&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;i&gt;3&lt;/i&gt;&lt;span&gt;Reuse and expand downstream paths&lt;/span&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;i&gt;4&lt;/i&gt;&lt;span&gt;Trace the consequence to money&lt;/span&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;dwl-counter&quot;&gt;
             &lt;div&gt;&lt;b id=&quot;dwl-record-count&quot;&gt;0&lt;/b&gt;&lt;span&gt;records learned&lt;/span&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;b id=&quot;dwl-path-count&quot;&gt;0&lt;/b&gt;&lt;span&gt;decision paths&lt;/span&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;b id=&quot;dwl-path-count&quot;&gt;0&lt;/b&gt;&lt;span&gt;decisions mapped&lt;/span&gt;&lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/aside&gt;
@@ -1419,7 +1419,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;button class=&quot;dwl-control&quot; id=&quot;dwl-next&quot; type=&quot;button&quot;&gt;+ Input&lt;/button&gt;
       &lt;/div&gt;
       &lt;div class=&quot;dwl-progress&quot;&gt;&lt;span id=&quot;dwl-progress-fill&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-      &lt;div class=&quot;dwl-footer-note&quot;&gt;Representative paths · 432-record synthetic corpus&lt;/div&gt;
+      &lt;div class=&quot;dwl-footer-note&quot;&gt;Representative inputs · shared paths · 432-record synthetic corpus&lt;/div&gt;
     &lt;/footer&gt;
   &lt;/section&gt;
 
@@ -1444,22 +1444,34 @@ html&gt;body{padding:0}&lt;/style&gt;
       const laneX = { source: 78, decision: 254, risk: 469, promise: 682, money: 893 };
       const colors = { decision: &#x27;#2f7897&#x27;, risk: &#x27;#d96d58&#x27;, promise: &#x27;#7c69bc&#x27;, money: &#x27;#c99a30&#x27; };
       const sourceColors = { Teams: &#x27;#6554c0&#x27;, Email: &#x27;#3976b8&#x27;, SharePoint: &#x27;#168b8d&#x27;, Slack: &#x27;#3aa17e&#x27;, WhatsApp: &#x27;#42a86b&#x27;, Model: &#x27;#b7892f&#x27;, Document: &#x27;#68747e&#x27; };
-      const paths = [
-        { source:&#x27;Teams&#x27;, sourceLabel:&#x27;TEAMS&#x27;, context:&#x27;Microsoft Teams · credit call&#x27;, decision:&#x27;Release first draw?&#x27;, risks:[&#x27;No certificate&#x27;,&#x27;Budget unproven&#x27;], promises:[&#x27;Engineer certifies&#x27;,&#x27;Sponsor funds first&#x27;], money:[&#x27;$42M draw&#x27;] },
-        { source:&#x27;Email&#x27;, sourceLabel:&#x27;EMAIL&#x27;, context:&#x27;Email · noise-work negotiation&#x27;, decision:&#x27;Accept mitigation scope?&#x27;, risks:[&#x27;Cost overrun&#x27;], promises:[&#x27;$18.6M earmark&#x27;,&#x27;Scope under contract&#x27;], money:[&#x27;$18.6M funded&#x27;] },
-        { source:&#x27;SharePoint&#x27;, sourceLabel:&#x27;SP&#x27;, context:&#x27;SharePoint · permit register&#x27;, decision:&#x27;Sequence permits?&#x27;, risks:[&#x27;Opening delay&#x27;,&#x27;Approval conflict&#x27;], promises:[&#x27;Permit before works&#x27;], money:[&#x27;$11M reserve&#x27;] },
-        { source:&#x27;Slack&#x27;, sourceLabel:&#x27;SLACK&#x27;, context:&#x27;Slack · deal-team discussion&#x27;, decision:&#x27;Use contingency?&#x27;, risks:[&#x27;Budget leakage&#x27;], promises:[&#x27;Lender consent&#x27;], money:[&#x27;Contingency locked&#x27;] },
-        { source:&#x27;WhatsApp&#x27;, sourceLabel:&#x27;WA&#x27;, context:&#x27;WhatsApp · contractor exchange&#x27;, decision:&#x27;Grant site access?&#x27;, risks:[&#x27;Uninsured work&#x27;], promises:[&#x27;Evidence before entry&#x27;], money:[&#x27;Draw withheld&#x27;] },
-        { source:&#x27;Model&#x27;, sourceLabel:&#x27;MODEL&#x27;, context:&#x27;Model · operating forecast&#x27;, decision:&#x27;Size revenue reserve?&#x27;, risks:[&#x27;Traffic downside&#x27;], promises:[&#x27;Quarterly top-up&#x27;], money:[&#x27;Reserve funded&#x27;] },
-        { source:&#x27;Document&#x27;, sourceLabel:&#x27;DOC&#x27;, context:&#x27;Document · completion schedule&#x27;, decision:&#x27;Define completion?&#x27;, risks:[&#x27;Test ambiguity&#x27;], promises:[&#x27;Independent test&#x27;], money:[&#x27;Final draw&#x27;] },
-        { source:&#x27;Teams&#x27;, sourceLabel:&#x27;TEAMS&#x27;, context:&#x27;Microsoft Teams · closing call&#x27;, decision:&#x27;Approve close?&#x27;, risks:[&#x27;Missing draft term&#x27;], promises:[&#x27;Correct v8&#x27;], money:[&#x27;$380M facility&#x27;] }
-      ];
-
-      const talk = [
-        [&#x27;Beat 1 · the input arrives&#x27;,&#x27;A conversation becomes a decision.&#x27;,&#x27;Deal Witness preserves who said what, when, and where the source lives.&#x27;],
-        [&#x27;Beat 2 · risks branch&#x27;,&#x27;The decision exposes what could go wrong.&#x27;,&#x27;One decision can create several risks. Each remains connected to the conversation that surfaced it.&#x27;],
-        [&#x27;Beat 3 · people negotiate&#x27;,&#x27;Mitigation becomes a promise.&#x27;,&#x27;The team agrees how to control each risk. That agreement becomes a covenant, condition, or operating promise.&#x27;],
-        [&#x27;Beat 4 · consequence&#x27;,&#x27;The promise governs money.&#x27;,&#x27;Only at the final lane do we show the dollars: what is funded, reserved, released, or withheld.&#x27;]
+      const events = [
+        { source:&#x27;Teams&#x27;, sourceLabel:&#x27;TEAMS&#x27;, context:&#x27;Microsoft Teams · credit call&#x27;, decisionKey:&#x27;draw-authorization&#x27;, decision:&#x27;Release first draw?&#x27;, branches:[
+          { risk:&#x27;No certificate&#x27;, promise:&#x27;Engineer certifies&#x27;, money:&#x27;$42M draw&#x27; },
+          { risk:&#x27;Budget unproven&#x27;, promise:&#x27;Sponsor funds first&#x27;, money:&#x27;$42M draw&#x27; }
+        ]},
+        { source:&#x27;Email&#x27;, sourceLabel:&#x27;EMAIL&#x27;, context:&#x27;Email · noise-work negotiation&#x27;, decisionKey:&#x27;mitigation-scope&#x27;, decision:&#x27;Accept mitigation scope?&#x27;, branches:[
+          { risk:&#x27;Cost overrun&#x27;, promise:&#x27;$18.6M earmark&#x27;, money:&#x27;$42M draw&#x27; },
+          { risk:&#x27;Budget unproven&#x27;, promise:&#x27;Sponsor funds first&#x27;, money:&#x27;$42M draw&#x27; }
+        ]},
+        { source:&#x27;SharePoint&#x27;, sourceLabel:&#x27;SP&#x27;, context:&#x27;SharePoint · permit register&#x27;, decisionKey:&#x27;permits&#x27;, decision:&#x27;Sequence permits?&#x27;, branches:[
+          { risk:&#x27;Opening delay&#x27;, promise:&#x27;Permit before works&#x27;, money:&#x27;$11M reserve&#x27; },
+          { risk:&#x27;Approval conflict&#x27;, promise:&#x27;Authority confirmed&#x27;, money:&#x27;$11M reserve&#x27; }
+        ]},
+        { source:&#x27;Slack&#x27;, sourceLabel:&#x27;SLACK&#x27;, context:&#x27;Slack · deal-team discussion&#x27;, decisionKey:&#x27;contingency&#x27;, decision:&#x27;Use contingency?&#x27;, branches:[
+          { risk:&#x27;Cost overrun&#x27;, promise:&#x27;Lender consent&#x27;, money:&#x27;$42M draw&#x27; }
+        ]},
+        { source:&#x27;WhatsApp&#x27;, sourceLabel:&#x27;WA&#x27;, context:&#x27;WhatsApp · contractor exchange&#x27;, decisionKey:&#x27;site-access&#x27;, decision:&#x27;Grant site access?&#x27;, branches:[
+          { risk:&#x27;Uninsured work&#x27;, promise:&#x27;Evidence before entry&#x27;, money:&#x27;Draw withheld&#x27; }
+        ]},
+        { source:&#x27;Model&#x27;, sourceLabel:&#x27;MODEL&#x27;, context:&#x27;Model · operating forecast&#x27;, decisionKey:&#x27;reserve&#x27;, decision:&#x27;Size revenue reserve?&#x27;, branches:[
+          { risk:&#x27;Traffic downside&#x27;, promise:&#x27;Quarterly top-up&#x27;, money:&#x27;Reserve funded&#x27; }
+        ]},
+        { source:&#x27;Document&#x27;, sourceLabel:&#x27;DOC&#x27;, context:&#x27;Document · completion schedule&#x27;, decisionKey:&#x27;completion&#x27;, decision:&#x27;Define completion?&#x27;, branches:[
+          { risk:&#x27;Test ambiguity&#x27;, promise:&#x27;Independent test&#x27;, money:&#x27;Final draw&#x27; }
+        ]},
+        { source:&#x27;Teams&#x27;, sourceLabel:&#x27;TEAMS&#x27;, context:&#x27;Microsoft Teams · closing call&#x27;, decisionKey:&#x27;close&#x27;, decision:&#x27;Approve close?&#x27;, branches:[
+          { risk:&#x27;Missing draft term&#x27;, promise:&#x27;Correct v8&#x27;, money:&#x27;$380M facility&#x27; }
+        ]}
       ];
 
       let visibleCount = 0;
@@ -1498,7 +1510,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           group.appendChild(svgElement(&#x27;rect&#x27;, { x:-31, y:-13, width:62, height:26 }));
         } else {
           group.style.setProperty(&#x27;--dwl-node-color&#x27;, colors[kind]);
-          group.appendChild(svgElement(&#x27;circle&#x27;, { r: kind === &#x27;decision&#x27; ? 27 : 23 }));
+          group.appendChild(svgElement(&#x27;circle&#x27;, { r: kind === &#x27;decision&#x27; ? 25 : kind === &#x27;money&#x27; ? 20 : 19 }));
         }
         const lines = shortLines(label);
         lines.forEach((line, index) =&gt; {
@@ -1521,38 +1533,64 @@ html&gt;body{padding:0}&lt;/style&gt;
       function render() {
         pathLayer.replaceChildren();
         nodeLayer.replaceChildren();
-        const ys = yPositions(visibleCount);
-        paths.slice(0, visibleCount).forEach((path, index) =&gt; {
-          const y = ys[index];
-          const isNew = index === visibleCount - 1;
-          const riskYs = path.risks.length === 1 ? [y] : path.risks.map((_, riskIndex) =&gt; y + (riskIndex === 0 ? -16 : 16));
-          const promiseYs = path.promises.length === 1 ? [y] : path.promises.map((_, promiseIndex) =&gt; y + (promiseIndex === 0 ? -15 : 15));
-          addCurve(laneX.source + 31, y, laneX.decision - 27, y, &#x27;source&#x27;, isNew);
-          path.risks.forEach((risk, riskIndex) =&gt; addCurve(laneX.decision + 27, y, laneX.risk - 23, riskYs[riskIndex], &#x27;decision-risk&#x27;, isNew, riskIndex ? 10 : -10));
-          path.promises.forEach((promise, promiseIndex) =&gt; {
-            const riskY = riskYs[Math.min(promiseIndex, riskYs.length - 1)];
-            addCurve(laneX.risk + 23, riskY, laneX.promise - 23, promiseYs[promiseIndex], &#x27;risk-promise&#x27;, isNew, promiseIndex ? 8 : -8);
+        const visible = events.slice(0, visibleCount);
+        const sourceYs = yPositions(visible.length);
+        const collect = (items, keyFor, labelFor) =&gt; {
+          const map = new Map();
+          items.forEach((item, eventIndex) =&gt; {
+            const key = keyFor(item);
+            if (!map.has(key)) map.set(key, { key, label: labelFor(item), firstSeen: item.eventIndex ?? eventIndex });
           });
-          path.money.forEach((money, moneyIndex) =&gt; addCurve(laneX.promise + 23, promiseYs[Math.min(moneyIndex, promiseYs.length - 1)], laneX.money - 23, y, &#x27;promise-money&#x27;, isNew));
-          addNode(&#x27;source&#x27;, laneX.source, y, path.sourceLabel, path.source, isNew);
-          addNode(&#x27;decision&#x27;, laneX.decision, y, path.decision, path.source, isNew);
-          path.risks.forEach((risk, riskIndex) =&gt; addNode(&#x27;risk&#x27;, laneX.risk, riskYs[riskIndex], risk, path.source, isNew));
-          path.promises.forEach((promise, promiseIndex) =&gt; addNode(&#x27;promise&#x27;, laneX.promise, promiseYs[promiseIndex], promise, path.source, isNew));
-          path.money.forEach(money =&gt; addNode(&#x27;money&#x27;, laneX.money, y, money, path.source, isNew));
+          return [...map.values()];
+        };
+        const decisions = collect(visible, event =&gt; event.decisionKey, event =&gt; event.decision);
+        const branchRows = visible.flatMap((event, eventIndex) =&gt; event.branches.map(branch =&gt; ({ event, eventIndex, branch })));
+        const risks = collect(branchRows, row =&gt; row.branch.risk, row =&gt; row.branch.risk);
+        const promises = collect(branchRows, row =&gt; row.branch.promise, row =&gt; row.branch.promise);
+        const money = collect(branchRows, row =&gt; row.branch.money, row =&gt; row.branch.money);
+        const positionMap = nodes =&gt; new Map(nodes.map((node, index) =&gt; [node.key, yPositions(nodes.length)[index]]));
+        const decisionY = positionMap(decisions);
+        const riskY = positionMap(risks);
+        const promiseY = positionMap(promises);
+        const moneyY = positionMap(money);
+
+        visible.forEach((event, eventIndex) =&gt; {
+          const isNew = eventIndex === visible.length - 1;
+          const sourceY = sourceYs[eventIndex];
+          const sharedDecisionY = decisionY.get(event.decisionKey);
+          addCurve(laneX.source + 31, sourceY, laneX.decision - 27, sharedDecisionY, &#x27;source&#x27;, isNew);
+          event.branches.forEach(branch =&gt; {
+            const branchRiskY = riskY.get(branch.risk);
+            const branchPromiseY = promiseY.get(branch.promise);
+            const branchMoneyY = moneyY.get(branch.money);
+            addCurve(laneX.decision + 27, sharedDecisionY, laneX.risk - 23, branchRiskY, &#x27;decision-risk&#x27;, isNew);
+            addCurve(laneX.risk + 23, branchRiskY, laneX.promise - 23, branchPromiseY, &#x27;risk-promise&#x27;, isNew);
+            addCurve(laneX.promise + 23, branchPromiseY, laneX.money - 23, branchMoneyY, &#x27;promise-money&#x27;, isNew);
+          });
+          addNode(&#x27;source&#x27;, laneX.source, sourceY, event.sourceLabel, event.source, isNew);
         });
-        const recordScale = visibleCount === 0 ? 0 : Math.round(432 * visibleCount / paths.length);
+        decisions.forEach(node =&gt; addNode(&#x27;decision&#x27;, laneX.decision, decisionY.get(node.key), node.label, &#x27;&#x27;, node.firstSeen === visible.length - 1));
+        risks.forEach(node =&gt; addNode(&#x27;risk&#x27;, laneX.risk, riskY.get(node.key), node.label, &#x27;&#x27;, node.firstSeen === visible.length - 1));
+        promises.forEach(node =&gt; addNode(&#x27;promise&#x27;, laneX.promise, promiseY.get(node.key), node.label, &#x27;&#x27;, node.firstSeen === visible.length - 1));
+        money.forEach(node =&gt; addNode(&#x27;money&#x27;, laneX.money, moneyY.get(node.key), node.label, &#x27;&#x27;, node.firstSeen === visible.length - 1));
+
+        const recordScale = visibleCount === 0 ? 0 : Math.round(432 * visibleCount / events.length);
         recordCount.textContent = String(recordScale);
-        pathCount.textContent = String(visibleCount);
-        densityNote.textContent = visibleCount &lt; 2 ? &#x27;Scale · 1 decision path&#x27; : `Scale compressed · ${visibleCount} paths visible`;
-        progressFill.style.width = `${100 * visibleCount / paths.length}%`;
+        pathCount.textContent = String(decisions.length);
+        densityNote.textContent = visibleCount === 0 ? &#x27;Waiting for evidence&#x27; : `Scale compressed · ${visibleCount} inputs · ${decisions.length} decisions`;
+        progressFill.style.width = `${100 * visibleCount / events.length}%`;
         if (visibleCount &gt; 0) {
-          const path = paths[visibleCount - 1];
-          currentSource.textContent = path.context;
-          const beatIndex = Math.min(3, Math.max(0, visibleCount - 1));
-          talkLabel.textContent = talk[beatIndex][0];
-          talkTitle.textContent = talk[beatIndex][1];
-          currentDetail.textContent = talk[beatIndex][2];
-          [...flowSentence.children].forEach((item, index) =&gt; item.dataset.active = String(index &lt;= beatIndex));
+          const event = visible[visible.length - 1];
+          const priorBranches = visible.slice(0, -1).flatMap(prior =&gt; prior.branches);
+          const reused = event.branches.some(branch =&gt; priorBranches.some(prior =&gt;
+            prior.risk === branch.risk || prior.promise === branch.promise || prior.money === branch.money));
+          currentSource.textContent = event.context;
+          talkLabel.textContent = reused ? &#x27;New decision · shared downstream memory&#x27; : &#x27;New decision · new route&#x27;;
+          talkTitle.textContent = reused ? &#x27;The decision reuses and expands an existing flow.&#x27; : &#x27;The document adds a decision and opens a path.&#x27;;
+          currentDetail.textContent = reused
+            ? &#x27;A new decision node is preserved, while matching risks, promises, and money stay shared—so the institution sees one connected deal.&#x27;
+            : &#x27;Deal Witness preserves the decision in the document, then traces its risks, negotiated promises, and monetary consequences left to right.&#x27;;
+          [...flowSentence.children].forEach(item =&gt; item.dataset.active = &#x27;true&#x27;);
         }
       }
 
@@ -1563,7 +1601,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         visibleCount = 0;
         render();
         playButton.textContent = &#x27;Playing&#x27;;
-        for (let index = 1; index &lt;= paths.length; index += 1) {
+        for (let index = 1; index &lt;= events.length; index += 1) {
           if (token !== runToken) break;
           visibleCount = index;
           render();
@@ -1573,8 +1611,8 @@ html&gt;body{padding:0}&lt;/style&gt;
           playing = false;
           playButton.textContent = &#x27;Replay&#x27;;
           talkLabel.textContent = &#x27;The memory keeps growing&#x27;;
-          talkTitle.textContent = &#x27;Every new source extends the causal graph.&#x27;;
-          currentDetail.textContent = &#x27;The view compresses as evidence grows, while every decision, risk, promise, and monetary consequence remains connected to its receipts.&#x27;;
+          talkTitle.textContent = &#x27;Every new source reuses or extends the causal graph.&#x27;;
+          currentDetail.textContent = &#x27;Evidence accumulates around shared decisions. The view compresses as their risks, promises, and monetary consequences expand.&#x27;;
           [...flowSentence.children].forEach(item =&gt; item.dataset.active = &#x27;true&#x27;);
         }
       }
@@ -1584,11 +1622,13 @@ html&gt;body{padding:0}&lt;/style&gt;
         else replay();
       });
       nextButton.addEventListener(&#x27;click&#x27;, () =&gt; {
+        if (visibleCount &gt;= events.length) return;
         runToken += 1;
         playing = false;
         playButton.textContent = &#x27;Replay&#x27;;
-        visibleCount = Math.min(paths.length, visibleCount + 1);
+        visibleCount = Math.min(events.length, visibleCount + 1);
         render();
+        nextButton.disabled = visibleCount &gt;= events.length;
       });
       resetButton.addEventListener(&#x27;click&#x27;, () =&gt; {
         runToken += 1;
@@ -1596,6 +1636,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         playButton.textContent = &#x27;Replay&#x27;;
         visibleCount = 0;
         render();
+        nextButton.disabled = false;
       });
 
       render();
