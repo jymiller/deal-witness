@@ -1,0 +1,842 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_id": "deal-witness-canonical-v1",
+  "synthetic": true,
+  "fiction_notice": "All names, entities, events, and deal terms are invented and are not modeled on any actual company, transaction, or person.",
+  "scenario": {
+    "as_of": "2026-10-12T09:00:00-07:00",
+    "project_name": "Project Brassleaf",
+    "business_receiving_loan": "Brassleaf Works",
+    "team_providing_money": "Lanternline Credit",
+    "loan": {
+      "amount_minor_units": 2400000000,
+      "currency": "USD",
+      "display_amount": "$24M",
+      "uses": [
+        {
+          "amount_minor_units": 1800000000,
+          "display_amount": "$18M",
+          "purpose": "Pay off the existing equipment loan"
+        },
+        {
+          "amount_minor_units": 600000000,
+          "display_amount": "$6M",
+          "purpose": "Fund a new production line"
+        }
+      ]
+    },
+    "deal_lead": {
+      "display_name": "Maya",
+      "role": "deal lead",
+      "leaves_at": "2026-10-13T09:00:00-07:00",
+      "relative_display": "Maya leaves tomorrow"
+    },
+    "closing": {
+      "scheduled_at": "2026-10-16T10:00:00-07:00",
+      "relative_display": "Closes Friday"
+    }
+  },
+  "language_contract": {
+    "covenant_explanation": "a promise that protects the money",
+    "critical_promise": "Owners cannot take cash out of the business without lender permission.",
+    "missing_connection_label": "Remembered, but missing from draft"
+  },
+  "map_contract": {
+    "concept_count": 12,
+    "stable_concept_ids_across_snapshots": true,
+    "region_order": [
+      "Money",
+      "Promises",
+      "Risks",
+      "Decisions"
+    ],
+    "concept_count_by_region": {
+      "Money": 3,
+      "Promises": 4,
+      "Risks": 3,
+      "Decisions": 2
+    }
+  },
+  "state_definitions": {
+    "verification_states": [
+      {
+        "id": "heard",
+        "display": "HEARD",
+        "meaning": "Captured from an initial source and not yet confirmed."
+      },
+      {
+        "id": "confirmed",
+        "display": "CONFIRMED",
+        "meaning": "Supported by an approved source, explicit human confirmation, or a direct result from checking the current draft; not a legal judgment."
+      },
+      {
+        "id": "in_contract",
+        "display": "IN CONTRACT",
+        "meaning": "Found in the current checked draft; not a judgment about enforceability."
+      }
+    ],
+    "contract_match_states": [
+      {
+        "id": "not_checked",
+        "display": "NOT CHECKED"
+      },
+      {
+        "id": "matched",
+        "display": "MATCHED"
+      },
+      {
+        "id": "missing",
+        "display": "MISSING"
+      },
+      {
+        "id": "not_required",
+        "display": "NOT REQUIRED"
+      }
+    ],
+    "connection_states": [
+      "pending",
+      "intact",
+      "broken",
+      "none"
+    ],
+    "resolution_states": [
+      "active",
+      "resolved",
+      "not_applicable"
+    ],
+    "deal_statuses": [
+      {
+        "id": "ready",
+        "display": "READY",
+        "meaning": "No unresolved blocker exists in the evidence loaded so far; this is not permission to close."
+      },
+      {
+        "id": "hold_for_review",
+        "display": "HOLD FOR REVIEW",
+        "meaning": "A required point is missing from the checked draft and needs human review."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "negotiation_call",
+      "type": "negotiation_call",
+      "title": "Negotiation call",
+      "occurred_at": "2026-10-12T09:00:00-07:00",
+      "artifact_path": "data/deal-witness/evidence/01-negotiation-call.md",
+      "support_role": "initial_report",
+      "can_confirm_memory": false,
+      "synthetic": true
+    },
+    {
+      "id": "internal_message",
+      "type": "internal_message",
+      "title": "Internal message",
+      "occurred_at": "2026-10-12T10:42:00-07:00",
+      "artifact_path": "data/deal-witness/evidence/02-internal-message.md",
+      "support_role": "handoff_reminder",
+      "can_confirm_memory": false,
+      "synthetic": true
+    },
+    {
+      "id": "approved_deal_memo",
+      "type": "deal_memo",
+      "title": "Approved deal memo",
+      "occurred_at": "2026-10-12T15:30:00-07:00",
+      "artifact_path": "data/deal-witness/evidence/03-approved-deal-memo.md",
+      "support_role": "approved_record",
+      "can_confirm_memory": true,
+      "synthetic": true
+    },
+    {
+      "id": "maya_exit_answer",
+      "type": "exit_answer",
+      "title": "Maya's exit answer",
+      "occurred_at": "2026-10-12T16:45:00-07:00",
+      "artifact_path": "data/deal-witness/evidence/04-maya-exit-answer.md",
+      "support_role": "explicit_human_confirmation",
+      "can_confirm_memory": true,
+      "synthetic": true
+    },
+    {
+      "id": "closing_draft_v7",
+      "type": "closing_draft",
+      "title": "Closing draft v7",
+      "occurred_at": "2026-10-15T11:00:00-07:00",
+      "artifact_path": "data/deal-witness/evidence/05-closing-draft-v7.md",
+      "support_role": "contract_version",
+      "version": 7,
+      "can_confirm_memory": false,
+      "can_confirm_comparison_result": true,
+      "can_advance_to_in_contract": true,
+      "synthetic": true
+    },
+    {
+      "id": "closing_draft_v8",
+      "type": "closing_draft",
+      "title": "Closing draft v8 corrected",
+      "occurred_at": "2026-10-15T14:10:00-07:00",
+      "artifact_path": "data/deal-witness/evidence/06-closing-draft-v8-corrected.md",
+      "support_role": "contract_version",
+      "version": 8,
+      "can_confirm_memory": false,
+      "can_confirm_comparison_result": true,
+      "can_advance_to_in_contract": true,
+      "synthetic": true
+    }
+  ],
+  "concepts": [
+    {
+      "id": "loan_amount",
+      "region": "Money",
+      "label": "$24M loan",
+      "plain_language": "The lender provides $24 million.",
+      "critical": true,
+      "required_in_contract": true,
+      "source_evidence": [
+        {
+          "source_id": "negotiation_call",
+          "effect": "heard"
+        },
+        {
+          "source_id": "approved_deal_memo",
+          "effect": "confirms"
+        },
+        {
+          "source_id": "closing_draft_v7",
+          "effect": "matches_contract"
+        },
+        {
+          "source_id": "closing_draft_v8",
+          "effect": "matches_contract"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_checked",
+          "connection_state": "pending",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        }
+      }
+    },
+    {
+      "id": "existing_loan_payoff",
+      "region": "Money",
+      "label": "$18M pays off the existing equipment loan",
+      "plain_language": "$18 million of the loan pays off the business's existing equipment loan.",
+      "critical": false,
+      "required_in_contract": true,
+      "source_evidence": [
+        {
+          "source_id": "negotiation_call",
+          "effect": "heard"
+        },
+        {
+          "source_id": "approved_deal_memo",
+          "effect": "confirms"
+        },
+        {
+          "source_id": "closing_draft_v7",
+          "effect": "matches_contract"
+        },
+        {
+          "source_id": "closing_draft_v8",
+          "effect": "matches_contract"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_checked",
+          "connection_state": "pending",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        }
+      }
+    },
+    {
+      "id": "production_line_funding",
+      "region": "Money",
+      "label": "$6M funds a new production line",
+      "plain_language": "$6 million of the loan funds a new production line.",
+      "critical": false,
+      "required_in_contract": true,
+      "source_evidence": [
+        {
+          "source_id": "negotiation_call",
+          "effect": "heard"
+        },
+        {
+          "source_id": "approved_deal_memo",
+          "effect": "confirms"
+        },
+        {
+          "source_id": "closing_draft_v7",
+          "effect": "matches_contract"
+        },
+        {
+          "source_id": "closing_draft_v8",
+          "effect": "matches_contract"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_checked",
+          "connection_state": "pending",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        }
+      }
+    },
+    {
+      "id": "owner_cash_out_permission",
+      "region": "Promises",
+      "label": "Owners need permission to take cash out",
+      "plain_language": "Owners cannot take cash out of the business without lender permission.",
+      "critical": true,
+      "required_in_contract": true,
+      "source_evidence": [
+        {
+          "source_id": "negotiation_call",
+          "effect": "heard"
+        },
+        {
+          "source_id": "internal_message",
+          "effect": "supports_without_advancing"
+        },
+        {
+          "source_id": "approved_deal_memo",
+          "effect": "confirms"
+        },
+        {
+          "source_id": "maya_exit_answer",
+          "effect": "confirms"
+        },
+        {
+          "source_id": "closing_draft_v7",
+          "effect": "checked_missing"
+        },
+        {
+          "source_id": "closing_draft_v8",
+          "effect": "matches_contract"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_checked",
+          "connection_state": "pending",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "confirmed",
+          "contract_match_state": "missing",
+          "connection_state": "broken",
+          "resolution_state": "active"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "resolved"
+        }
+      }
+    },
+    {
+      "id": "monthly_numbers",
+      "region": "Promises",
+      "label": "Monthly numbers arrive within 20 days",
+      "plain_language": "The business provides monthly numbers within 20 calendar days after each month ends.",
+      "critical": false,
+      "required_in_contract": true,
+      "source_evidence": [
+        {
+          "source_id": "approved_deal_memo",
+          "effect": "confirms"
+        },
+        {
+          "source_id": "closing_draft_v7",
+          "effect": "matches_contract"
+        },
+        {
+          "source_id": "closing_draft_v8",
+          "effect": "matches_contract"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_checked",
+          "connection_state": "pending",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        }
+      }
+    },
+    {
+      "id": "new_debt_permission",
+      "region": "Promises",
+      "label": "New debt above $1M needs permission",
+      "plain_language": "The business needs lender permission before taking on more than $1 million of new debt.",
+      "critical": false,
+      "required_in_contract": true,
+      "source_evidence": [
+        {
+          "source_id": "approved_deal_memo",
+          "effect": "confirms"
+        },
+        {
+          "source_id": "closing_draft_v7",
+          "effect": "matches_contract"
+        },
+        {
+          "source_id": "closing_draft_v8",
+          "effect": "matches_contract"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_checked",
+          "connection_state": "pending",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        }
+      }
+    },
+    {
+      "id": "insurance_kept",
+      "region": "Promises",
+      "label": "Factory and equipment stay insured",
+      "plain_language": "The business keeps its factory and equipment insured.",
+      "critical": false,
+      "required_in_contract": true,
+      "source_evidence": [
+        {
+          "source_id": "approved_deal_memo",
+          "effect": "confirms"
+        },
+        {
+          "source_id": "closing_draft_v7",
+          "effect": "matches_contract"
+        },
+        {
+          "source_id": "closing_draft_v8",
+          "effect": "matches_contract"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_checked",
+          "connection_state": "pending",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "not_applicable"
+        }
+      }
+    },
+    {
+      "id": "maya_departure",
+      "region": "Risks",
+      "label": "Maya leaves Tuesday",
+      "plain_language": "The deal lead leaves on Tuesday, before the Friday close.",
+      "critical": true,
+      "required_in_contract": false,
+      "source_evidence": [
+        {
+          "source_id": "internal_message",
+          "effect": "heard"
+        },
+        {
+          "source_id": "maya_exit_answer",
+          "effect": "confirms"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "active"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "active"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "active"
+        }
+      }
+    },
+    {
+      "id": "friday_close",
+      "region": "Risks",
+      "label": "Friday 10:00 AM closing deadline",
+      "plain_language": "The loan is scheduled to become final on Friday at 10:00 AM.",
+      "critical": true,
+      "required_in_contract": true,
+      "source_evidence": [
+        {
+          "source_id": "negotiation_call",
+          "effect": "heard"
+        },
+        {
+          "source_id": "internal_message",
+          "effect": "supports_without_advancing"
+        },
+        {
+          "source_id": "approved_deal_memo",
+          "effect": "confirms"
+        },
+        {
+          "source_id": "closing_draft_v7",
+          "effect": "matches_contract"
+        },
+        {
+          "source_id": "closing_draft_v8",
+          "effect": "matches_contract"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_checked",
+          "connection_state": "pending",
+          "resolution_state": "active"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "active"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "in_contract",
+          "contract_match_state": "matched",
+          "connection_state": "intact",
+          "resolution_state": "active"
+        }
+      }
+    },
+    {
+      "id": "critical_promise_omission_risk",
+      "region": "Risks",
+      "label": "Critical promise may be missing from the draft",
+      "plain_language": "The closing draft may leave out a protection the team remembers and approved.",
+      "critical": true,
+      "required_in_contract": false,
+      "source_evidence": [
+        {
+          "source_id": "maya_exit_answer",
+          "effect": "heard"
+        },
+        {
+          "source_id": "closing_draft_v7",
+          "effect": "confirms_omission"
+        },
+        {
+          "source_id": "closing_draft_v8",
+          "effect": "resolves_omission"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "heard",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "active"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "active"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "resolved"
+        }
+      }
+    },
+    {
+      "id": "loan_approval",
+      "region": "Decisions",
+      "label": "Approve the $24M loan",
+      "plain_language": "The team decided to make the loan with the required promises.",
+      "critical": true,
+      "required_in_contract": false,
+      "source_evidence": [
+        {
+          "source_id": "approved_deal_memo",
+          "effect": "confirms"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "not_applicable"
+        }
+      }
+    },
+    {
+      "id": "missing_critical_promise_blocks_release",
+      "region": "Decisions",
+      "label": "A missing critical promise blocks release",
+      "plain_language": "The deal pauses for review when a required promise is missing from the closing draft.",
+      "critical": true,
+      "required_in_contract": false,
+      "source_evidence": [
+        {
+          "source_id": "internal_message",
+          "effect": "supports_without_advancing"
+        },
+        {
+          "source_id": "maya_exit_answer",
+          "effect": "confirms"
+        },
+        {
+          "source_id": "closing_draft_v7",
+          "effect": "applies_decision"
+        },
+        {
+          "source_id": "closing_draft_v8",
+          "effect": "clears_blocker"
+        }
+      ],
+      "expected_state_by_snapshot": {
+        "handoff_ready": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v7_reviewed": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "not_applicable"
+        },
+        "draft_v8_reviewed": {
+          "verification_state": "confirmed",
+          "contract_match_state": "not_required",
+          "connection_state": "none",
+          "resolution_state": "not_applicable"
+        }
+      }
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "handoff_ready",
+      "at": "2026-10-12T16:45:00-07:00",
+      "trigger_source_id": "maya_exit_answer",
+      "active_contract_source_id": null,
+      "deal_status_id": "ready",
+      "deal_status_display": "READY",
+      "blocking_concept_ids": [],
+      "verification_state_counts": {
+        "heard": 1,
+        "confirmed": 11,
+        "in_contract": 0
+      }
+    },
+    {
+      "id": "draft_v7_reviewed",
+      "at": "2026-10-15T11:00:00-07:00",
+      "trigger_source_id": "closing_draft_v7",
+      "active_contract_source_id": "closing_draft_v7",
+      "deal_status_id": "hold_for_review",
+      "deal_status_display": "HOLD FOR REVIEW",
+      "blocking_concept_ids": [
+        "owner_cash_out_permission"
+      ],
+      "verification_state_counts": {
+        "heard": 0,
+        "confirmed": 5,
+        "in_contract": 7
+      }
+    },
+    {
+      "id": "draft_v8_reviewed",
+      "at": "2026-10-15T14:10:00-07:00",
+      "trigger_source_id": "closing_draft_v8",
+      "active_contract_source_id": "closing_draft_v8",
+      "deal_status_id": "ready",
+      "deal_status_display": "READY",
+      "blocking_concept_ids": [],
+      "verification_state_counts": {
+        "heard": 0,
+        "confirmed": 4,
+        "in_contract": 8
+      }
+    }
+  ],
+  "status_transitions": [
+    {
+      "at": "2026-10-12T16:45:00-07:00",
+      "event": "handoff_evidence_loaded",
+      "from_status_id": null,
+      "to_status_id": "ready",
+      "reason_concept_ids": []
+    },
+    {
+      "at": "2026-10-15T11:00:00-07:00",
+      "event": "closing_draft_v7_checked",
+      "from_status_id": "ready",
+      "to_status_id": "hold_for_review",
+      "reason_concept_ids": [
+        "owner_cash_out_permission"
+      ]
+    },
+    {
+      "at": "2026-10-15T14:10:00-07:00",
+      "event": "closing_draft_v8_checked",
+      "from_status_id": "hold_for_review",
+      "to_status_id": "ready",
+      "reason_concept_ids": []
+    }
+  ],
+  "visual_contract": {
+    "primary_concept_id": "owner_cash_out_permission",
+    "source_count_is_confidence": false,
+    "same_concept_node_must_persist": true,
+    "progression": [
+      {
+        "after_source_id": "negotiation_call",
+        "verification_state": "heard",
+        "contract_match_state": "not_checked",
+        "connection_state": "pending"
+      },
+      {
+        "after_source_id": "approved_deal_memo",
+        "verification_state": "confirmed",
+        "contract_match_state": "not_checked",
+        "connection_state": "pending"
+      },
+      {
+        "after_source_id": "closing_draft_v7",
+        "verification_state": "confirmed",
+        "contract_match_state": "missing",
+        "connection_state": "broken",
+        "connection_label": "Remembered, but missing from draft"
+      },
+      {
+        "after_source_id": "closing_draft_v8",
+        "verification_state": "in_contract",
+        "contract_match_state": "matched",
+        "connection_state": "intact"
+      }
+    ],
+    "display_requirements": [
+      "Show HEARD to CONFIRMED to IN CONTRACT as support quality on one stable concept, not as three concepts.",
+      "Keep the critical concept CONFIRMED while v7 is MISSING; missing contract text must not erase remembered support.",
+      "Use both a broken-line treatment and the label Remembered, but missing from draft for v7; do not rely on color alone.",
+      "Make source count secondary to verification state.",
+      "Keep both v7 and v8 checks visible so the repaired connection does not rewrite history."
+    ]
+  },
+  "validation_invariants": [
+    "synthetic must be true and every source artifact_path must resolve under data/deal-witness/evidence/.",
+    "There must be 12 to 14 concepts; this fixture requires exactly 12.",
+    "The only region labels are Money, Promises, Risks, and Decisions, and every region is represented.",
+    "Concept IDs and source IDs are unique, and every source reference resolves.",
+    "Every concept has at least one source and a verification_state, contract_match_state, connection_state, and resolution_state for every snapshot.",
+    "Verification may move only heard to confirmed to in_contract and must never move backward.",
+    "in_contract is valid only when contract_match_state is matched for the active draft.",
+    "A required critical concept with contract_match_state missing must have connection_state broken, appear in blocking_concept_ids, and force HOLD FOR REVIEW.",
+    "The v7 snapshot has exactly one blocker: owner_cash_out_permission.",
+    "The v8 snapshot has no blockers and returns to READY.",
+    "Snapshot state counts are derived from all 12 concepts and sum to 12.",
+    "The critical promise stays one concept and progresses heard to confirmed to in_contract, with a broken remembered-but-missing connection at v7."
+  ]
+}
