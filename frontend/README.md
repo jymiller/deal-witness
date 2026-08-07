@@ -1,6 +1,8 @@
-# Deal Witness visual prototype
+# Deal Witness visual experience
 
-This directory is a dependency-free, fixture-driven presenter prototype. It shows a closed memory-completion loop for a wholly synthetic airport-infrastructure financing:
+The default page is the spacious, animated causal-map story approved for the presentation: inputs flow through four vertical slices—Decisions, Risks, Promises, and Money—and the view compresses as memory grows.
+
+`explorer.html` preserves the dependency-free, fixture-driven investigation view. It shows the complete memory-completion loop for a wholly synthetic airport-infrastructure financing:
 
     INGEST → MAP → EXPOSE → IDENTIFY → ASK → CAPTURE → UPDATE → USE
 
@@ -14,7 +16,7 @@ From the repository root:
 
     python3 -m http.server 8000 --directory frontend
 
-Open http://localhost:8000. HTTP serving is required because the browser loads the local fixture with fetch(). There is no install or build step.
+Open http://localhost:8000 for the presentation view. Open http://localhost:8000/explorer.html for the detailed investigation view. HTTP serving is required for the explorer because it loads the local fixture with fetch(). There is no install or build step.
 
 Run the checks with:
 

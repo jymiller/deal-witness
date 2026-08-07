@@ -81,6 +81,14 @@ Run the test suite and validate every generated corpus invariant:
 node data/deal-witness/validate-corpus.mjs
 ```
 
+Run the presentation locally:
+
+```bash
+python3 -m http.server 8000 --directory frontend
+```
+
+Open `http://localhost:8000` for the spacious animated vertical-lane story. The deeper receipt and recovery-loop explorer remains available at `http://localhost:8000/explorer.html`.
+
 The corpus validator checks 22,544 assertions and verifies that all 15 generated outputs reproduce byte-for-byte. To regenerate the synthetic corpus before validating it:
 
 ```bash
@@ -130,6 +138,8 @@ The scripts never print the credential or raw provider responses that might cont
 - [`data/deal-witness/corpus/`](data/deal-witness/corpus/) — generated source records, items, relationships, provenance, expert ranking, replay frames, and draft matches
 - [`data/deal-witness/evidence/`](data/deal-witness/evidence/) — seven readable evidence bundles used in the story
 - [`data/deal-witness/expected-state.json`](data/deal-witness/expected-state.json) — deterministic snapshots and display contract
+- [`frontend/index.html`](frontend/index.html) — presentation-first animated vertical-lane experience
+- [`frontend/explorer.html`](frontend/explorer.html) — detailed fixture-driven investigation and paper-check view
 - [`src/cost_knee/everos.py`](src/cost_knee/everos.py) — secret-safe EverOS client construction and connectivity probe
 - [`scripts/verify_deal_witness_space.py`](scripts/verify_deal_witness_space.py) — dedicated-space collaboration probe
 - [`tests/`](tests/) — repository, EverOS, corpus-support, and benchmark tests

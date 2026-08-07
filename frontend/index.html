@@ -1,274 +1,1850 @@
 <!doctype html>
-<html lang="en" data-fixture-url="./fixtures/deal-witness.json">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Loading the local Deal Witness fixture.">
-    <meta name="theme-color" content="#f1eee6">
-    <link rel="icon" href="data:,">
-    <title>Deal Witness · Loading local fixture</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./app.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#deal-map">Skip to the deal map</a>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Deal Witness Growth Lanes</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Deal Witness Growth Lanes" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Deal Witness Growth Lanes&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
 
-    <main class="app-shell" id="app" aria-busy="true">
-      <header class="topbar">
-        <div class="brand-lockup" aria-label="Deal Witness">
-          <span class="witness-mark" aria-hidden="true"><span></span></span>
-          <div>
-            <p class="brand-name" id="product-name">Deal Witness</p>
-            <p class="brand-tagline" id="product-tagline">Loading fixture-owned product copy…</p>
-          </div>
-        </div>
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
 
-        <div class="session-meta">
-          <span class="synthetic-label" id="data-label">Loading synthetic fixture…</span>
-          <span class="replay-length"><span id="replay-duration">—:—</span> replay</span>
-        </div>
-      </header>
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: var(--border-radius-lg, 12.5px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
 
-      <section class="story-bar" aria-labelledby="step-title">
-        <ol class="week-stakes" id="week-stakes" aria-label="Loading fixture-owned deal timeline"></ol>
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
 
-        <div class="story-copy">
-          <p class="step-eyebrow" id="step-eyebrow">Loading the witness…</p>
-          <h1 id="step-title">Preparing the fixed deal map</h1>
-          <p class="step-narration" id="step-narration">The story will appear from a local, replaceable fixture.</p>
-        </div>
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
 
-        <aside class="connector-block" id="connector-block" aria-labelledby="connector-name">
-          <span class="connector-label" id="connector-label">Historical provenance</span>
-          <strong class="connector-name" id="connector-name">Loading historical navigator…</strong>
-          <span class="connector-deadline" id="connector-deadline">Loading recorded departure…</span>
-          <p class="connector-role" id="connector-role">Loading historical role…</p>
-          <p class="connector-status" id="connector-status">Preparing retained source relationships.</p>
-          <p class="connector-boundary" id="connector-boundary">No active contact is loaded from the document.</p>
-        </aside>
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
 
-        <div class="decision-block" id="decision-block" data-decision="reviewing">
-          <span class="decision-label">Closing decision</span>
-          <strong class="decision-value" id="decision-value">REVIEWING</strong>
-          <span class="decision-reason" id="decision-reason">Gathering the remembered deal</span>
-        </div>
-      </section>
+* {
+  box-sizing: border-box;
+}
 
-      <section class="stage" id="stage" aria-label="Deal Witness presentation">
-        <svg class="connection-layer" id="connection-layer" aria-hidden="true"></svg>
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
 
-        <aside class="evidence-column" aria-label="Evidence River and source feed">
-          <section class="evidence-river" id="evidence-river" data-mode="loading" aria-labelledby="river-title">
-            <header class="river-header">
-              <div>
-                <p class="section-kicker" id="river-kicker">Evidence River</p>
-                <h2 id="river-title">Loading the evidence scale…</h2>
-              </div>
-              <p class="river-truth" id="river-truth">Preparing truthful load metadata.</p>
-            </header>
-            <div class="river-metrics" id="river-metrics" aria-label="Evidence scale"></div>
-            <div class="river-flow">
-              <div class="river-stream" id="river-stream" aria-hidden="true"></div>
-              <div class="compression-gate" id="compression-gate">
-                <span id="compression-label">Compress</span>
-                <strong id="compression-output">— clusters</strong>
-              </div>
-            </div>
-          </section>
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
 
-          <nav class="source-rail" aria-labelledby="source-rail-title">
-            <div class="rail-heading">
-              <p class="section-kicker">Source feed</p>
-              <h2 id="source-rail-title">How the deal arrived</h2>
-            </div>
-            <ol class="source-list" id="source-list"></ol>
-            <section class="source-quote" id="source-quote" aria-labelledby="source-quote-label">
-              <span class="quote-label" id="source-quote-label">Now reviewing</span>
-              <p id="source-summary">Loading source…</p>
-              <ul class="evidence-list" id="evidence-list" aria-label="Evidence in the current source bundle"></ul>
-            </section>
-          </nav>
-        </aside>
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
 
-        <section class="map-panel" id="deal-map" aria-labelledby="map-title" tabindex="-1">
-          <header class="panel-heading">
-            <div>
-              <p class="section-kicker">Fixed Deal Map</p>
-              <h2 id="map-title">Nothing moves. Meaning gets clearer.</h2>
-            </div>
-            <p class="map-rule">Position + symbol = type<br>Color + line = state</p>
-          </header>
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
 
-          <div class="deal-map-grid" id="deal-map-grid"></div>
-        </section>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
 
-        <aside class="right-rail" aria-label="Investigation, memory completion, and document check">
-          <div class="right-context" aria-label="Representative deal-map context">
-            <aside class="example-drawer" id="example-drawer" aria-hidden="true" aria-labelledby="example-title" tabindex="-1">
-              <div class="example-drawer-heading">
-                <div>
-                  <span class="example-kicker" id="example-kicker">Representative drill-down</span>
-                  <h3 id="example-title">Open one example</h3>
-                </div>
-                <span class="example-scale" id="example-scale">One of hundreds</span>
-              </div>
-              <p class="example-value" id="example-value">Choose a visible cluster to inspect a representative item.</p>
-              <p class="example-plain" id="example-plain"></p>
-              <div class="example-provenance" id="example-provenance"></div>
-            </aside>
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
 
-            <aside class="teaching-card" id="teaching-card" aria-hidden="true">
-              <span class="teaching-mark" aria-hidden="true">Plain English</span>
-              <p id="teaching-line"></p>
-            </aside>
-          </div>
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
 
-          <div class="right-mode-panels">
-            <aside class="completion-shell" id="completion-shell" aria-labelledby="completion-title">
-              <header class="completion-header">
-                <div>
-                  <p class="section-kicker" id="completion-kicker">Memory completion loop</p>
-                  <h2 id="completion-title">Loading the investigation replay…</h2>
-                </div>
-                <span class="completion-mode" id="completion-mode">Loading fixture mode…</span>
-              </header>
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
 
-              <section class="knowledge-panel" id="knowledge-panel" aria-labelledby="knowledge-title" aria-hidden="true">
-                <header class="knowledge-header">
-                  <div>
-                    <p class="section-kicker" id="knowledge-kicker">Who Knows What</p>
-                    <h3 id="knowledge-title">Loading ranked expertise…</h3>
-                  </div>
-                  <span class="knowledge-state" id="knowledge-state">Historical routes only</span>
-                </header>
-                <p class="knowledge-summary" id="knowledge-summary"></p>
-                <ul class="capability-legend" id="capability-legend" aria-label="Contact capability types"></ul>
-                <ol class="contact-ranking" id="contact-ranking" aria-label="Ranked source-backed contacts"></ol>
-                <p class="knowledge-history" id="knowledge-history"></p>
-                <p class="memory-target" id="memory-target"></p>
-              </section>
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
 
-              <section class="simulation-call" id="simulation-call" aria-labelledby="simulation-title" aria-hidden="true">
-                <header>
-                  <div>
-                    <span class="simulation-label" id="simulation-label">Prepared simulation</span>
-                    <h3 id="simulation-title">Recovery call</h3>
-                  </div>
-                  <span class="simulation-authority" id="simulation-authority">Transcript is the authority</span>
-                </header>
-                <div class="simulation-controls" role="group" aria-label="Optional prepared-call audio">
-                  <button class="simulation-button" id="simulation-play" type="button" aria-pressed="false">Play prepared call</button>
-                  <button class="simulation-button" id="simulation-mute" type="button" aria-pressed="false">Mute</button>
-                  <button class="simulation-button" id="simulation-skip" type="button">Skip audio</button>
-                </div>
-                <p class="simulation-fallback" id="simulation-fallback">Audio is optional. The transcript remains visible.</p>
-                <p class="simulation-status" id="simulation-status" role="status" aria-live="polite">Audio idle.</p>
-              </section>
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
 
-              <ol class="loop-stages" id="loop-stages" aria-label="Memory completion stages"></ol>
-              <div class="completion-transcript" id="completion-transcript" role="log" aria-label="Authoritative prepared-call transcript"></div>
-              <aside class="memory-receipt" id="memory-receipt" aria-hidden="true">
-                <span id="receipt-label">Memory receipt</span>
-                <strong id="receipt-title">Waiting for substantive evidence</strong>
-                <ul id="receipt-items"></ul>
-                <p id="receipt-recipe"></p>
-              </aside>
-            </aside>
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
 
-            <aside class="contract-shell" id="contract-shell" aria-labelledby="contract-title" aria-hidden="true">
-              <div class="contract-paper" id="contract-paper">
-                <header class="paper-header">
-                  <div>
-                    <p class="paper-overline" id="paper-overline">Closing agreement</p>
-                    <h2 id="contract-title">Waiting for paper</h2>
-                  </div>
-                  <span class="paper-revision" id="paper-revision">—</span>
-                </header>
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
 
-                <div class="paper-rule"></div>
-                <ol class="clause-list" id="clause-list"></ol>
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
 
-                <footer class="paper-footer">
-                  <span id="paper-footer-left">Closing review copy</span>
-                  <span id="paper-footer-right">Synthetic</span>
-                </footer>
-              </div>
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
 
-              <div class="draft-callout" id="draft-callout">
-                <strong id="callout-title">Paper not yet open</strong>
-                <p id="callout-body">The contract appears after the source record is reviewed.</p>
-              </div>
-            </aside>
-          </div>
-        </aside>
-      </section>
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
 
-      <footer class="bottom-state-rail">
-        <div class="everos-state" aria-label="EverOS memory state">
-          <span class="everos-state-dot" aria-hidden="true"></span>
-          <div>
-            <span>EverOS memory layer</span>
-            <strong>Deal Witness space</strong>
-            <small>Attributed receipts + reusable recipes</small>
-          </div>
-        </div>
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
 
-        <section class="legend" aria-labelledby="legend-title">
-          <div class="legend-intro">
-            <p class="section-kicker" id="legend-title">Map states</p>
-            <p>No finance background needed.</p>
-          </div>
-          <ul class="legend-list">
-            <li><span class="legend-swatch heard" aria-hidden="true"></span><strong>Heard once</strong><span>hollow</span></li>
-            <li><span class="legend-swatch confirmed" aria-hidden="true"></span><strong>Confirmed</strong><span>solid</span></li>
-            <li><span class="legend-swatch written" aria-hidden="true"></span><strong>Written</strong><span>contract-linked</span></li>
-            <li><span class="legend-swatch missing" aria-hidden="true"></span><strong>Missing</strong><span>broken red line</span></li>
-          </ul>
-        </section>
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
 
-        <section class="presenter-controls" aria-label="Presenter controls">
-          <div class="control-buttons">
-            <button class="control-button secondary" id="previous-button" type="button">
-              <span aria-hidden="true">←</span> Previous
-            </button>
-            <button class="control-button play" id="play-button" type="button" aria-pressed="false">
-              <span class="play-icon" aria-hidden="true">▶</span>
-              <span id="play-label">Play replay</span>
-            </button>
-            <button class="control-button secondary" id="next-button" type="button">
-              Next <span aria-hidden="true">→</span>
-            </button>
-            <button class="control-button replay" id="replay-button" type="button">
-              <span aria-hidden="true">↺</span> Replay
-            </button>
-          </div>
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
 
-          <div class="step-track-wrap">
-            <div class="step-track" id="step-track" aria-label="Presentation steps"></div>
-            <div class="auto-meter" aria-hidden="true"><span id="auto-meter-fill"></span></div>
-          </div>
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
 
-          <p class="keyboard-hint">
-            <kbd>←</kbd><kbd>→</kbd> step
-            <span aria-hidden="true">·</span>
-            <kbd>Space</kbd> play/pause
-            <span aria-hidden="true">·</span>
-            <kbd>R</kbd> replay
-          </p>
-        </section>
-      </footer>
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
 
-      <div class="sr-only" id="live-status" role="status" aria-live="polite" aria-atomic="true"></div>
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
 
-      <section class="error-panel" id="error-panel" role="alert" hidden>
-        <p class="section-kicker">Fixture could not load</p>
-        <h2>The deal map is unavailable.</h2>
-        <p id="error-message">Start the local server and refresh this page.</p>
-      </section>
-    </main>
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
 
-    <noscript>
-      <div class="noscript-message">Deal Witness needs JavaScript to step through the synthetic closing review.</div>
-    </noscript>
-  </body>
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+    [aria-pressed=&quot;true&quot;],
+    [aria-selected=&quot;true&quot;],
+    .is-selected
+  ) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: 16px !important;
+  height: 16px !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;deal-witness-growth-lanes&quot; aria-label=&quot;Animated Deal Witness mockup showing source inputs becoming decisions, risks, promises, and monetary consequences&quot;&gt;
+  &lt;style&gt;
+    #deal-witness-growth-lanes {
+      --dwl-paper: light-dark(#f5f1e8, #111923);
+      --dwl-surface: light-dark(#fffdf8, #182432);
+      --dwl-ink: light-dark(#11202b, #f5f1e8);
+      --dwl-muted: light-dark(#6f787f, #aab5be);
+      --dwl-line: light-dark(#cbc5b8, #3b4855);
+      --dwl-decision: #2f7897;
+      --dwl-risk: #d96d58;
+      --dwl-promise: #7c69bc;
+      --dwl-money: #c99a30;
+      color: var(--dwl-ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;
+      container-type: inline-size;
+    }
+
+    #deal-witness-growth-lanes * { box-sizing: border-box; }
+
+    #deal-witness-growth-lanes .dwl-window {
+      min-height: 720px;
+      overflow: hidden;
+      border: 1px solid var(--dwl-line);
+      border-radius: 22px;
+      background:
+        linear-gradient(light-dark(rgba(17,32,43,.028), rgba(255,255,255,.022)) 1px, transparent 1px),
+        linear-gradient(90deg, light-dark(rgba(17,32,43,.028), rgba(255,255,255,.022)) 1px, transparent 1px),
+        var(--dwl-paper);
+      background-size: 32px 32px;
+      box-shadow: 0 22px 70px light-dark(rgba(17,32,43,.13), rgba(0,0,0,.3));
+    }
+
+    #deal-witness-growth-lanes .dwl-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 80px;
+      padding: 18px 26px;
+      border-bottom: 1px solid var(--dwl-line);
+      background: light-dark(rgba(255,253,248,.92), rgba(17,25,35,.94));
+    }
+
+    #deal-witness-growth-lanes .dwl-brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    #deal-witness-growth-lanes .dwl-brand-mark {
+      position: relative;
+      width: 36px;
+      height: 36px;
+      border: 2px solid var(--dwl-ink);
+      border-radius: 50%;
+    }
+
+    #deal-witness-growth-lanes .dwl-brand-mark::after {
+      content: &quot;&quot;;
+      position: absolute;
+      inset: 11px;
+      border-radius: 50%;
+      background: var(--dwl-ink);
+    }
+
+    #deal-witness-growth-lanes .dwl-brand strong {
+      display: block;
+      font-size: 15px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    #deal-witness-growth-lanes .dwl-brand small {
+      display: block;
+      margin-top: 3px;
+      color: var(--dwl-muted);
+      font-size: 10px;
+    }
+
+    #deal-witness-growth-lanes .dwl-stakes {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    #deal-witness-growth-lanes .dwl-stakes span:first-child {
+      padding: 7px 10px;
+      border: 1px solid var(--dwl-risk);
+      border-radius: 999px;
+      color: var(--dwl-risk);
+    }
+
+    #deal-witness-growth-lanes .dwl-stakes i {
+      width: 52px;
+      border-top: 1px solid var(--dwl-line);
+    }
+
+    #deal-witness-growth-lanes .dwl-intro {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 26px 30px 20px;
+    }
+
+    #deal-witness-growth-lanes .dwl-intro h1 {
+      margin: 0;
+      max-width: 740px;
+      font-size: clamp(28px, 4.2cqi, 48px);
+      line-height: .97;
+      letter-spacing: -.055em;
+    }
+
+    #deal-witness-growth-lanes .dwl-intro p {
+      margin: 0 0 4px;
+      max-width: 260px;
+      color: var(--dwl-muted);
+      font-size: 11px;
+      font-weight: 650;
+      line-height: 1.45;
+      text-align: right;
+    }
+
+    #deal-witness-growth-lanes .dwl-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 246px;
+      gap: 24px;
+      padding: 0 28px 24px;
+    }
+
+    #deal-witness-growth-lanes .dwl-chart {
+      position: relative;
+      min-width: 0;
+      height: 500px;
+      overflow: hidden;
+      border: 1px solid var(--dwl-line);
+      border-radius: 18px;
+      background: light-dark(rgba(255,253,248,.86), rgba(24,36,50,.88));
+    }
+
+    #deal-witness-growth-lanes .dwl-lane-headings {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: grid;
+      grid-template-columns: 15% repeat(4, 1fr);
+      align-items: stretch;
+      height: 58px;
+      border-bottom: 1px solid var(--dwl-line);
+      background: light-dark(rgba(255,253,248,.94), rgba(24,36,50,.95));
+    }
+
+    #deal-witness-growth-lanes .dwl-lane-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 13px;
+      border-left: 1px solid var(--dwl-line);
+    }
+
+    #deal-witness-growth-lanes .dwl-lane-title:first-child { border-left: 0; }
+
+    #deal-witness-growth-lanes .dwl-lane-title b {
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    #deal-witness-growth-lanes .dwl-lane-title small {
+      margin-top: 3px;
+      color: var(--dwl-muted);
+      font-size: 8px;
+      line-height: 1.25;
+    }
+
+    #deal-witness-growth-lanes .dwl-lane-title[data-lane=&quot;decision&quot;] b { color: var(--dwl-decision); }
+    #deal-witness-growth-lanes .dwl-lane-title[data-lane=&quot;risk&quot;] b { color: var(--dwl-risk); }
+    #deal-witness-growth-lanes .dwl-lane-title[data-lane=&quot;promise&quot;] b { color: var(--dwl-promise); }
+    #deal-witness-growth-lanes .dwl-lane-title[data-lane=&quot;money&quot;] b { color: var(--dwl-money); }
+
+    #deal-witness-growth-lanes .dwl-chart svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    #deal-witness-growth-lanes .dwl-divider {
+      stroke: var(--dwl-line);
+      stroke-width: 1;
+    }
+
+    #deal-witness-growth-lanes .dwl-volume-axis {
+      fill: var(--dwl-muted);
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    #deal-witness-growth-lanes .dwl-path {
+      fill: none;
+      stroke: var(--dwl-line);
+      stroke-width: 1.35;
+      opacity: .7;
+      transition: d .5s ease;
+    }
+
+    #deal-witness-growth-lanes .dwl-path[data-segment=&quot;source&quot;] { stroke-dasharray: 3 4; }
+    #deal-witness-growth-lanes .dwl-path[data-segment=&quot;decision-risk&quot;] { stroke: var(--dwl-risk); }
+    #deal-witness-growth-lanes .dwl-path[data-segment=&quot;risk-promise&quot;] { stroke: var(--dwl-promise); }
+    #deal-witness-growth-lanes .dwl-path[data-segment=&quot;promise-money&quot;] { stroke: var(--dwl-money); }
+
+    #deal-witness-growth-lanes .dwl-path.dwl-new-path {
+      stroke-width: 2.4;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      animation: dwl-draw .7s ease forwards;
+    }
+
+    @keyframes dwl-draw { to { stroke-dashoffset: 0; } }
+
+    #deal-witness-growth-lanes .dwl-node {
+      animation: dwl-pop .45s ease both;
+    }
+
+    @keyframes dwl-pop {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    #deal-witness-growth-lanes .dwl-node circle {
+      fill: var(--dwl-surface);
+      stroke: var(--dwl-node-color);
+      stroke-width: 2.1;
+    }
+
+    #deal-witness-growth-lanes .dwl-node[data-kind=&quot;source&quot;] rect {
+      fill: var(--dwl-source-color);
+      stroke: none;
+      rx: 7;
+    }
+
+    #deal-witness-growth-lanes .dwl-node text {
+      fill: var(--dwl-ink);
+      font-size: 7.5px;
+      font-weight: 800;
+      text-anchor: middle;
+      pointer-events: none;
+    }
+
+    #deal-witness-growth-lanes .dwl-node[data-kind=&quot;source&quot;] text {
+      fill: white;
+      font-size: 6.5px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    #deal-witness-growth-lanes .dwl-density-note {
+      position: absolute;
+      right: 14px;
+      bottom: 12px;
+      padding: 7px 9px;
+      border: 1px solid var(--dwl-line);
+      border-radius: 999px;
+      background: var(--dwl-surface);
+      color: var(--dwl-muted);
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    #deal-witness-growth-lanes .dwl-talk {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    #deal-witness-growth-lanes .dwl-talk-label {
+      margin: 0 0 8px;
+      color: var(--dwl-muted);
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    #deal-witness-growth-lanes .dwl-talk h2 {
+      margin: 0 0 16px;
+      font-size: 22px;
+      line-height: 1.02;
+      letter-spacing: -.04em;
+    }
+
+    #deal-witness-growth-lanes .dwl-talk-card {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid var(--dwl-line);
+      border-radius: 16px;
+      background: var(--dwl-surface);
+    }
+
+    #deal-witness-growth-lanes .dwl-talk-card strong {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 1.15;
+      letter-spacing: -.02em;
+    }
+
+    #deal-witness-growth-lanes .dwl-talk-card p {
+      margin: 0;
+      color: var(--dwl-muted);
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    #deal-witness-growth-lanes .dwl-flow-sentence {
+      display: grid;
+      gap: 9px;
+      margin-top: 24px;
+    }
+
+    #deal-witness-growth-lanes .dwl-flow-sentence div {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 8px;
+      align-items: center;
+      color: var(--dwl-muted);
+      font-size: 10px;
+      line-height: 1.3;
+      opacity: .28;
+      transition: opacity .25s ease;
+    }
+
+    #deal-witness-growth-lanes .dwl-flow-sentence div[data-active=&quot;true&quot;] { opacity: 1; color: var(--dwl-ink); }
+
+    #deal-witness-growth-lanes .dwl-flow-sentence i {
+      display: grid;
+      width: 22px;
+      height: 22px;
+      place-items: center;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      font-size: 8px;
+      font-style: normal;
+      font-weight: 900;
+    }
+
+    #deal-witness-growth-lanes .dwl-counter {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 26px;
+      padding-top: 14px;
+      border-top: 1px solid var(--dwl-line);
+    }
+
+    #deal-witness-growth-lanes .dwl-counter b {
+      display: block;
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: -.05em;
+    }
+
+    #deal-witness-growth-lanes .dwl-counter span {
+      color: var(--dwl-muted);
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    #deal-witness-growth-lanes .dwl-footer {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 20px;
+      min-height: 72px;
+      padding: 13px 26px;
+      border-top: 1px solid var(--dwl-line);
+      background: light-dark(rgba(255,253,248,.94), rgba(17,25,35,.94));
+    }
+
+    #deal-witness-growth-lanes .dwl-controls { display: flex; gap: 7px; }
+
+    #deal-witness-growth-lanes .dwl-control {
+      min-width: 40px;
+      min-height: 36px;
+      padding: 0 12px;
+      border: 1px solid var(--dwl-line);
+      border-radius: 9px;
+      background: var(--dwl-surface);
+      color: var(--dwl-ink);
+      cursor: pointer;
+      font: inherit;
+      font-size: 10px;
+      font-weight: 850;
+    }
+
+    #deal-witness-growth-lanes .dwl-control[data-primary=&quot;true&quot;] {
+      min-width: 76px;
+      border-color: var(--dwl-ink);
+      background: var(--dwl-ink);
+      color: var(--dwl-paper);
+    }
+
+    #deal-witness-growth-lanes .dwl-progress {
+      position: relative;
+      height: 4px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--dwl-line);
+    }
+
+    #deal-witness-growth-lanes .dwl-progress span {
+      display: block;
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--dwl-decision), var(--dwl-risk), var(--dwl-promise), var(--dwl-money));
+      transition: width .4s ease;
+    }
+
+    #deal-witness-growth-lanes .dwl-footer-note {
+      color: var(--dwl-muted);
+      font-size: 8px;
+      font-weight: 750;
+      line-height: 1.35;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    @container (max-width: 800px) {
+      #deal-witness-growth-lanes .dwl-intro { align-items: flex-start; }
+      #deal-witness-growth-lanes .dwl-intro p { display: none; }
+      #deal-witness-growth-lanes .dwl-body { grid-template-columns: 1fr; }
+      #deal-witness-growth-lanes .dwl-talk { display: grid; grid-template-columns: 170px 1fr; gap: 16px; }
+      #deal-witness-growth-lanes .dwl-talk-label { grid-column: 1 / -1; margin: 0; }
+      #deal-witness-growth-lanes .dwl-talk h2 { margin: 0; }
+      #deal-witness-growth-lanes .dwl-talk-card { min-height: 180px; }
+    }
+
+    @container (max-width: 520px) {
+      #deal-witness-growth-lanes .dwl-header { align-items: flex-start; padding: 15px 16px; }
+      #deal-witness-growth-lanes .dwl-brand small { display: none; }
+      #deal-witness-growth-lanes .dwl-stakes i { display: none; }
+      #deal-witness-growth-lanes .dwl-intro { padding: 20px 16px 15px; }
+      #deal-witness-growth-lanes .dwl-body { padding: 0 14px 18px; }
+      #deal-witness-growth-lanes .dwl-chart { height: 430px; }
+      #deal-witness-growth-lanes .dwl-lane-title { padding: 0 4px; }
+      #deal-witness-growth-lanes .dwl-lane-title small { display: none; }
+      #deal-witness-growth-lanes .dwl-talk { display: block; }
+      #deal-witness-growth-lanes .dwl-talk h2 { margin-bottom: 12px; }
+      #deal-witness-growth-lanes .dwl-footer { grid-template-columns: 1fr; padding: 12px 16px; }
+      #deal-witness-growth-lanes .dwl-controls { justify-content: center; }
+      #deal-witness-growth-lanes .dwl-footer-note { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #deal-witness-growth-lanes *,
+      #deal-witness-growth-lanes *::before,
+      #deal-witness-growth-lanes *::after { animation-duration: .001ms !important; }
+    }
+  &lt;/style&gt;
+
+  &lt;section class=&quot;dwl-window&quot;&gt;
+    &lt;header class=&quot;dwl-header&quot;&gt;
+      &lt;div class=&quot;dwl-brand&quot;&gt;&lt;span class=&quot;dwl-brand-mark&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Deal Witness&lt;/strong&gt;&lt;small&gt;High-value person recovery · synthetic replay&lt;/small&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;dwl-stakes&quot;&gt;&lt;span&gt;Maya already left&lt;/span&gt;&lt;i&gt;&lt;/i&gt;&lt;span&gt;Close in 4 days&lt;/span&gt;&lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;div class=&quot;dwl-intro&quot;&gt;
+      &lt;h1&gt;Every new input grows the shape of the deal.&lt;/h1&gt;
+      &lt;p&gt;One source becomes a decision. Decisions expose risks. Negotiated mitigations become promises. Promises govern money.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;dwl-body&quot;&gt;
+      &lt;section class=&quot;dwl-chart&quot;&gt;
+        &lt;div class=&quot;dwl-lane-headings&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;div class=&quot;dwl-lane-title&quot;&gt;&lt;b&gt;Inputs&lt;/b&gt;&lt;small&gt;conversations + files&lt;/small&gt;&lt;/div&gt;
+          &lt;div class=&quot;dwl-lane-title&quot; data-lane=&quot;decision&quot;&gt;&lt;b&gt;Decisions&lt;/b&gt;&lt;small&gt;what people agreed&lt;/small&gt;&lt;/div&gt;
+          &lt;div class=&quot;dwl-lane-title&quot; data-lane=&quot;risk&quot;&gt;&lt;b&gt;Risks&lt;/b&gt;&lt;small&gt;what could go wrong&lt;/small&gt;&lt;/div&gt;
+          &lt;div class=&quot;dwl-lane-title&quot; data-lane=&quot;promise&quot;&gt;&lt;b&gt;Promises&lt;/b&gt;&lt;small&gt;mitigations + covenants&lt;/small&gt;&lt;/div&gt;
+          &lt;div class=&quot;dwl-lane-title&quot; data-lane=&quot;money&quot;&gt;&lt;b&gt;Money&lt;/b&gt;&lt;small&gt;when capital moves&lt;/small&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;svg viewBox=&quot;0 0 1000 500&quot; role=&quot;img&quot; aria-label=&quot;A growing left-to-right causal graph with vertical lanes for decisions, risks, promises, and money&quot;&gt;
+          &lt;line class=&quot;dwl-divider&quot; x1=&quot;150&quot; y1=&quot;58&quot; x2=&quot;150&quot; y2=&quot;500&quot;&gt;&lt;/line&gt;
+          &lt;line class=&quot;dwl-divider&quot; x1=&quot;362.5&quot; y1=&quot;58&quot; x2=&quot;362.5&quot; y2=&quot;500&quot;&gt;&lt;/line&gt;
+          &lt;line class=&quot;dwl-divider&quot; x1=&quot;575&quot; y1=&quot;58&quot; x2=&quot;575&quot; y2=&quot;500&quot;&gt;&lt;/line&gt;
+          &lt;line class=&quot;dwl-divider&quot; x1=&quot;787.5&quot; y1=&quot;58&quot; x2=&quot;787.5&quot; y2=&quot;500&quot;&gt;&lt;/line&gt;
+          &lt;text class=&quot;dwl-volume-axis&quot; x=&quot;14&quot; y=&quot;482&quot;&gt;MORE EVIDENCE ↓ · VIEW COMPRESSES TO FIT&lt;/text&gt;
+          &lt;g id=&quot;dwl-path-layer&quot;&gt;&lt;/g&gt;
+          &lt;g id=&quot;dwl-node-layer&quot;&gt;&lt;/g&gt;
+        &lt;/svg&gt;
+        &lt;div class=&quot;dwl-density-note&quot; id=&quot;dwl-density-note&quot;&gt;Scale · 1 decision path&lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;aside class=&quot;dwl-talk&quot;&gt;
+        &lt;p class=&quot;dwl-talk-label&quot; id=&quot;dwl-talk-label&quot;&gt;Beat 1 · the input arrives&lt;/p&gt;
+        &lt;h2 id=&quot;dwl-talk-title&quot;&gt;A conversation becomes a decision.&lt;/h2&gt;
+        &lt;div class=&quot;dwl-talk-card&quot;&gt;
+          &lt;strong id=&quot;dwl-current-source&quot;&gt;Microsoft Teams · credit call&lt;/strong&gt;
+          &lt;p id=&quot;dwl-current-detail&quot;&gt;Deal Witness preserves who said what, when, and where the source lives.&lt;/p&gt;
+          &lt;div class=&quot;dwl-flow-sentence&quot; id=&quot;dwl-flow-sentence&quot;&gt;
+            &lt;div data-active=&quot;true&quot;&gt;&lt;i&gt;1&lt;/i&gt;&lt;span&gt;Extract a decision&lt;/span&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;i&gt;2&lt;/i&gt;&lt;span&gt;Populate its risks&lt;/span&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;i&gt;3&lt;/i&gt;&lt;span&gt;Connect negotiated promises&lt;/span&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;i&gt;4&lt;/i&gt;&lt;span&gt;Show the monetary consequence&lt;/span&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;dwl-counter&quot;&gt;
+            &lt;div&gt;&lt;b id=&quot;dwl-record-count&quot;&gt;0&lt;/b&gt;&lt;span&gt;records learned&lt;/span&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;b id=&quot;dwl-path-count&quot;&gt;0&lt;/b&gt;&lt;span&gt;decision paths&lt;/span&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/aside&gt;
+    &lt;/div&gt;
+
+    &lt;footer class=&quot;dwl-footer&quot;&gt;
+      &lt;div class=&quot;dwl-controls&quot;&gt;
+        &lt;button class=&quot;dwl-control&quot; id=&quot;dwl-reset&quot; type=&quot;button&quot;&gt;↺&lt;/button&gt;
+        &lt;button class=&quot;dwl-control&quot; id=&quot;dwl-play&quot; data-primary=&quot;true&quot; type=&quot;button&quot;&gt;Replay&lt;/button&gt;
+        &lt;button class=&quot;dwl-control&quot; id=&quot;dwl-next&quot; type=&quot;button&quot;&gt;+ Input&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;dwl-progress&quot;&gt;&lt;span id=&quot;dwl-progress-fill&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;dwl-footer-note&quot;&gt;Representative paths · 432-record synthetic corpus&lt;/div&gt;
+    &lt;/footer&gt;
+  &lt;/section&gt;
+
+  &lt;script&gt;
+    (() =&gt; {
+      const root = document.getElementById(&#x27;deal-witness-growth-lanes&#x27;);
+      const pathLayer = root.querySelector(&#x27;#dwl-path-layer&#x27;);
+      const nodeLayer = root.querySelector(&#x27;#dwl-node-layer&#x27;);
+      const talkLabel = root.querySelector(&#x27;#dwl-talk-label&#x27;);
+      const talkTitle = root.querySelector(&#x27;#dwl-talk-title&#x27;);
+      const currentSource = root.querySelector(&#x27;#dwl-current-source&#x27;);
+      const currentDetail = root.querySelector(&#x27;#dwl-current-detail&#x27;);
+      const flowSentence = root.querySelector(&#x27;#dwl-flow-sentence&#x27;);
+      const recordCount = root.querySelector(&#x27;#dwl-record-count&#x27;);
+      const pathCount = root.querySelector(&#x27;#dwl-path-count&#x27;);
+      const densityNote = root.querySelector(&#x27;#dwl-density-note&#x27;);
+      const progressFill = root.querySelector(&#x27;#dwl-progress-fill&#x27;);
+      const playButton = root.querySelector(&#x27;#dwl-play&#x27;);
+      const nextButton = root.querySelector(&#x27;#dwl-next&#x27;);
+      const resetButton = root.querySelector(&#x27;#dwl-reset&#x27;);
+
+      const laneX = { source: 78, decision: 254, risk: 469, promise: 682, money: 893 };
+      const colors = { decision: &#x27;#2f7897&#x27;, risk: &#x27;#d96d58&#x27;, promise: &#x27;#7c69bc&#x27;, money: &#x27;#c99a30&#x27; };
+      const sourceColors = { Teams: &#x27;#6554c0&#x27;, Email: &#x27;#3976b8&#x27;, SharePoint: &#x27;#168b8d&#x27;, Slack: &#x27;#3aa17e&#x27;, WhatsApp: &#x27;#42a86b&#x27;, Model: &#x27;#b7892f&#x27;, Document: &#x27;#68747e&#x27; };
+      const paths = [
+        { source:&#x27;Teams&#x27;, sourceLabel:&#x27;TEAMS&#x27;, context:&#x27;Microsoft Teams · credit call&#x27;, decision:&#x27;Release first draw?&#x27;, risks:[&#x27;No certificate&#x27;,&#x27;Budget unproven&#x27;], promises:[&#x27;Engineer certifies&#x27;,&#x27;Sponsor funds first&#x27;], money:[&#x27;$42M draw&#x27;] },
+        { source:&#x27;Email&#x27;, sourceLabel:&#x27;EMAIL&#x27;, context:&#x27;Email · noise-work negotiation&#x27;, decision:&#x27;Accept mitigation scope?&#x27;, risks:[&#x27;Cost overrun&#x27;], promises:[&#x27;$18.6M earmark&#x27;,&#x27;Scope under contract&#x27;], money:[&#x27;$18.6M funded&#x27;] },
+        { source:&#x27;SharePoint&#x27;, sourceLabel:&#x27;SP&#x27;, context:&#x27;SharePoint · permit register&#x27;, decision:&#x27;Sequence permits?&#x27;, risks:[&#x27;Opening delay&#x27;,&#x27;Approval conflict&#x27;], promises:[&#x27;Permit before works&#x27;], money:[&#x27;$11M reserve&#x27;] },
+        { source:&#x27;Slack&#x27;, sourceLabel:&#x27;SLACK&#x27;, context:&#x27;Slack · deal-team discussion&#x27;, decision:&#x27;Use contingency?&#x27;, risks:[&#x27;Budget leakage&#x27;], promises:[&#x27;Lender consent&#x27;], money:[&#x27;Contingency locked&#x27;] },
+        { source:&#x27;WhatsApp&#x27;, sourceLabel:&#x27;WA&#x27;, context:&#x27;WhatsApp · contractor exchange&#x27;, decision:&#x27;Grant site access?&#x27;, risks:[&#x27;Uninsured work&#x27;], promises:[&#x27;Evidence before entry&#x27;], money:[&#x27;Draw withheld&#x27;] },
+        { source:&#x27;Model&#x27;, sourceLabel:&#x27;MODEL&#x27;, context:&#x27;Model · operating forecast&#x27;, decision:&#x27;Size revenue reserve?&#x27;, risks:[&#x27;Traffic downside&#x27;], promises:[&#x27;Quarterly top-up&#x27;], money:[&#x27;Reserve funded&#x27;] },
+        { source:&#x27;Document&#x27;, sourceLabel:&#x27;DOC&#x27;, context:&#x27;Document · completion schedule&#x27;, decision:&#x27;Define completion?&#x27;, risks:[&#x27;Test ambiguity&#x27;], promises:[&#x27;Independent test&#x27;], money:[&#x27;Final draw&#x27;] },
+        { source:&#x27;Teams&#x27;, sourceLabel:&#x27;TEAMS&#x27;, context:&#x27;Microsoft Teams · closing call&#x27;, decision:&#x27;Approve close?&#x27;, risks:[&#x27;Missing draft term&#x27;], promises:[&#x27;Correct v8&#x27;], money:[&#x27;$380M facility&#x27;] }
+      ];
+
+      const talk = [
+        [&#x27;Beat 1 · the input arrives&#x27;,&#x27;A conversation becomes a decision.&#x27;,&#x27;Deal Witness preserves who said what, when, and where the source lives.&#x27;],
+        [&#x27;Beat 2 · risks branch&#x27;,&#x27;The decision exposes what could go wrong.&#x27;,&#x27;One decision can create several risks. Each remains connected to the conversation that surfaced it.&#x27;],
+        [&#x27;Beat 3 · people negotiate&#x27;,&#x27;Mitigation becomes a promise.&#x27;,&#x27;The team agrees how to control each risk. That agreement becomes a covenant, condition, or operating promise.&#x27;],
+        [&#x27;Beat 4 · consequence&#x27;,&#x27;The promise governs money.&#x27;,&#x27;Only at the final lane do we show the dollars: what is funded, reserved, released, or withheld.&#x27;]
+      ];
+
+      let visibleCount = 0;
+      let playing = false;
+      let runToken = 0;
+
+      function svgElement(name, attrs = {}) {
+        const element = document.createElementNS(&#x27;http://www.w3.org/2000/svg&#x27;, name);
+        Object.entries(attrs).forEach(([key, value]) =&gt; element.setAttribute(key, String(value)));
+        return element;
+      }
+
+      function yPositions(count) {
+        if (count &lt;= 1) return [275];
+        const top = 92;
+        const bottom = 462;
+        return Array.from({length: count}, (_, index) =&gt; top + index * ((bottom - top) / (count - 1)));
+      }
+
+      function shortLines(label) {
+        if (label.length &lt;= 17) return [label];
+        const words = label.split(&#x27; &#x27;);
+        let first = &#x27;&#x27;;
+        let second = &#x27;&#x27;;
+        words.forEach(word =&gt; {
+          if ((first + &#x27; &#x27; + word).trim().length &lt;= 15 &amp;&amp; !second) first = (first + &#x27; &#x27; + word).trim();
+          else second = (second + &#x27; &#x27; + word).trim();
+        });
+        return [first, second].filter(Boolean);
+      }
+
+      function addNode(kind, x, y, label, sourceType, isNew) {
+        const group = svgElement(&#x27;g&#x27;, { class: `dwl-node${isNew ? &#x27; dwl-new-node&#x27; : &#x27;&#x27;}`, transform: `translate(${x} ${y})`, &#x27;data-kind&#x27;: kind });
+        if (kind === &#x27;source&#x27;) {
+          group.style.setProperty(&#x27;--dwl-source-color&#x27;, sourceColors[sourceType]);
+          group.appendChild(svgElement(&#x27;rect&#x27;, { x:-31, y:-13, width:62, height:26 }));
+        } else {
+          group.style.setProperty(&#x27;--dwl-node-color&#x27;, colors[kind]);
+          group.appendChild(svgElement(&#x27;circle&#x27;, { r: kind === &#x27;decision&#x27; ? 27 : 23 }));
+        }
+        const lines = shortLines(label);
+        lines.forEach((line, index) =&gt; {
+          const text = svgElement(&#x27;text&#x27;, { y: lines.length === 1 ? 3 : -2 + index * 10 });
+          text.textContent = line;
+          group.appendChild(text);
+        });
+        nodeLayer.appendChild(group);
+      }
+
+      function addCurve(x1, y1, x2, y2, segment, isNew, offset = 0) {
+        const curve = svgElement(&#x27;path&#x27;, {
+          class: `dwl-path${isNew ? &#x27; dwl-new-path&#x27; : &#x27;&#x27;}`,
+          &#x27;data-segment&#x27;: segment,
+          d: `M${x1},${y1} C${x1 + 55},${y1 + offset} ${x2 - 55},${y2 - offset} ${x2},${y2}`
+        });
+        pathLayer.appendChild(curve);
+      }
+
+      function render() {
+        pathLayer.replaceChildren();
+        nodeLayer.replaceChildren();
+        const ys = yPositions(visibleCount);
+        paths.slice(0, visibleCount).forEach((path, index) =&gt; {
+          const y = ys[index];
+          const isNew = index === visibleCount - 1;
+          const riskYs = path.risks.length === 1 ? [y] : path.risks.map((_, riskIndex) =&gt; y + (riskIndex === 0 ? -16 : 16));
+          const promiseYs = path.promises.length === 1 ? [y] : path.promises.map((_, promiseIndex) =&gt; y + (promiseIndex === 0 ? -15 : 15));
+          addCurve(laneX.source + 31, y, laneX.decision - 27, y, &#x27;source&#x27;, isNew);
+          path.risks.forEach((risk, riskIndex) =&gt; addCurve(laneX.decision + 27, y, laneX.risk - 23, riskYs[riskIndex], &#x27;decision-risk&#x27;, isNew, riskIndex ? 10 : -10));
+          path.promises.forEach((promise, promiseIndex) =&gt; {
+            const riskY = riskYs[Math.min(promiseIndex, riskYs.length - 1)];
+            addCurve(laneX.risk + 23, riskY, laneX.promise - 23, promiseYs[promiseIndex], &#x27;risk-promise&#x27;, isNew, promiseIndex ? 8 : -8);
+          });
+          path.money.forEach((money, moneyIndex) =&gt; addCurve(laneX.promise + 23, promiseYs[Math.min(moneyIndex, promiseYs.length - 1)], laneX.money - 23, y, &#x27;promise-money&#x27;, isNew));
+          addNode(&#x27;source&#x27;, laneX.source, y, path.sourceLabel, path.source, isNew);
+          addNode(&#x27;decision&#x27;, laneX.decision, y, path.decision, path.source, isNew);
+          path.risks.forEach((risk, riskIndex) =&gt; addNode(&#x27;risk&#x27;, laneX.risk, riskYs[riskIndex], risk, path.source, isNew));
+          path.promises.forEach((promise, promiseIndex) =&gt; addNode(&#x27;promise&#x27;, laneX.promise, promiseYs[promiseIndex], promise, path.source, isNew));
+          path.money.forEach(money =&gt; addNode(&#x27;money&#x27;, laneX.money, y, money, path.source, isNew));
+        });
+        const recordScale = visibleCount === 0 ? 0 : Math.round(432 * visibleCount / paths.length);
+        recordCount.textContent = String(recordScale);
+        pathCount.textContent = String(visibleCount);
+        densityNote.textContent = visibleCount &lt; 2 ? &#x27;Scale · 1 decision path&#x27; : `Scale compressed · ${visibleCount} paths visible`;
+        progressFill.style.width = `${100 * visibleCount / paths.length}%`;
+        if (visibleCount &gt; 0) {
+          const path = paths[visibleCount - 1];
+          currentSource.textContent = path.context;
+          const beatIndex = Math.min(3, Math.max(0, visibleCount - 1));
+          talkLabel.textContent = talk[beatIndex][0];
+          talkTitle.textContent = talk[beatIndex][1];
+          currentDetail.textContent = talk[beatIndex][2];
+          [...flowSentence.children].forEach((item, index) =&gt; item.dataset.active = String(index &lt;= beatIndex));
+        }
+      }
+
+      const wait = milliseconds =&gt; new Promise(resolve =&gt; setTimeout(resolve, milliseconds));
+      async function replay() {
+        playing = true;
+        const token = ++runToken;
+        visibleCount = 0;
+        render();
+        playButton.textContent = &#x27;Playing&#x27;;
+        for (let index = 1; index &lt;= paths.length; index += 1) {
+          if (token !== runToken) break;
+          visibleCount = index;
+          render();
+          await wait(index &lt;= 4 ? 900 : 620);
+        }
+        if (token === runToken) {
+          playing = false;
+          playButton.textContent = &#x27;Replay&#x27;;
+          talkLabel.textContent = &#x27;The memory keeps growing&#x27;;
+          talkTitle.textContent = &#x27;Every new source extends the causal graph.&#x27;;
+          currentDetail.textContent = &#x27;The view compresses as evidence grows, while every decision, risk, promise, and monetary consequence remains connected to its receipts.&#x27;;
+          [...flowSentence.children].forEach(item =&gt; item.dataset.active = &#x27;true&#x27;);
+        }
+      }
+
+      playButton.addEventListener(&#x27;click&#x27;, () =&gt; {
+        if (playing) { runToken += 1; playing = false; playButton.textContent = &#x27;Replay&#x27;; }
+        else replay();
+      });
+      nextButton.addEventListener(&#x27;click&#x27;, () =&gt; {
+        runToken += 1;
+        playing = false;
+        playButton.textContent = &#x27;Replay&#x27;;
+        visibleCount = Math.min(paths.length, visibleCount + 1);
+        render();
+      });
+      resetButton.addEventListener(&#x27;click&#x27;, () =&gt; {
+        runToken += 1;
+        playing = false;
+        playButton.textContent = &#x27;Replay&#x27;;
+        visibleCount = 0;
+        render();
+      });
+
+      render();
+      setTimeout(replay, 350);
+    })();
+  &lt;/script&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handleLeave = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
 </html>

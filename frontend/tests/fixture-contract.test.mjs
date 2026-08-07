@@ -8,7 +8,7 @@ const frontendRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), 
 const fixturePath = path.join(frontendRoot, "fixtures", "deal-witness.json");
 const fixture = JSON.parse(await readFile(fixturePath, "utf8"));
 const appSource = await readFile(path.join(frontendRoot, "app.js"), "utf8");
-const htmlSource = await readFile(path.join(frontendRoot, "index.html"), "utf8");
+const htmlSource = await readFile(path.join(frontendRoot, "explorer.html"), "utf8");
 const stylesSource = await readFile(path.join(frontendRoot, "styles.css"), "utf8");
 
 const clusterById = new Map(fixture.clusters.map((cluster) => [cluster.id, cluster]));
