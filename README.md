@@ -6,6 +6,8 @@ Deal Witness is a high-value-person recovery system for complex transactions. It
 
 This hackathon demo is **wholly synthetic**. Every person, company, source, date, quote, amount, and project detail is invented.
 
+**Live demo:** [Deal Witness memory map](https://deal-witness.onrender.com/) · [Recovery-loop explorer](https://deal-witness.onrender.com/explorer.html)
+
 ## The story
 
 Project Asterline is a synthetic **$380 million private-credit runway and infrastructure financing** assembled across nine months by 14 organizations and 36 people.
