@@ -247,6 +247,41 @@ a:focus-visible,
   text-transform: uppercase;
 }
 
+.view-switcher {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px;
+  background: rgba(16, 24, 32, 0.06);
+  border: 1px solid var(--rule-dark);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.view-switcher a {
+  padding: 7px 10px;
+  color: var(--muted);
+  border-radius: 999px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.67rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.view-switcher a:hover,
+.view-switcher a:focus-visible {
+  color: var(--ink);
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.view-switcher a[aria-current="page"] {
+  color: var(--paper);
+  background: var(--ink);
+}
+
 .synthetic-label,
 .replay-length {
   padding: 8px 10px;
@@ -2554,6 +2589,10 @@ kbd {
     align-self: flex-start;
   }
 
+  .view-switcher {
+    align-self: flex-start;
+  }
+
   .story-bar {
     display: grid;
   }
@@ -2650,6 +2689,7 @@ kbd {
 
   .topbar > *,
   .brand-lockup,
+  .view-switcher,
   .session-meta,
   .synthetic-label {
     min-width: 0;
