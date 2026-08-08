@@ -99,7 +99,7 @@ The repository includes three slide-ready exports of the approved memory-growth 
 
 For the MP4, upload the file to Google Drive, wait for Drive to finish processing it, then use **Insert → Video → Google Drive** in Slides and enable autoplay in the video playback options. For the GIF, use **Insert → Image**; it loops automatically during slideshow playback. The exports contain no browser chrome and show the deterministic sequence from sparse memory through document reinforcement to the representative hollow path.
 
-The longer [`artifacts/deal-witness-demo.mp4`](artifacts/deal-witness-demo.mp4) preserves the full 75-second recovery and document-check walkthrough. Its capture is reproducible with [`scripts/capture-deal-witness-demo.mjs`](scripts/capture-deal-witness-demo.mjs).
+The longer [`artifacts/deal-witness-demo.mp4`](artifacts/deal-witness-demo.mp4) is an older explorer-based recovery walkthrough preserved for development reference. Use `deal-witness-memory-growth-demo.mp4` for the current presentation UI. The older capture remains reproducible with [`scripts/capture-deal-witness-demo.mjs`](scripts/capture-deal-witness-demo.mjs).
 
 The corpus validator checks 22,544 assertions and verifies that all 15 generated outputs reproduce byte-for-byte. To regenerate the synthetic corpus before validating it:
 
