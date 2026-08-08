@@ -1372,7 +1372,13 @@ html&gt;body{padding:0}&lt;/style&gt;
     @container (max-width: 520px) {
       #dw-memory-map .dw-screen { min-height: 850px; }
       #dw-memory-map .dw-brand span { display: none; }
-      #dw-memory-map .dw-view-switcher { width: 100%; justify-content: center; margin-left: 0; }
+      #dw-memory-map .dw-view-switcher {
+        width: 100%;
+        justify-content: flex-start;
+        margin-left: 0;
+        overflow-x: auto;
+        scrollbar-width: thin;
+      }
       #dw-memory-map .dw-deadline { width: 100%; justify-content: space-between; }
       #dw-memory-map .dw-graph-zone { height: 450px; }
       #dw-memory-map .dw-graph { min-height: 450px; }
@@ -1394,6 +1400,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;nav class=&quot;dw-view-switcher&quot; aria-label=&quot;Choose Deal Witness view&quot;&gt;
         &lt;a href=&quot;/&quot; target=&quot;_top&quot; aria-current=&quot;page&quot;&gt;Growth map&lt;/a&gt;
         &lt;a href=&quot;/explorer.html&quot; target=&quot;_top&quot;&gt;Recovery explorer&lt;/a&gt;
+        &lt;a class=&quot;dw-project-link&quot; href=&quot;./guide.html&quot; target=&quot;_top&quot;&gt;How it works&lt;/a&gt;
         &lt;a class=&quot;dw-project-link&quot; href=&quot;./about.html&quot; target=&quot;_top&quot;&gt;About&lt;/a&gt;
         &lt;a class=&quot;dw-project-link&quot; href=&quot;./assets/deal-witness-hackathon-deck.pdf&quot; target=&quot;_top&quot;&gt;View deck&lt;/a&gt;
       &lt;/nav&gt;

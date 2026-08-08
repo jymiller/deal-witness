@@ -2,10 +2,11 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-const [growthMap, recoveryExplorer, aboutPage, deck] = await Promise.all([
+const [growthMap, recoveryExplorer, aboutPage, guidePage, deck] = await Promise.all([
   readFile(new URL("../index.html", import.meta.url), "utf8"),
   readFile(new URL("../explorer.html", import.meta.url), "utf8"),
   readFile(new URL("../about.html", import.meta.url), "utf8"),
+  readFile(new URL("../guide.html", import.meta.url), "utf8"),
   readFile(new URL("../assets/deal-witness-hackathon-deck.pdf", import.meta.url)),
 ]);
 
@@ -26,17 +27,25 @@ test("each view marks itself as the current page", () => {
 });
 
 test("both Deal Witness experiences expose compact project links", () => {
+  assert.match(growthMap, /href=&quot;\.\/guide\.html&quot; target=&quot;_top&quot;&gt;How it works/);
   assert.match(growthMap, /href=&quot;\.\/about\.html&quot; target=&quot;_top&quot;&gt;About/);
   assert.match(
     growthMap,
     /href=&quot;\.\/assets\/deal-witness-hackathon-deck\.pdf&quot; target=&quot;_top&quot;&gt;View deck/,
   );
 
+  assert.match(recoveryExplorer, /href="\.\/guide\.html">How it works<\/a>/);
   assert.match(recoveryExplorer, /href="\.\/about\.html">About<\/a>/);
   assert.match(
     recoveryExplorer,
     /href="\.\/assets\/deal-witness-hackathon-deck\.pdf">View deck<\/a>/,
   );
+});
+
+test("every existing public page exposes the explainer guide", () => {
+  assert.match(aboutPage, /href="\.\/guide\.html">How it works<\/a>/);
+  assert.match(guidePage, /Growth Map/i);
+  assert.match(guidePage, /Recovery Explorer/i);
 });
 
 test("the public hackathon page and deck ship with the site", () => {

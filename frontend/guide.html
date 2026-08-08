@@ -1,0 +1,1477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A plain-English guide to the Deal Witness Growth Map and Recovery Explorer.">
+    <meta name="theme-color" content="#f1eee6">
+    <link rel="icon" href="data:,">
+    <title>How to read Deal Witness</title>
+    <style>
+      :root {
+        --canvas: #f1eee6;
+        --paper: #fffdf7;
+        --ink: #101820;
+        --muted: #59615f;
+        --rule: #b9b7ad;
+        --rule-dark: #777a74;
+        --navy: #17324a;
+        --green: #167354;
+        --amber: #9b6317;
+        --red: #b33b2f;
+        color-scheme: light;
+        font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-synthesis: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-width: 320px;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(rgba(16, 24, 32, 0.033) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(16, 24, 32, 0.033) 1px, transparent 1px),
+          var(--canvas);
+        background-size: 28px 28px;
+      }
+
+      a:focus-visible {
+        outline: 4px solid #226ca2;
+        outline-offset: 3px;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 20;
+        padding: 11px 15px;
+        color: var(--paper);
+        background: var(--ink);
+        border-radius: 8px;
+        transform: translateY(-160%);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .shell {
+        width: min(1280px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        display: flex;
+        min-height: 96px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      .brand-lockup {
+        display: flex;
+        min-width: 0;
+        align-items: center;
+        gap: 14px;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .witness-mark {
+        position: relative;
+        display: grid;
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        border: 3px solid var(--ink);
+        border-radius: 50%;
+      }
+
+      .witness-mark::before,
+      .witness-mark::after {
+        position: absolute;
+        top: 50%;
+        width: 9px;
+        height: 16px;
+        content: "";
+        border-top: 3px solid var(--ink);
+        border-bottom: 3px solid var(--ink);
+        transform: translateY(-50%);
+      }
+
+      .witness-mark::before {
+        left: -7px;
+        border-left: 3px solid var(--ink);
+        border-radius: 4px 0 0 4px;
+      }
+
+      .witness-mark::after {
+        right: -7px;
+        border-right: 3px solid var(--ink);
+        border-radius: 0 4px 4px 0;
+      }
+
+      .witness-mark span {
+        width: 10px;
+        height: 10px;
+        background: var(--ink);
+        border-radius: 50%;
+      }
+
+      .brand-name,
+      .brand-tagline {
+        display: block;
+      }
+
+      .brand-name {
+        font-size: 1.12rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .brand-tagline {
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 650;
+      }
+
+      .view-switcher {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        padding: 3px;
+        background: rgba(16, 24, 32, 0.06);
+        border: 1px solid var(--rule-dark);
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+
+      .view-switcher a {
+        padding: 8px 9px;
+        color: var(--muted);
+        border-radius: 999px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.64rem;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .view-switcher a:hover,
+      .view-switcher a:focus-visible {
+        color: var(--ink);
+      }
+
+      .view-switcher a[aria-current="page"] {
+        color: var(--paper);
+        background: var(--ink);
+      }
+
+      main {
+        padding: clamp(66px, 8vw, 118px) 0 100px;
+      }
+
+      .eyebrow,
+      .section-label,
+      .question-label,
+      .flow-name,
+      .state-name,
+      .step-number,
+      .scale-item span,
+      .boundary-label,
+      .footer-note {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-weight: 850;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow {
+        margin: 0 0 24px;
+        color: var(--amber);
+        font-size: 0.76rem;
+      }
+
+      h1 {
+        max-width: 1050px;
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(3.25rem, 7.6vw, 7.3rem);
+        font-weight: 500;
+        letter-spacing: -0.055em;
+        line-height: 0.92;
+      }
+
+      .lede {
+        max-width: 805px;
+        margin: 36px 0 0;
+        color: #343c3f;
+        font-size: clamp(1.08rem, 2vw, 1.46rem);
+        line-height: 1.6;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 11px;
+        margin-top: 38px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        color: var(--paper);
+        background: var(--ink);
+        border: 2px solid var(--ink);
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 850;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .button.secondary {
+        color: var(--ink);
+        background: transparent;
+      }
+
+      .button:hover {
+        color: var(--ink);
+        background: var(--paper);
+      }
+
+      .button.secondary:hover {
+        color: var(--paper);
+        background: var(--ink);
+      }
+
+      .scale-strip {
+        display: grid;
+        grid-template-columns: 1.25fr repeat(4, minmax(0, 1fr));
+        margin-top: clamp(74px, 10vw, 130px);
+        border-top: 2px solid var(--ink);
+        border-bottom: 1px solid var(--rule-dark);
+      }
+
+      .scale-item {
+        min-height: 132px;
+        padding: 25px 18px 23px;
+        border-left: 1px solid var(--rule);
+      }
+
+      .scale-item:first-child {
+        padding-left: 0;
+        border-left: 0;
+      }
+
+      .scale-item span {
+        color: var(--muted);
+        font-size: 0.64rem;
+      }
+
+      .scale-item strong {
+        display: block;
+        margin-top: 13px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.5rem, 2.8vw, 2.9rem);
+        font-weight: 500;
+        letter-spacing: -0.03em;
+      }
+
+      .orientation {
+        padding: clamp(94px, 12vw, 165px) 0;
+      }
+
+      .section-heading {
+        display: grid;
+        grid-template-columns: minmax(190px, 0.34fr) minmax(0, 1fr);
+        gap: clamp(38px, 8vw, 120px);
+        align-items: start;
+      }
+
+      .section-label {
+        margin: 7px 0 0;
+        color: var(--green);
+        font-size: 0.73rem;
+      }
+
+      .section-heading h2 {
+        max-width: 820px;
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.4rem, 5.5vw, 5.4rem);
+        font-weight: 500;
+        letter-spacing: -0.05em;
+        line-height: 0.98;
+      }
+
+      .question-grid {
+        display: grid;
+        grid-template-columns: 1fr 64px 1fr;
+        gap: 22px;
+        align-items: stretch;
+        margin-top: 64px;
+      }
+
+      .question-card {
+        display: flex;
+        min-height: 390px;
+        flex-direction: column;
+        padding: clamp(30px, 4vw, 48px);
+        background: rgba(255, 253, 247, 0.78);
+        border: 1px solid var(--rule-dark);
+        border-radius: 20px;
+        box-shadow: 0 14px 32px rgba(16, 24, 32, 0.06);
+      }
+
+      .question-card.recovery {
+        color: var(--paper);
+        background: var(--navy);
+        border-color: var(--navy);
+      }
+
+      .question-label {
+        margin: 0;
+        color: var(--amber);
+        font-size: 0.68rem;
+      }
+
+      .question-card.recovery .question-label {
+        color: #dbbd88;
+      }
+
+      .question-card h3 {
+        max-width: 500px;
+        margin: 28px 0 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2rem, 3.8vw, 3.8rem);
+        font-weight: 500;
+        letter-spacing: -0.04em;
+        line-height: 1.02;
+      }
+
+      .question-card p:not(.question-label) {
+        margin: auto 0 0;
+        padding-top: 44px;
+        color: #485052;
+        font-size: 1.08rem;
+        line-height: 1.65;
+      }
+
+      .question-card.recovery p:not(.question-label) {
+        color: #dce3e4;
+      }
+
+      .bridge-mark {
+        display: grid;
+        place-items: center;
+        color: var(--green);
+        font-size: 2rem;
+        font-weight: 300;
+      }
+
+      .relationship-note {
+        max-width: 820px;
+        margin: 40px auto 0;
+        color: var(--muted);
+        font-size: 1.03rem;
+        line-height: 1.7;
+        text-align: center;
+      }
+
+      .view-section {
+        padding: clamp(85px, 11vw, 150px) 0;
+        border-top: 2px solid var(--ink);
+      }
+
+      .view-intro {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.32fr) minmax(0, 1fr);
+        gap: clamp(42px, 8vw, 120px);
+      }
+
+      .view-index {
+        margin: 4px 0 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(4.5rem, 9vw, 8.5rem);
+        font-weight: 500;
+        letter-spacing: -0.06em;
+        line-height: 0.8;
+      }
+
+      .view-copy h2 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.7rem, 6vw, 6.2rem);
+        font-weight: 500;
+        letter-spacing: -0.055em;
+        line-height: 0.94;
+      }
+
+      .view-answer {
+        max-width: 790px;
+        margin: 30px 0 0;
+        color: #3c4547;
+        font-size: clamp(1.08rem, 1.8vw, 1.34rem);
+        line-height: 1.65;
+      }
+
+      .visual-card {
+        margin-top: 62px;
+        padding: clamp(24px, 4vw, 46px);
+        background: var(--paper);
+        border: 1px solid var(--rule-dark);
+        border-radius: 22px;
+        box-shadow: 0 18px 44px rgba(16, 24, 32, 0.08);
+      }
+
+      .growth-diagram {
+        position: relative;
+        display: grid;
+        grid-template-columns: 0.82fr repeat(4, 1fr);
+        min-height: 320px;
+        overflow: hidden;
+        border: 1px solid var(--rule);
+        border-radius: 14px;
+        background:
+          radial-gradient(circle at 15% 35%, rgba(22, 115, 84, 0.06), transparent 25%),
+          #fbfaf5;
+      }
+
+      .lane {
+        position: relative;
+        padding: 22px 14px;
+        border-left: 1px solid #d8d6cc;
+      }
+
+      .lane:first-child {
+        border-left: 0;
+      }
+
+      .flow-name {
+        position: relative;
+        z-index: 2;
+        display: block;
+        color: var(--muted);
+        font-size: 0.62rem;
+        text-align: center;
+      }
+
+      .dot-field {
+        position: absolute;
+        inset: 67px 20px 24px;
+      }
+
+      .dot {
+        position: absolute;
+        width: var(--size, 8px);
+        height: var(--size, 8px);
+        background: var(--dot, var(--navy));
+        border: 2px solid var(--dot, var(--navy));
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(255, 253, 247, 0.72);
+      }
+
+      .dot.hollow {
+        background: var(--paper);
+      }
+
+      .dot.square {
+        border-radius: 2px;
+      }
+
+      .growth-lines {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .growth-lines path {
+        fill: none;
+        stroke: #aeb9b7;
+        stroke-width: 1.35;
+        opacity: 0.66;
+      }
+
+      .growth-lines path.strong {
+        stroke: var(--green);
+        stroke-width: 2.2;
+        opacity: 0.76;
+      }
+
+      .diagram-caption {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+        margin-top: 34px;
+      }
+
+      .diagram-caption article {
+        padding-top: 19px;
+        border-top: 1px solid var(--rule-dark);
+      }
+
+      .diagram-caption strong {
+        display: block;
+        font-size: 1rem;
+      }
+
+      .diagram-caption p {
+        margin: 10px 0 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .try-panel {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.3fr) minmax(0, 1fr);
+        gap: clamp(35px, 7vw, 100px);
+        margin-top: 58px;
+        padding: clamp(34px, 5vw, 60px);
+        color: var(--paper);
+        background: var(--ink);
+        border-radius: 20px;
+      }
+
+      .try-panel h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2rem, 4vw, 3.7rem);
+        font-weight: 500;
+        letter-spacing: -0.04em;
+        line-height: 1;
+      }
+
+      .try-panel ol {
+        display: grid;
+        gap: 22px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: tries;
+      }
+
+      .try-panel li {
+        position: relative;
+        padding-left: 46px;
+        color: #d9dfdd;
+        line-height: 1.55;
+        counter-increment: tries;
+      }
+
+      .try-panel li::before {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        display: grid;
+        width: 29px;
+        height: 29px;
+        place-items: center;
+        content: counter(tries, decimal-leading-zero);
+        color: var(--ink);
+        background: var(--paper);
+        border-radius: 50%;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.62rem;
+        font-weight: 900;
+      }
+
+      .try-panel strong {
+        color: var(--paper);
+      }
+
+      .grammar {
+        padding: clamp(90px, 12vw, 160px) 0;
+        border-top: 1px solid var(--rule-dark);
+      }
+
+      .grammar-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(280px, 0.5fr);
+        gap: clamp(40px, 9vw, 130px);
+        align-items: end;
+      }
+
+      .grammar h2 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.5rem, 5.8vw, 5.8rem);
+        font-weight: 500;
+        letter-spacing: -0.05em;
+        line-height: 0.96;
+      }
+
+      .grammar-head p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.65;
+      }
+
+      .state-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 54px;
+      }
+
+      .state-card {
+        min-height: 250px;
+        padding: 26px;
+        background: rgba(255, 253, 247, 0.72);
+        border: 1px solid var(--rule-dark);
+        border-radius: 14px;
+      }
+
+      .state-symbol {
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin-bottom: 30px;
+        background: var(--paper);
+        border: 3px solid var(--navy);
+        border-radius: 50%;
+      }
+
+      .state-symbol.confirmed {
+        background: var(--navy);
+      }
+
+      .state-symbol.written {
+        background: var(--paper);
+        border-color: var(--green);
+        border-radius: 3px;
+        box-shadow: inset 0 0 0 5px var(--paper), inset 0 0 0 9px var(--green);
+      }
+
+      .state-symbol.missing {
+        position: relative;
+        width: 56px;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+      }
+
+      .state-symbol.missing::after {
+        position: absolute;
+        top: 13px;
+        left: 0;
+        width: 56px;
+        content: "";
+        border-top: 3px dashed var(--red);
+      }
+
+      .state-name {
+        display: block;
+        color: var(--muted);
+        font-size: 0.65rem;
+      }
+
+      .state-card h3 {
+        margin: 12px 0 0;
+        font-size: 1.12rem;
+      }
+
+      .state-card p {
+        margin: 14px 0 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .recovery-sequence {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        margin-top: 62px;
+        border-top: 2px solid var(--ink);
+        border-bottom: 1px solid var(--rule-dark);
+      }
+
+      .recovery-step {
+        position: relative;
+        min-height: 285px;
+        padding: 27px 18px 25px;
+        border-left: 1px solid var(--rule);
+      }
+
+      .recovery-step:first-child {
+        border-left: 0;
+      }
+
+      .recovery-step::after {
+        position: absolute;
+        top: 41px;
+        right: -7px;
+        z-index: 2;
+        content: "→";
+        color: var(--green);
+        background: var(--canvas);
+        font-weight: 900;
+      }
+
+      .recovery-step:last-child::after {
+        display: none;
+      }
+
+      .step-number {
+        color: var(--amber);
+        font-size: 0.65rem;
+      }
+
+      .recovery-step h3 {
+        margin: 28px 0 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.45rem;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        line-height: 1.05;
+      }
+
+      .recovery-step p {
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.55;
+      }
+
+      .deadline-line {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-top: 42px;
+        padding: 19px 22px;
+        color: var(--paper);
+        background: var(--navy);
+        border-radius: 12px;
+      }
+
+      .deadline-line strong {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.45rem;
+        font-weight: 500;
+      }
+
+      .deadline-line span {
+        width: 8px;
+        height: 8px;
+        background: #d7b676;
+        border-radius: 50%;
+      }
+
+      .walkthrough {
+        padding: clamp(85px, 11vw, 145px) 0;
+        border-top: 2px solid var(--ink);
+      }
+
+      .walkthrough-grid {
+        display: grid;
+        grid-template-columns: minmax(250px, 0.48fr) minmax(0, 1fr);
+        gap: clamp(55px, 9vw, 135px);
+        margin-top: 60px;
+      }
+
+      .walkthrough-intro {
+        position: sticky;
+        top: 32px;
+        align-self: start;
+      }
+
+      .walkthrough-intro h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.2rem, 4vw, 4.3rem);
+        font-weight: 500;
+        letter-spacing: -0.04em;
+        line-height: 1;
+      }
+
+      .walkthrough-intro p {
+        margin: 24px 0 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .walkthrough-steps {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .walkthrough-steps li {
+        display: grid;
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 22px;
+        padding: 0 0 48px;
+      }
+
+      .walkthrough-steps li + li {
+        padding-top: 44px;
+        border-top: 1px solid var(--rule);
+      }
+
+      .walkthrough-steps .count {
+        display: grid;
+        width: 48px;
+        height: 48px;
+        place-items: center;
+        color: var(--paper);
+        background: var(--ink);
+        border-radius: 50%;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.7rem;
+        font-weight: 900;
+      }
+
+      .walkthrough-steps h4 {
+        margin: 2px 0 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.75rem;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+      }
+
+      .walkthrough-steps p {
+        margin: 13px 0 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .boundary {
+        padding: clamp(58px, 8vw, 95px);
+        color: var(--paper);
+        background: var(--ink);
+        border-radius: 24px;
+        box-shadow: 0 18px 45px rgba(16, 24, 32, 0.14);
+      }
+
+      .boundary-label {
+        margin: 0 0 25px;
+        color: #d7b676;
+        font-size: 0.68rem;
+      }
+
+      .boundary h2 {
+        max-width: 780px;
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.35rem, 5.2vw, 5.2rem);
+        font-weight: 500;
+        letter-spacing: -0.05em;
+        line-height: 0.98;
+      }
+
+      .boundary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 50px;
+      }
+
+      .boundary-card {
+        min-height: 190px;
+        padding: 25px;
+        border: 1px solid rgba(255, 253, 247, 0.28);
+        border-radius: 14px;
+      }
+
+      .boundary-card strong {
+        display: block;
+        font-size: 1.05rem;
+      }
+
+      .boundary-card p {
+        margin: 14px 0 0;
+        color: #d7ddda;
+        line-height: 1.58;
+      }
+
+      .next-stop {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.65fr);
+        gap: clamp(46px, 9vw, 130px);
+        align-items: end;
+        padding: clamp(95px, 12vw, 165px) 0 58px;
+      }
+
+      .next-stop h2 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.6rem, 6vw, 6.3rem);
+        font-weight: 500;
+        letter-spacing: -0.055em;
+        line-height: 0.94;
+      }
+
+      .next-stop-copy p {
+        margin: 0 0 25px;
+        color: var(--muted);
+        font-size: 1.06rem;
+        line-height: 1.65;
+      }
+
+      footer {
+        display: flex;
+        min-height: 96px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        border-top: 2px solid var(--ink);
+      }
+
+      footer a {
+        color: var(--ink);
+        font-weight: 750;
+        text-underline-offset: 4px;
+      }
+
+      .footer-note {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.66rem;
+      }
+
+      @media (max-width: 1020px) {
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 22px 0;
+        }
+
+        .view-switcher {
+          max-width: 100%;
+          overflow-x: auto;
+        }
+
+        .scale-strip {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .scale-item:nth-child(4) {
+          padding-left: 0;
+          border-top: 1px solid var(--rule);
+          border-left: 0;
+        }
+
+        .scale-item:nth-child(5) {
+          border-top: 1px solid var(--rule);
+        }
+
+        .recovery-sequence {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .recovery-step:nth-child(4) {
+          border-top: 1px solid var(--rule);
+          border-left: 0;
+        }
+
+        .recovery-step:nth-child(3)::after {
+          display: none;
+        }
+
+        .recovery-step:nth-child(n + 4) {
+          border-top: 1px solid var(--rule);
+        }
+      }
+
+      @media (max-width: 780px) {
+        .section-heading,
+        .view-intro,
+        .try-panel,
+        .grammar-head,
+        .walkthrough-grid,
+        .next-stop {
+          grid-template-columns: 1fr;
+        }
+
+        .question-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .question-card {
+          min-height: 330px;
+        }
+
+        .bridge-mark {
+          height: 38px;
+          transform: rotate(90deg);
+        }
+
+        .growth-diagram {
+          min-width: 720px;
+        }
+
+        .visual-scroll {
+          overflow-x: auto;
+          padding-bottom: 8px;
+        }
+
+        .diagram-caption,
+        .state-grid,
+        .boundary-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .walkthrough-intro {
+          position: static;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          width: min(100% - 24px, 1280px);
+        }
+
+        .view-switcher {
+          width: 100%;
+        }
+
+        .view-switcher a {
+          padding: 7px 8px;
+          font-size: 0.58rem;
+        }
+
+        h1 {
+          font-size: clamp(3rem, 17vw, 5rem);
+        }
+
+        .scale-strip,
+        .diagram-caption,
+        .state-grid,
+        .boundary-grid,
+        .recovery-sequence {
+          grid-template-columns: 1fr;
+        }
+
+        .scale-item,
+        .scale-item:first-child,
+        .scale-item:nth-child(4) {
+          min-height: 105px;
+          padding: 22px 0;
+          border-top: 1px solid var(--rule);
+          border-left: 0;
+        }
+
+        .scale-item:first-child {
+          border-top: 0;
+        }
+
+        .recovery-step,
+        .recovery-step:nth-child(4) {
+          min-height: 0;
+          padding: 26px 0 32px;
+          border-top: 1px solid var(--rule);
+          border-left: 0;
+        }
+
+        .recovery-step:first-child {
+          border-top: 0;
+        }
+
+        .recovery-step::after {
+          display: none;
+        }
+
+        .deadline-line {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .deadline-line span {
+          display: none;
+        }
+
+        .boundary {
+          padding: 48px 24px;
+        }
+
+        footer {
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          padding: 28px 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to the guide</a>
+
+    <header class="shell topbar">
+      <a class="brand-lockup" href="./" aria-label="Deal Witness growth map">
+        <span class="witness-mark" aria-hidden="true"><span></span></span>
+        <span>
+          <span class="brand-name">Deal Witness</span>
+          <span class="brand-tagline">Complete the memory. Check the paper.</span>
+        </span>
+      </a>
+
+      <nav class="view-switcher" aria-label="Explore Deal Witness">
+        <a href="./">Growth map</a>
+        <a href="./explorer.html">Recovery explorer</a>
+        <a href="./guide.html" aria-current="page">Guide</a>
+        <a href="./about.html">About</a>
+        <a href="./assets/deal-witness-hackathon-deck.pdf" target="_blank" rel="noopener">Deck</a>
+        <a href="https://github.com/jymiller/deal-witness" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="shell" id="content">
+      <section aria-labelledby="page-title">
+        <p class="eyebrow">Product guide · Two views, one memory</p>
+        <h1 id="page-title">See the deal learn. Then see it recover.</h1>
+        <p class="lede">
+          The Growth Map explains how source evidence becomes an expanding network of decisions and consequences. The Recovery Explorer shows how that network helps a team find missing knowledge after a key person leaves.
+        </p>
+        <div class="actions" aria-label="Open Deal Witness views">
+          <a class="button" href="./">Open the Growth Map</a>
+          <a class="button secondary" href="./explorer.html">Open the Recovery Explorer</a>
+        </div>
+      </section>
+
+      <section class="scale-strip" aria-label="Scale of the wholly synthetic Project Asterline demonstration">
+        <div class="scale-item"><span>Wholly synthetic</span><strong>Project Asterline</strong></div>
+        <div class="scale-item"><span>Financing</span><strong>$380M</strong></div>
+        <div class="scale-item"><span>Source records</span><strong>432</strong></div>
+        <div class="scale-item"><span>Atomic items</span><strong>288</strong></div>
+        <div class="scale-item"><span>Relationships</span><strong>576</strong></div>
+      </section>
+
+      <section class="orientation" aria-labelledby="orientation-title">
+        <div class="section-heading">
+          <p class="section-label">Start here</p>
+          <h2 id="orientation-title">Each view answers a different question.</h2>
+        </div>
+
+        <div class="question-grid">
+          <article class="question-card">
+            <p class="question-label">Growth Map</p>
+            <h3>What does this deal know—and how did it learn it?</h3>
+            <p>Watch records create or reinforce decisions, then follow their links into risks, negotiated promises, and monetary consequences.</p>
+          </article>
+          <div class="bridge-mark" aria-hidden="true">→</div>
+          <article class="question-card recovery">
+            <p class="question-label">Recovery Explorer</p>
+            <h3>What is missing—and how can the team recover it?</h3>
+            <p>Inspect receipts, reconstruct who should know, ask a grounded question, preserve the sourced answer, and use it to check the paper.</p>
+          </article>
+        </div>
+        <p class="relationship-note">
+          These are not competing maps or separate datasets. The Growth Map shows memory being formed; the Recovery Explorer shows the same kind of attributed memory being used under pressure.
+        </p>
+      </section>
+
+      <section class="view-section" aria-labelledby="growth-title">
+        <div class="view-intro">
+          <p class="view-index" aria-hidden="true">01</p>
+          <div class="view-copy">
+            <p class="section-label">Growth Map</p>
+            <h2 id="growth-title">Watch meaning accumulate.</h2>
+            <p class="view-answer">
+              The Growth Map turns a long stream of records into a legible, left-to-right memory. It is designed to make scale visible without labeling every tiny node.
+            </p>
+          </div>
+        </div>
+
+        <div class="visual-card">
+          <div class="visual-scroll" tabindex="0" aria-label="Scroll to see the complete five-lane Growth Map illustration">
+            <div class="growth-diagram" role="img" aria-label="Evidence flows from inputs to decisions, then branches through risks and promises to monetary consequences">
+              <svg class="growth-lines" viewBox="0 0 1000 320" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M92 96 C168 96 186 82 273 82 S390 102 474 104 S596 93 678 100 S824 83 904 88"></path>
+                <path class="strong" d="M92 148 C170 148 191 156 273 150 S391 138 474 143 S583 155 678 150 S816 164 904 160"></path>
+                <path d="M92 205 C172 205 192 197 273 201 S385 221 474 215 S593 202 678 208 S822 222 904 220"></path>
+                <path d="M273 82 C362 82 390 181 474 184 S590 126 678 128 S812 120 904 126"></path>
+                <path d="M273 150 C360 150 390 104 474 104"></path>
+                <path d="M474 143 C570 143 592 242 678 244 S813 250 904 254"></path>
+                <path d="M474 215 C560 215 593 208 678 208 S820 160 904 160"></path>
+              </svg>
+              <div class="lane">
+                <span class="flow-name">Inputs</span>
+                <div class="dot-field" aria-hidden="true">
+                  <i class="dot" style="left: 18%; top: 7%; --size: 7px"></i>
+                  <i class="dot" style="left: 58%; top: 15%; --size: 6px; --dot: #9b6317"></i>
+                  <i class="dot" style="left: 31%; top: 29%; --size: 8px"></i>
+                  <i class="dot" style="left: 68%; top: 42%; --size: 6px; --dot: #167354"></i>
+                  <i class="dot" style="left: 17%; top: 57%; --size: 7px; --dot: #9b6317"></i>
+                  <i class="dot" style="left: 49%; top: 69%; --size: 6px"></i>
+                  <i class="dot" style="left: 72%; top: 81%; --size: 8px"></i>
+                </div>
+              </div>
+              <div class="lane">
+                <span class="flow-name">Decisions</span>
+                <div class="dot-field" aria-hidden="true">
+                  <i class="dot" style="left: 42%; top: 6%; --size: 12px"></i>
+                  <i class="dot" style="left: 42%; top: 34%; --size: 11px"></i>
+                  <i class="dot" style="left: 42%; top: 62%; --size: 12px"></i>
+                  <i class="dot hollow" style="left: 42%; top: 82%; --size: 11px"></i>
+                </div>
+              </div>
+              <div class="lane">
+                <span class="flow-name">Risks</span>
+                <div class="dot-field" aria-hidden="true">
+                  <i class="dot" style="left: 40%; top: 14%; --size: 10px; --dot: #9b6317"></i>
+                  <i class="dot" style="left: 40%; top: 37%; --size: 12px; --dot: #9b6317"></i>
+                  <i class="dot hollow" style="left: 40%; top: 57%; --size: 11px; --dot: #9b6317"></i>
+                  <i class="dot" style="left: 40%; top: 77%; --size: 10px; --dot: #9b6317"></i>
+                </div>
+              </div>
+              <div class="lane">
+                <span class="flow-name">Promises</span>
+                <div class="dot-field" aria-hidden="true">
+                  <i class="dot square" style="left: 43%; top: 12%; --size: 11px; --dot: #167354"></i>
+                  <i class="dot square" style="left: 43%; top: 39%; --size: 12px; --dot: #167354"></i>
+                  <i class="dot square hollow" style="left: 43%; top: 68%; --size: 12px; --dot: #b33b2f"></i>
+                </div>
+              </div>
+              <div class="lane">
+                <span class="flow-name">Money</span>
+                <div class="dot-field" aria-hidden="true">
+                  <i class="dot" style="left: 47%; top: 10%; --size: 13px; --dot: #17324a"></i>
+                  <i class="dot" style="left: 47%; top: 41%; --size: 12px; --dot: #17324a"></i>
+                  <i class="dot" style="left: 47%; top: 73%; --size: 13px; --dot: #17324a"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="diagram-caption">
+            <article>
+              <strong>Evidence does not equal a new decision every time.</strong>
+              <p>A new record may create a decision, reinforce one already remembered, or add provenance and context to an existing path.</p>
+            </article>
+            <article>
+              <strong>Paths branch and converge.</strong>
+              <p>One decision can expose several risks. Risks can lead to negotiated promises, and those promises can change how money moves.</p>
+            </article>
+            <article>
+              <strong>Density is the point.</strong>
+              <p>Repeated receipts make established paths more credible. The interface summarizes the corpus into 13 stable clusters so it remains readable.</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="try-panel" aria-labelledby="try-growth-title">
+          <h3 id="try-growth-title">Try it in 45 seconds.</h3>
+          <ol>
+            <li><strong>Choose Replay history</strong> to watch the map build from sparse evidence into a connected field.</li>
+            <li><strong>Choose Next document</strong> a few times. Watch a new receipt create or strengthen a path instead of moving the map around.</li>
+            <li><strong>Choose Highlight the open gap</strong> to isolate the hollow path that the second view will investigate.</li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="grammar" aria-labelledby="grammar-title">
+        <div class="grammar-head">
+          <h2 id="grammar-title">Four states. One visual grammar.</h2>
+          <p>Position tells you what kind of knowledge you are looking at. Shape, fill, and line tell you how well that knowledge is supported.</p>
+        </div>
+
+        <div class="state-grid">
+          <article class="state-card">
+            <span class="state-symbol" aria-hidden="true"></span>
+            <span class="state-name">Heard once · hollow</span>
+            <h3>Remembered, not resolved.</h3>
+            <p>There is a receipt, claim, or open path worth preserving, but it has not reached the next support state.</p>
+          </article>
+          <article class="state-card">
+            <span class="state-symbol confirmed" aria-hidden="true"></span>
+            <span class="state-name">Confirmed · solid</span>
+            <h3>Supported by the loaded evidence.</h3>
+            <p>The memory has enough attributed support to appear as confirmed in this fixed demonstration.</p>
+          </article>
+          <article class="state-card">
+            <span class="state-symbol written" aria-hidden="true"></span>
+            <span class="state-name">Written · in contract</span>
+            <h3>Connected to the paper.</h3>
+            <p>The remembered item is linked to contract wording in the document-check portion of the replay.</p>
+          </article>
+          <article class="state-card">
+            <span class="state-symbol missing" aria-hidden="true"></span>
+            <span class="state-name">Missing · broken edge</span>
+            <h3>The expected connection is absent.</h3>
+            <p>A red broken line makes the gap visible without claiming the remembered fact itself has disappeared.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="view-section" aria-labelledby="recovery-title">
+        <div class="view-intro">
+          <p class="view-index" aria-hidden="true">02</p>
+          <div class="view-copy">
+            <p class="section-label">Recovery Explorer</p>
+            <h2 id="recovery-title">Turn a gap into a sourced trail.</h2>
+            <p class="view-answer">
+              Maya is gone on Monday. The deal closes Friday. The Explorer demonstrates how historical receipts and relationship memory can help the remaining team recover context without pretending Maya is still available.
+            </p>
+          </div>
+        </div>
+
+        <div class="deadline-line" aria-label="Demonstration deadline">
+          <strong>Maya is gone Monday.</strong>
+          <span aria-hidden="true"></span>
+          <strong>The $380M deal closes Friday.</strong>
+        </div>
+
+        <div class="recovery-sequence" aria-label="The six-stage memory completion loop">
+          <article class="recovery-step">
+            <span class="step-number">01 · Expose</span>
+            <h3>Find a hollow path.</h3>
+            <p>The map identifies a specific unresolved connection rather than returning a generic “not found.”</p>
+          </article>
+          <article class="recovery-step">
+            <span class="step-number">02 · Prove</span>
+            <h3>Show the receipts.</h3>
+            <p>Conflicting or incomplete historical evidence explains exactly why the path remains open.</p>
+          </article>
+          <article class="recovery-step">
+            <span class="step-number">03 · Route</span>
+            <h3>Rank who should know.</h3>
+            <p>Authorship, attendance, ownership, approvals, and referrals support “Why this person?”</p>
+          </article>
+          <article class="recovery-step">
+            <span class="step-number">04 · Ask</span>
+            <h3>Prepare a precise question.</h3>
+            <p>The simulated outreach is grounded in the visible evidence. No real call or message is sent.</p>
+          </article>
+          <article class="recovery-step">
+            <span class="step-number">05 · Evaluate</span>
+            <h3>Require a sourced answer.</h3>
+            <p>A vague response stays open. A substantive response with a supporting receipt can complete the path.</p>
+          </article>
+          <article class="recovery-step">
+            <span class="step-number">06 · Reuse</span>
+            <h3>Check v7, then v8.</h3>
+            <p>The completed memory exposes one representative omission in v7 and recognizes its repair in v8.</p>
+          </article>
+        </div>
+
+        <aside class="try-panel" aria-labelledby="try-recovery-title">
+          <h3 id="try-recovery-title">What to watch.</h3>
+          <ol>
+            <li><strong>Use Next or Play replay.</strong> The Evidence River compresses 432 records, 288 items, and 576 relationships into 13 legible clusters.</li>
+            <li><strong>Pause at Who Knows What.</strong> Read “Why this person?” and distinguish likely knowledge, evidence ownership, and authority to confirm.</li>
+            <li><strong>Compare the two answers.</strong> The vague answer leaves the node hollow; the source-backed answer adds an attributed receipt and closes it.</li>
+            <li><strong>Continue to the paper check.</strong> v7 moves the representative path to HOLD FOR REVIEW; corrected v8 returns it to READY for the loaded demo evidence—not legal approval.</li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="walkthrough" aria-labelledby="walkthrough-title">
+        <div class="section-heading">
+          <p class="section-label">Guided walkthrough</p>
+          <h2 id="walkthrough-title">If you have two minutes, follow this route.</h2>
+        </div>
+
+        <div class="walkthrough-grid">
+          <div class="walkthrough-intro">
+            <h3>Formation → recovery → proof.</h3>
+            <p>The two views tell one causal story. Start with the calmer visual explanation, then open the denser operational proof.</p>
+          </div>
+          <ol class="walkthrough-steps">
+            <li>
+              <span class="count">01</span>
+              <div>
+                <h4>Let the Growth Map fill.</h4>
+                <p>Notice that new records can reinforce existing lines as well as create new decisions. Follow the flow from Decisions to Risks, Promises, and Money.</p>
+              </div>
+            </li>
+            <li>
+              <span class="count">02</span>
+              <div>
+                <h4>Highlight the hollow gap.</h4>
+                <p>This is the handoff between views: the network has preserved enough context to describe what it does not yet know.</p>
+              </div>
+            </li>
+            <li>
+              <span class="count">03</span>
+              <div>
+                <h4>Open the Recovery Explorer.</h4>
+                <p>Step through the receipts and ranked experts. The system does not contact Maya; it uses the historical routes she helped create to find another appropriate source.</p>
+              </div>
+            </li>
+            <li>
+              <span class="count">04</span>
+              <div>
+                <h4>Watch evidence change the state.</h4>
+                <p>The vague answer does nothing. The source-backed answer is attributed, completes the path, and leaves behind a reusable investigation trail.</p>
+              </div>
+            </li>
+            <li>
+              <span class="count">05</span>
+              <div>
+                <h4>Finish with v7 and v8.</h4>
+                <p>The Explorer checks whether one representative remembered promise reached the paper. The point is the reusable mechanism—not that this is the only important commitment in the deal.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="boundary" aria-labelledby="boundary-title">
+        <p class="boundary-label">Honest demonstration boundary</p>
+        <h2 id="boundary-title">The behavior is demonstrated. The outside world is not contacted.</h2>
+        <div class="boundary-grid">
+          <article class="boundary-card">
+            <strong>Every person and receipt is synthetic.</strong>
+            <p>Project Asterline, the $380M financing, its organizations, evidence, and terms were invented for this prototype.</p>
+          </article>
+          <article class="boundary-card">
+            <strong>The hosted experience is deterministic.</strong>
+            <p>A fixed local fixture makes the replay repeatable, reviewable, and safe to share publicly.</p>
+          </article>
+          <article class="boundary-card">
+            <strong>No live operation happens here.</strong>
+            <p>The public replay has no live enterprise connectors, sends no outreach, and performs no EverOS Cloud write.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="next-stop" aria-labelledby="next-title">
+        <h2 id="next-title">Now choose how you want to see it.</h2>
+        <div class="next-stop-copy">
+          <p>Use the Growth Map for the clearest visual explanation. Use the Recovery Explorer for the complete, evidence-rich sequence.</p>
+          <div class="actions">
+            <a class="button" href="./">Growth Map</a>
+            <a class="button secondary" href="./explorer.html">Recovery Explorer</a>
+            <a class="button secondary" href="./about.html">About the hackathon</a>
+            <a class="button secondary" href="./assets/deal-witness-hackathon-deck.pdf" target="_blank" rel="noopener">View the deck</a>
+            <a class="button secondary" href="https://github.com/jymiller/deal-witness" target="_blank" rel="noreferrer">GitHub repository</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="shell">
+      <p class="footer-note">Deal Witness guide · Wholly synthetic hosted replay</p>
+      <a href="https://github.com/jymiller/deal-witness" target="_blank" rel="noreferrer">View source on GitHub ↗</a>
+    </footer>
+  </body>
+</html>

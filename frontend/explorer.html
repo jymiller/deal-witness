@@ -20,6 +20,15 @@
       .view-switcher .project-link:focus-visible {
         opacity: 1;
       }
+
+      @media (max-width: 560px) {
+        .view-switcher {
+          width: 100%;
+          max-width: 100%;
+          overflow-x: auto;
+          scrollbar-width: thin;
+        }
+      }
     </style>
     <script src="./app.js" defer></script>
   </head>
@@ -39,6 +48,7 @@
         <nav class="view-switcher" aria-label="Choose Deal Witness view">
           <a href="./">Growth map</a>
           <a href="./explorer.html" aria-current="page">Recovery explorer</a>
+          <a class="project-link" href="./guide.html">How it works</a>
           <a class="project-link" href="./about.html">About</a>
           <a class="project-link" href="./assets/deal-witness-hackathon-deck.pdf">View deck</a>
         </nav>

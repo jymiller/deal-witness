@@ -6,7 +6,11 @@ Deal Witness is a high-value-person recovery system for complex transactions. It
 
 This hackathon demo is **wholly synthetic**. Every person, company, source, date, quote, amount, and project detail is invented.
 
-**Live demo:** [Deal Witness memory map](https://deal-witness.onrender.com/) · [Recovery-loop explorer](https://deal-witness.onrender.com/explorer.html) · [Hackathon notes](https://deal-witness.onrender.com/about.html) · [Presentation deck](https://deal-witness.onrender.com/assets/deal-witness-hackathon-deck.pdf)
+## Open the public build
+
+**[Launch Deal Witness on Render →](https://deal-witness.onrender.com/)**
+
+[How the two views work](https://deal-witness.onrender.com/guide.html) · [Growth Map](https://deal-witness.onrender.com/) · [Recovery Explorer](https://deal-witness.onrender.com/explorer.html) · [Hackathon notes](https://deal-witness.onrender.com/about.html) · [Presentation deck](https://deal-witness.onrender.com/assets/deal-witness-hackathon-deck.pdf)
 
 ## The hackathon build
 
@@ -161,6 +165,7 @@ The scripts never print the credential or raw provider responses that might cont
 - [`data/deal-witness/evidence/`](data/deal-witness/evidence/) — seven readable evidence bundles used in the story
 - [`data/deal-witness/expected-state.json`](data/deal-witness/expected-state.json) — deterministic snapshots and display contract
 - [`frontend/index.html`](frontend/index.html) — presentation-first animated vertical-lane experience
+- [`frontend/guide.html`](frontend/guide.html) — plain-language explainer connecting the Growth Map and Recovery Explorer
 - [`frontend/explorer.html`](frontend/explorer.html) — detailed fixture-driven investigation and paper-check view
 - [`src/cost_knee/everos.py`](src/cost_knee/everos.py) — secret-safe EverOS client construction and connectivity probe
 - [`scripts/verify_deal_witness_space.py`](scripts/verify_deal_witness_space.py) — dedicated-space collaboration probe

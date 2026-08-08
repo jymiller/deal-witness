@@ -183,6 +183,17 @@
         background: var(--ink);
       }
 
+      .view-switcher .project-link {
+        padding-inline: 8px;
+        font-size: 0.62rem;
+        opacity: 0.76;
+      }
+
+      .view-switcher .project-link:hover,
+      .view-switcher .project-link:focus-visible {
+        opacity: 1;
+      }
+
       main {
         padding: clamp(70px, 9vw, 138px) 0 96px;
       }
@@ -464,8 +475,9 @@
         .view-switcher {
           width: 100%;
           gap: 1px;
-          justify-content: center;
-          overflow-x: visible;
+          justify-content: flex-start;
+          overflow-x: auto;
+          scrollbar-width: thin;
         }
 
         .view-switcher a {
@@ -520,6 +532,7 @@
       <nav class="view-switcher" aria-label="Choose Deal Witness view">
         <a href="./">Growth map</a>
         <a href="./explorer.html">Recovery explorer</a>
+        <a class="project-link" href="./guide.html">How it works</a>
         <a href="./about.html" aria-current="page">About</a>
         <a href="./assets/deal-witness-hackathon-deck.pdf" target="_blank" rel="noopener">View deck</a>
       </nav>
