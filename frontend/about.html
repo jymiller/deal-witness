@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="About Deal Witness, an EverMind and EverOS memory-hackathon prototype built on August 7, 2026.">
+    <meta name="theme-color" content="#f1eee6">
+    <link rel="icon" href="data:,">
+    <title>About the build · Deal Witness</title>
+    <style>
+      :root {
+        --canvas: #f1eee6;
+        --paper: #fffdf7;
+        --ink: #101820;
+        --muted: #5f665f;
+        --rule: #b9b7ad;
+        --rule-dark: #777a74;
+        --navy: #17324a;
+        --green: #167354;
+        --amber: #9b6317;
+        color-scheme: light;
+        font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-synthesis: none;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-width: 320px;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(rgba(16, 24, 32, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(16, 24, 32, 0.035) 1px, transparent 1px),
+          var(--canvas);
+        background-size: 28px 28px;
+      }
+
+      a:focus-visible {
+        outline: 4px solid #226ca2;
+        outline-offset: 3px;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 10;
+        padding: 11px 15px;
+        color: var(--paper);
+        background: var(--ink);
+        border-radius: 8px;
+        transform: translateY(-160%);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .shell {
+        width: min(1280px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 96px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      .brand-lockup {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 0;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .witness-mark {
+        position: relative;
+        display: grid;
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        border: 3px solid var(--ink);
+        border-radius: 50%;
+      }
+
+      .witness-mark::before,
+      .witness-mark::after {
+        position: absolute;
+        top: 50%;
+        width: 9px;
+        height: 16px;
+        content: "";
+        border-top: 3px solid var(--ink);
+        border-bottom: 3px solid var(--ink);
+        transform: translateY(-50%);
+      }
+
+      .witness-mark::before {
+        left: -7px;
+        border-left: 3px solid var(--ink);
+        border-radius: 4px 0 0 4px;
+      }
+
+      .witness-mark::after {
+        right: -7px;
+        border-right: 3px solid var(--ink);
+        border-radius: 0 4px 4px 0;
+      }
+
+      .witness-mark span {
+        width: 10px;
+        height: 10px;
+        background: var(--ink);
+        border-radius: 50%;
+      }
+
+      .brand-name,
+      .brand-tagline {
+        margin: 0;
+      }
+
+      .brand-name {
+        font-size: 1.12rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .brand-tagline {
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 650;
+      }
+
+      .view-switcher {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        padding: 3px;
+        background: rgba(16, 24, 32, 0.06);
+        border: 1px solid var(--rule-dark);
+        border-radius: 999px;
+        white-space: nowrap;
+      }
+
+      .view-switcher a {
+        padding: 8px 11px;
+        color: var(--muted);
+        border-radius: 999px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.68rem;
+        font-weight: 900;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .view-switcher a:hover,
+      .view-switcher a:focus-visible {
+        color: var(--ink);
+      }
+
+      .view-switcher a[aria-current="page"] {
+        color: var(--paper);
+        background: var(--ink);
+      }
+
+      main {
+        padding: clamp(70px, 9vw, 138px) 0 96px;
+      }
+
+      .eyebrow,
+      .section-label,
+      .stat span,
+      .boundary-card span,
+      .footer-note {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-weight: 850;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow {
+        margin: 0 0 24px;
+        color: var(--amber);
+        font-size: 0.78rem;
+      }
+
+      h1 {
+        max-width: 980px;
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(3.25rem, 8vw, 7.7rem);
+        font-weight: 500;
+        letter-spacing: -0.055em;
+        line-height: 0.92;
+      }
+
+      .lede {
+        max-width: 790px;
+        margin: 38px 0 0;
+        color: #343c3f;
+        font-size: clamp(1.08rem, 2vw, 1.5rem);
+        line-height: 1.58;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 40px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        color: var(--paper);
+        background: var(--ink);
+        border: 2px solid var(--ink);
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 850;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .button.secondary {
+        color: var(--ink);
+        background: transparent;
+      }
+
+      .button:hover {
+        color: var(--ink);
+        background: var(--paper);
+      }
+
+      .button.secondary:hover {
+        color: var(--paper);
+        background: var(--ink);
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: clamp(80px, 11vw, 150px);
+        border-top: 2px solid var(--ink);
+        border-bottom: 1px solid var(--rule-dark);
+      }
+
+      .stat {
+        min-height: 150px;
+        padding: 27px 22px 24px 0;
+      }
+
+      .stat + .stat {
+        padding-left: 22px;
+        border-left: 1px solid var(--rule);
+      }
+
+      .stat strong {
+        display: block;
+        margin-top: 16px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(1.75rem, 3.2vw, 3.1rem);
+        font-weight: 500;
+        letter-spacing: -0.03em;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.68rem;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr);
+        gap: clamp(50px, 9vw, 140px);
+        padding: clamp(88px, 12vw, 170px) 0;
+      }
+
+      .section-label {
+        margin: 8px 0 0;
+        color: var(--green);
+        font-size: 0.75rem;
+      }
+
+      .story-copy h2,
+      .boundary h2 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.2rem, 5vw, 4.8rem);
+        font-weight: 500;
+        letter-spacing: -0.045em;
+        line-height: 1;
+      }
+
+      .story-copy p {
+        max-width: 730px;
+        margin: 30px 0 0;
+        color: #3f4748;
+        font-size: clamp(1rem, 1.5vw, 1.22rem);
+        line-height: 1.7;
+      }
+
+      .story-copy strong {
+        color: var(--ink);
+      }
+
+      .boundary {
+        padding: clamp(65px, 8vw, 110px);
+        background: var(--ink);
+        border-radius: 24px;
+        color: var(--paper);
+        box-shadow: 0 18px 45px rgba(16, 24, 32, 0.14);
+      }
+
+      .boundary > p {
+        max-width: 780px;
+        margin: 28px 0 0;
+        color: #d8ddd8;
+        font-size: 1.12rem;
+        line-height: 1.65;
+      }
+
+      .boundary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 50px;
+      }
+
+      .boundary-card {
+        min-height: 200px;
+        padding: 25px;
+        border: 1px solid rgba(255, 253, 247, 0.3);
+        border-radius: 14px;
+      }
+
+      .boundary-card span {
+        color: #aebbb5;
+        font-size: 0.66rem;
+      }
+
+      .boundary-card h3 {
+        margin: 22px 0 0;
+        font-size: 1.13rem;
+      }
+
+      .boundary-card p {
+        margin: 12px 0 0;
+        color: #d8ddd8;
+        line-height: 1.55;
+      }
+
+      .explore {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.55fr);
+        gap: clamp(40px, 9vw, 130px);
+        align-items: end;
+        padding: clamp(100px, 12vw, 170px) 0 60px;
+      }
+
+      .explore h2 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.6rem, 6vw, 6.2rem);
+        font-weight: 500;
+        letter-spacing: -0.05em;
+        line-height: 0.96;
+      }
+
+      .explore-copy p {
+        margin: 0 0 26px;
+        color: #3f4748;
+        font-size: 1.05rem;
+        line-height: 1.65;
+      }
+
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 96px;
+        border-top: 2px solid var(--ink);
+      }
+
+      footer a {
+        color: var(--ink);
+        font-weight: 750;
+        text-underline-offset: 4px;
+      }
+
+      .footer-note {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.67rem;
+      }
+
+      @media (max-width: 850px) {
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 22px 0;
+        }
+
+        .view-switcher {
+          max-width: 100%;
+          overflow-x: auto;
+        }
+
+        .stats,
+        .boundary-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .stat:nth-child(3) {
+          padding-left: 0;
+          border-left: 0;
+          border-top: 1px solid var(--rule);
+        }
+
+        .stat:nth-child(4) {
+          border-top: 1px solid var(--rule);
+        }
+
+        .story,
+        .explore {
+          grid-template-columns: 1fr;
+        }
+
+        .boundary {
+          padding: 55px 30px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          width: min(100% - 24px, 1280px);
+        }
+
+        .view-switcher {
+          width: 100%;
+          gap: 1px;
+          justify-content: center;
+          overflow-x: visible;
+        }
+
+        .view-switcher a {
+          padding: 7px 6px;
+          font-size: 0.58rem;
+          letter-spacing: 0.02em;
+        }
+
+        h1 {
+          font-size: clamp(3rem, 17vw, 5rem);
+        }
+
+        .stats,
+        .boundary-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stat,
+        .stat + .stat,
+        .stat:nth-child(3) {
+          min-height: 120px;
+          padding: 24px 0;
+          border-top: 1px solid var(--rule);
+          border-left: 0;
+        }
+
+        .stats .stat:first-child {
+          border-top: 0;
+        }
+
+        footer {
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          padding: 28px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to the story</a>
+
+    <header class="shell topbar">
+      <a class="brand-lockup" href="./" aria-label="Deal Witness growth map">
+        <span class="witness-mark" aria-hidden="true"><span></span></span>
+        <span>
+          <span class="brand-name">Deal Witness</span>
+          <span class="brand-tagline">Complete the memory. Check the paper.</span>
+        </span>
+      </a>
+
+      <nav class="view-switcher" aria-label="Choose Deal Witness view">
+        <a href="./">Growth map</a>
+        <a href="./explorer.html">Recovery explorer</a>
+        <a href="./about.html" aria-current="page">About</a>
+        <a href="./assets/deal-witness-hackathon-deck.pdf" target="_blank" rel="noopener">View deck</a>
+      </nav>
+    </header>
+
+    <main class="shell" id="content">
+      <section aria-labelledby="page-title">
+        <p class="eyebrow">EverMind / EverOS memory hackathon · August 7, 2026</p>
+        <h1 id="page-title">Great people leave. The deal should still remember.</h1>
+        <p class="lede">
+          Deal Witness is a prototype for preserving source-backed institutional memory across a complex transaction—then using that memory to recover missing context and check the final paper.
+        </p>
+        <div class="actions" aria-label="Explore Deal Witness">
+          <a class="button" href="./">Watch memory grow</a>
+          <a class="button secondary" href="./explorer.html">Explore recovery</a>
+          <a class="button secondary" href="./assets/deal-witness-hackathon-deck.pdf" target="_blank" rel="noopener">Open the deck</a>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Synthetic demonstration scale">
+        <div class="stat"><span>Synthetic financing</span><strong>$380M</strong></div>
+        <div class="stat"><span>Source records</span><strong>432</strong></div>
+        <div class="stat"><span>Atomic items</span><strong>288</strong></div>
+        <div class="stat"><span>Relationships</span><strong>576</strong></div>
+      </section>
+
+      <section class="story" aria-labelledby="build-story">
+        <p class="section-label">The hackathon question</p>
+        <div class="story-copy">
+          <h2 id="build-story">What survives when the person who connected everything is gone?</h2>
+          <p>
+            Maya is already gone on Monday. A few-hundred-million-dollar financing closes Friday. The prototype follows evidence as it becomes <strong>decisions, risks, promises, and money</strong>; reveals a hollow path; reconstructs who should know and why; captures a sourced answer; and reuses the completed memory in a document check.
+          </p>
+          <p>
+            The product design treats EverOS as the load-bearing memory layer for attributed receipts and reusable investigation recipes. The public build below is intentionally safer and narrower.
+          </p>
+        </div>
+      </section>
+
+      <section class="boundary" aria-labelledby="boundary-title">
+        <h2 id="boundary-title">What you are seeing</h2>
+        <p>
+          This hosted experience is a deterministic demonstration of the product idea—not a claim that live systems or people were contacted during the replay.
+        </p>
+        <div class="boundary-grid">
+          <article class="boundary-card">
+            <span>Entirely synthetic</span>
+            <h3>The deal and every receipt are invented.</h3>
+            <p>Project Asterline, its people, organizations, evidence, and financing terms exist only for this demonstration.</p>
+          </article>
+          <article class="boundary-card">
+            <span>Deterministic replay</span>
+            <h3>The browser runs a fixed local fixture.</h3>
+            <p>That makes the visual sequence repeatable and keeps the demonstration available without private data or credentials.</p>
+          </article>
+          <article class="boundary-card">
+            <span>No live operations</span>
+            <h3>No connectors, outreach, or cloud write occurs here.</h3>
+            <p>The hosted replay does not contact enterprise sources, reach a person, or write to EverOS Cloud.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="explore" aria-labelledby="explore-title">
+        <h2 id="explore-title">Two views. One memory story.</h2>
+        <div class="explore-copy">
+          <p>The Growth Map shows repeated receipts strengthening an expanding network. The Recovery Explorer shows how the remembered network can expose a gap, route a question, and check the paper.</p>
+          <div class="actions">
+            <a class="button" href="./">Growth map</a>
+            <a class="button secondary" href="./explorer.html">Recovery explorer</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="shell">
+      <p class="footer-note">Hackathon prototype · Wholly synthetic</p>
+      <a href="https://github.com/jymiller/deal-witness" target="_blank" rel="noreferrer">View the public GitHub repository ↗</a>
+    </footer>
+  </body>
+</html>

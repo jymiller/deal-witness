@@ -8,6 +8,19 @@
     <link rel="icon" href="data:,">
     <title>Deal Witness · Loading local fixture</title>
     <link rel="stylesheet" href="./styles.css">
+    <style>
+      .view-switcher .project-link {
+        padding-inline: 7px;
+        color: var(--ink);
+        font-size: 0.58rem;
+        opacity: 0.72;
+      }
+
+      .view-switcher .project-link:hover,
+      .view-switcher .project-link:focus-visible {
+        opacity: 1;
+      }
+    </style>
     <script src="./app.js" defer></script>
   </head>
   <body>
@@ -26,6 +39,8 @@
         <nav class="view-switcher" aria-label="Choose Deal Witness view">
           <a href="./">Growth map</a>
           <a href="./explorer.html" aria-current="page">Recovery explorer</a>
+          <a class="project-link" href="./about.html">About</a>
+          <a class="project-link" href="./assets/deal-witness-hackathon-deck.pdf">View deck</a>
         </nav>
 
         <div class="session-meta">

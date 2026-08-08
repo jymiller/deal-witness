@@ -6,7 +6,15 @@ Deal Witness is a high-value-person recovery system for complex transactions. It
 
 This hackathon demo is **wholly synthetic**. Every person, company, source, date, quote, amount, and project detail is invented.
 
-**Live demo:** [Deal Witness memory map](https://deal-witness.onrender.com/) · [Recovery-loop explorer](https://deal-witness.onrender.com/explorer.html)
+**Live demo:** [Deal Witness memory map](https://deal-witness.onrender.com/) · [Recovery-loop explorer](https://deal-witness.onrender.com/explorer.html) · [Hackathon notes](https://deal-witness.onrender.com/about.html) · [Presentation deck](https://deal-witness.onrender.com/assets/deal-witness-hackathon-deck.pdf)
+
+## The hackathon build
+
+Deal Witness was built on August 7, 2026 for an EverMind / EverOS memory hackathon. The one-day build asked a simple question: **when a great person leaves, can the institution preserve the evidence paths, relationships, and investigation habits that made their judgment useful?**
+
+This public repository is the post-hackathon record of that experiment. The hosted product is an interactive, deterministic replay over a wholly synthetic transaction; it does not claim live enterprise connectors, autonomous outreach, or a browser-to-EverOS write. The load-bearing EverOS adapter and dedicated-memory-space probe remain server-side development paths so no credential is exposed in the public site.
+
+The five-page [`Deal Witness` presentation deck](frontend/assets/deal-witness-hackathon-deck.pdf) is stored directly in the repository so it remains available without a separate Drive share.
 
 ## The story
 
