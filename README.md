@@ -89,6 +89,18 @@ python3 -m http.server 8000 --directory frontend
 
 Open `http://localhost:8000` for the spacious animated vertical-lane story. The deeper receipt and recovery-loop explorer remains available at `http://localhost:8000/explorer.html`.
 
+## Present it from Google Slides
+
+The repository includes three slide-ready exports of the approved memory-growth sequence:
+
+- [`artifacts/deal-witness-memory-growth-demo.mp4`](artifacts/deal-witness-memory-growth-demo.mp4) — 22-second, 1920×1080 H.264 video for the clearest projected playback
+- [`artifacts/deal-witness-memory-growth-preview.gif`](artifacts/deal-witness-memory-growth-preview.gif) — 22-second, 1280×720 looping GIF for a no-click animated slide
+- [`artifacts/deal-witness-memory-growth-poster.png`](artifacts/deal-witness-memory-growth-poster.png) — still-image fallback
+
+For the MP4, upload the file to Google Drive, wait for Drive to finish processing it, then use **Insert → Video → Google Drive** in Slides and enable autoplay in the video playback options. For the GIF, use **Insert → Image**; it loops automatically during slideshow playback. The exports contain no browser chrome and show the deterministic sequence from sparse memory through document reinforcement to the representative hollow path.
+
+The longer [`artifacts/deal-witness-demo.mp4`](artifacts/deal-witness-demo.mp4) preserves the full 75-second recovery and document-check walkthrough. Its capture is reproducible with [`scripts/capture-deal-witness-demo.mjs`](scripts/capture-deal-witness-demo.mjs).
+
 The corpus validator checks 22,544 assertions and verifies that all 15 generated outputs reproduce byte-for-byte. To regenerate the synthetic corpus before validating it:
 
 ```bash
